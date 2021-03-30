@@ -1,0 +1,41 @@
+.navMenu {
+	display: flex;
+	list-style: none;
+	@include roww(45px);
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+	&__link {
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		// padding: rem(3) rem(0);
+		color: $body-color !important;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: $primary;
+			@include mt;
+		}
+
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+
+	&__item {
+		&.active {
+			.navMenu__link::before {
+				width: 100%;
+			}
+		}
+	}
+}

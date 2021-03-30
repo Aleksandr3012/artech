@@ -1,0 +1,20 @@
+mixin item-sos(icon, a='#')
+	+e.A.item(href= a target="_blank")&attributes(attributes)
+		if block
+			block
+		else
+			+icon(icon)
+//- social buttons
+mixin soc()
+	+b.soc&attributes(attributes)
+		if block
+			block
+		else
+			+item-sos('youtube')(style="--hover-bg: #FF0000")
+			+item-sos('fb')(style="--hover-bg: #4267B2")
+			+item-sos('vk')(style="--hover-bg: #4A76A8")
+			+item-sos('instagram')(style="--hover-bg: #E94754")
+			+item-sos('telegram')(style="--hover-bg: #139BD0")
+			+item-sos('twitter')(style="--hover-bg: #03A9F4")
+
+//- /social buttons 

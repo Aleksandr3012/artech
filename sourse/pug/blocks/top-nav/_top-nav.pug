@@ -1,0 +1,47 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+		//- h1= dataJson['lala'] 
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js.on
+			span
+		+e.inner
+
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container-fluid
+			.row.align-items-center
+				.col-auto 
+					+e.logo(href="/")
+						+e.logoTopBlock(src="img/svg/logo-top.svg" alt="")
+						img(src="img/svg/logo-sm.svg" alt="")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+e.contactWrap 
+						+e.tel(href="tel:+73472210790") +7 (347) 221-07-90
+						+e.mail(href="mailto:") info@artech.si
+				.col-auto 
+					+e.btn.btn.btn-outline-primary(href="#") Связаться с нами
+				.col-auto 
+					+e.search.link-modal-js(href="#modal-search")
+						+icon('search')
+				.col-auto 
+					+e.lang(href="#") 
+						img(src="img/svg/lang.svg" alt="")
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+
+
+	// end top-nav

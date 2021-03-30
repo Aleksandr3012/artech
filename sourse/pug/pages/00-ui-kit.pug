@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'ARTECH'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	//- +topLine()
+
+	mixin btn-primary(t='Подробнее о компании')
+		a.btn.btn-primary(href="#")= t
+			+icon('arrow-r')
+	.mb-3
+		+btn-primary
+	.mb-3
+		a.btn.btn-outline-primary(href="#") Связаться с нами
+	.mb-3
+		+soc()
+	.mb-3
+		+soc().light
+	.mb-3
+		+pugin
+
+	+footer()
+
+
+
+

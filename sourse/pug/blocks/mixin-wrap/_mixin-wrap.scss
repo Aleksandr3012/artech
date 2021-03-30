@@ -1,0 +1,50 @@
+.soc {
+	@include roww(15px, m);
+	display: flex;
+	&__item {
+		text-decoration: none !important;
+		vertical-align: middle;
+		@include mt;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		background: #2d393e;
+		padding: rem(12);
+
+		&:hover {
+			background-color: var(--hover-bg);
+		}
+	}
+	.icon {
+		font-size: rem(20);
+		color: #fff;
+	}
+
+	&.light {
+		.soc__item {
+			background: #f1f1f1;
+
+			&:hover {
+				background-color: var(--hover-bg);
+				.icon {
+					color: #fff;
+				}
+			}
+		}
+
+		.icon {
+			color: #8f9597;
+		}
+	}
+}
+
+.counter {
+	counter-reset: num;
+	&__item {
+		position: relative;
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
