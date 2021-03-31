@@ -18,7 +18,7 @@ const fileSources = {
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title
 				h2 {blockName}
 				
 			.row
@@ -29,7 +29,7 @@ const fileSources = {
 	// --sPB: ;
 	// --sTPB: ;
 
-
+	@include md-lg {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}

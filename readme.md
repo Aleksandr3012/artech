@@ -1,4 +1,2 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://Aleksandr3012.github.io/artech/public>
+1. <https://Aleksandr3012.github.io/artech/public/00-ui-kit.html>

@@ -1,11 +1,16 @@
 .navMenu {
-	display: flex;
 	list-style: none;
-	@include roww(45px);
+	@include media-breakpoint-up(xxl) {
+		display: flex;
+		flex-wrap: wrap;
+		@include roww(24px);
+	}
+	@include media-breakpoint-up(xxxl) {
+		@include roww(45px);
+	}
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	flex-wrap: wrap;
 	&__link {
 		text-decoration: none;
 		display: block;

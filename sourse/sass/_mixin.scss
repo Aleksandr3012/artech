@@ -118,6 +118,15 @@
 	}
 }
 
+@mixin md-lg {
+	@include media-breakpoint-only(md) {
+		@content;
+	}
+	@include media-breakpoint-only(lg) {
+		@content;
+	}
+}
+
 @mixin bgsn($img, $w: center, $h: center) {
 	background-size: cover;
 	background-repeat: no-repeat;

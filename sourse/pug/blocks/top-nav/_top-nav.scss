@@ -1,11 +1,11 @@
 .top-nav {
-	position: sticky;
-	left: 0;
+	position: relative;
+	// left: 0;
 	// left: 200px;
 	// right: -200px;
 	// margin-right: -200px;
-	top: 0;
-	left: 0;
+	// top: 0;
+	// left: 0;
 	z-index: 800;
 	// background-color: #fff;
 	// border-bottom: 1px solid #000;
@@ -15,6 +15,10 @@
 	// background-color: #{rgba(var(--color-link), .5)};
 	padding-top: rem(24);
 	padding-bottom: rem(24);
+	@include md-lg {
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+	}
 
 	&.fixed {
 		bottom: auto;
@@ -24,37 +28,124 @@
 	}
 
 	&__contactWrap {
-		text-align: right;
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		@include media-breakpoint-up(xxl) {
+			align-items: flex-end;
+			flex-direction: column;
+			justify-content: center;
+		}
+		@include media-breakpoint-only(md) {
+			align-items: flex-end;
+			flex-direction: column;
+			justify-content: center;
+		}
+		@include media-breakpoint-up(xxxl) {
+			padding-right: rem(20);
+		}
 	}
 
 	&__tel {
 		text-decoration: none;
 		color: #263237 !important;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 
 	&__mail {
 		text-decoration: none;
 		color: #8f9597 !important;
+
+		@include media-breakpoint-down(xxl) {
+			margin-left: rem(30);
+		}
+		@include media-breakpoint-down(md) {
+			margin-left: 0;
+		}
+
+		.icon {
+			color: #8c8c8c;
+			font-size: rem(28);
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+
+		span {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
 	}
 
-	&__btn {
+	.toggle-menu-mobile {
+		@include md-lg {
+			margin-left: rem(30);
+		}
 	}
 
 	&__logo {
 		display: flex;
-		flex-direction: column;
+		@include media-breakpoint-up(md) {
+			flex-direction: column;
+			margin-right: rem(15);
+		}
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(27);
+		}
+		@include media-breakpoint-up(xxxl) {
+			margin-right: rem(85);
+		}
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+
+			img {
+				width: rem(171px);
+			}
+		}
+
+		@include media-breakpoint-only(xxl) {
+			width: rem(112px);
+		}
+		@include md-lg {
+			width: rem(110);
+		}
+
+		@include media-breakpoint-down(sm) {
+			img {
+				width: rem(130);
+			}
+		}
 	}
 
 	&__logoTopBlock {
-		margin-bottom: rem(4);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(4);
+		}
 	}
 
 	&__search {
+		display: inline-block;
+		@include media-breakpoint-up(xxxl) {
+			margin-left: rem(19);
+		}
 		.icon {
 			font-size: rem(20);
 			color: $body-color;
+		}
+	}
+
+	&__lang {
+		display: inline-block;
+		@include media-breakpoint-up(xxxl) {
+			margin-right: rem(27);
+			margin-left: rem(17);
+		}
+
+		@include md-lg {
+			margin-left: rem(10);
 		}
 	}
 
@@ -66,8 +157,4 @@
 	}
 	@include media-breakpoint-down(xs) {
 	}
-}
-
-.container-fluid {
-	max-width: 1770px;
 }

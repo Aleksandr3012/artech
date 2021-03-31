@@ -11,37 +11,60 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js on"><span></span>
-				</div>
-				<div class="menu-mobile__inner">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
-						</li>
-					</ul>
-					<div class="text-right"></div>
-				</div>
-			</div>
-			<!--  мобильное меню-->
+			<script>
+				//- let screenName = 'main-1920.jpg'
+				let screenName = 'main-1320.jpg'
+				//- let screenName = 'main-1140.jpg'
+				//- let screenName = 'mian-960.jpg'
+				//- let screenName = 'main-720.jpg'
+				//- let screenName = 'main_540.jpg'
+				
+			</script>
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<div class="container-fluid">
-						<div class="row align-items-center">
-							<div class="col-auto"> <a class="top-nav__logo" href="/"><img class="top-nav__logoTopBlock" src="img/svg/logo-top.svg" alt="" role="presentation"/><img src="img/svg/logo-sm.svg" alt=""/></a>
+					<div class="menu-mobile menu-mobile--js d-xxl-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js on"><span></span>
+						</div>
+						<div class="menu-mobile__inner">
+							<div class="menu-mobile__search">
+								<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="search" type="search" placeholder="Поиск по сайту"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="menu-mobile__btn" type="submit">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
 							</div>
-							<div class="col d-none d-lg-block">
+							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+								</li>
+							</ul>
+							<div class="text-right"></div>
+						</div>
+					</div>
+					<!--  мобильное меню-->
+					<div class="container container--fluid">
+						<div class="row align-items-center">
+							<div class="col-auto d-xxl-none order-1 order-md-last">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="top-nav__logoTopBlock d-none d-md-block" src="img/svg/logo-top.svg" alt="" role="presentation"/><img src="img/svg/logo-sm.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-xxl-block order-1">
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
 									</li>
@@ -57,22 +80,20 @@
 									</li>
 								</ul>
 							</div>
-							<div class="col-auto">
-								<div class="top-nav__contactWrap"> <a class="top-nav__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="top-nav__mail" href="mailto:">info@artech.si</a>
+							<div class="col-auto order-1 order-xxl-5 d-none d-md-block"><a class="top-nav__lang" href="#"> <img src="img/svg/lang.svg" alt=""/></a>
+							</div>
+							<div class="col-auto col-md col-xxl-auto order-3">
+								<div class="top-nav__contactWrap"> <a class="top-nav__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="top-nav__mail" href="mailto:"> <span>info@artech.si</span>
+									<svg class="icon icon-mail ">
+										<use xlink:href="img/svg/sprite.svg#mail"></use>
+									</svg></a>
 								</div>
 							</div>
-							<div class="col-auto"> <a class="top-nav__btn btn btn-outline-primary" href="#">Связаться с нами</a>
-							</div>
-							<div class="col-auto"> <a class="top-nav__search link-modal-js" href="#modal-search">
+							<div class="col-auto order-4 d-none d-md-block"><a class="btn btn-outline-primary" href="#">Связаться с нами</a></div>
+							<div class="col-auto d-none d-xxl-block order-4"><a class="top-nav__search link-modal-js" href="#modal-search">
 								<svg class="icon icon-search ">
 									<use xlink:href="img/svg/sprite.svg#search"></use>
 								</svg></a>
-							</div>
-							<div class="col-auto"> <a class="top-nav__lang" href="#"> <img src="img/svg/lang.svg" alt=""/></a>
-							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -80,78 +101,106 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<div class="mb-3"><a class="btn btn-primary" href="#">Подробнее о компании
-								<svg class="icon icon-arrow-r ">
-									<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-								</svg></a>
-			</div>
-			<div class="mb-3"><a class="btn btn-outline-primary" href="#">Связаться с нами</a></div>
-			<div class="mb-3">
-				<div class="soc"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF0000;">
-					<svg class="icon icon-youtube ">
-						<use xlink:href="img/svg/sprite.svg#youtube"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
-					<svg class="icon icon-fb ">
-						<use xlink:href="img/svg/sprite.svg#fb"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
-					<svg class="icon icon-vk ">
-						<use xlink:href="img/svg/sprite.svg#vk"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #E94754;">
-					<svg class="icon icon-instagram ">
-						<use xlink:href="img/svg/sprite.svg#instagram"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
-					<svg class="icon icon-telegram ">
-						<use xlink:href="img/svg/sprite.svg#telegram"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
-					<svg class="icon icon-twitter ">
-						<use xlink:href="img/svg/sprite.svg#twitter"></use>
-					</svg></a>
+			<div class="container-fluid section">
+				<div class="mb-3"><a class="btn btn-primary" href="#">Подробнее о компании
+						<svg class="icon icon-arrow-r ">
+							<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+						</svg></a>
 				</div>
-			</div>
-			<div class="mb-3">
-				<div class="soc light"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF0000;">
-					<svg class="icon icon-youtube ">
-						<use xlink:href="img/svg/sprite.svg#youtube"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
-					<svg class="icon icon-fb ">
-						<use xlink:href="img/svg/sprite.svg#fb"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
-					<svg class="icon icon-vk ">
-						<use xlink:href="img/svg/sprite.svg#vk"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #E94754;">
-					<svg class="icon icon-instagram ">
-						<use xlink:href="img/svg/sprite.svg#instagram"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
-					<svg class="icon icon-telegram ">
-						<use xlink:href="img/svg/sprite.svg#telegram"></use>
-					</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
-					<svg class="icon icon-twitter ">
-						<use xlink:href="img/svg/sprite.svg#twitter"></use>
-					</svg></a>
+				<div class="mb-3"><a class="btn btn-outline-primary" href="#">Связаться с нами</a></div>
+				<div class="mb-3">
+					<div class="soc"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF0000;">
+						<svg class="icon icon-youtube ">
+							<use xlink:href="img/svg/sprite.svg#youtube"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
+						<svg class="icon icon-fb ">
+							<use xlink:href="img/svg/sprite.svg#fb"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
+						<svg class="icon icon-vk ">
+							<use xlink:href="img/svg/sprite.svg#vk"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #E94754;">
+						<svg class="icon icon-instagram ">
+							<use xlink:href="img/svg/sprite.svg#instagram"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
+						<svg class="icon icon-telegram ">
+							<use xlink:href="img/svg/sprite.svg#telegram"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
+						<svg class="icon icon-twitter ">
+							<use xlink:href="img/svg/sprite.svg#twitter"></use>
+						</svg></a>
+					</div>
 				</div>
-			</div>
-			<div class="mb-3">
-				<div class="pagination-wrapper">
-					<ul class="page-numbers">
-								<li><span class="prev page-numbers">
-										<svg class="icon icon-chevron-l ">
-											<use xlink:href="img/svg/sprite.svg#chevron-l"></use>
-										</svg></span>
-								</li>
-								<li><span class="page-numbers current"> 1</span>
-								</li>
-								<li><a class="page-numbers" href="#">2</a>
-								</li>
-								<li><a class="page-numbers" href="#">3</a>
-								</li>
-								<li><a class="page-numbers" href="#">4</a>
-								</li>
-								<li><a class="next page-numbers" href="#">
-										<svg class="icon icon-chevron-r ">
-											<use xlink:href="img/svg/sprite.svg#chevron-r"></use>
-										</svg></a>
-								</li>
-					</ul>
+				<div class="mb-3">
+					<div class="soc light"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF0000;">
+						<svg class="icon icon-youtube ">
+							<use xlink:href="img/svg/sprite.svg#youtube"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
+						<svg class="icon icon-fb ">
+							<use xlink:href="img/svg/sprite.svg#fb"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
+						<svg class="icon icon-vk ">
+							<use xlink:href="img/svg/sprite.svg#vk"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #E94754;">
+						<svg class="icon icon-instagram ">
+							<use xlink:href="img/svg/sprite.svg#instagram"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
+						<svg class="icon icon-telegram ">
+							<use xlink:href="img/svg/sprite.svg#telegram"></use>
+						</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
+						<svg class="icon icon-twitter ">
+							<use xlink:href="img/svg/sprite.svg#twitter"></use>
+						</svg></a>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="pagination-wrapper">
+						<ul class="page-numbers">
+									<li><span class="prev page-numbers">
+											<svg class="icon icon-chevron-l ">
+												<use xlink:href="img/svg/sprite.svg#chevron-l"></use>
+											</svg></span>
+									</li>
+									<li><span class="page-numbers current"> 1</span>
+									</li>
+									<li><a class="page-numbers" href="#">2</a>
+									</li>
+									<li><a class="page-numbers" href="#">3</a>
+									</li>
+									<li><a class="page-numbers" href="#">4</a>
+									</li>
+									<li><a class="next page-numbers" href="#">
+											<svg class="icon icon-chevron-r ">
+												<use xlink:href="img/svg/sprite.svg#chevron-r"></use>
+											</svg></a>
+									</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mb-3"> <a class="link" href="#">Подробнее</a>
+				</div>
+				<div class="mb-3"> 
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оборудование</span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Формирователи гофрокоробов</span>
+									<meta itemprop="position" content="3"/></a></li>
+						</ol>
+					</nav>
+				</div>
+				<div class="mb-3 bg-dark"> 
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb light" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оборудование</span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Формирователи гофрокоробов</span>
+									<meta itemprop="position" content="3"/></a></li>
+						</ol>
+					</nav>
 				</div>
 			</div>
 			<footer class="footer"></footer>
@@ -164,7 +213,6 @@
 						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
 					</div>
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/> 
 					</div>
@@ -179,6 +227,23 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-search" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__wrap">
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="search" placeholder="Начните поиск"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-search-->
 		<!-- end modals-->
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>

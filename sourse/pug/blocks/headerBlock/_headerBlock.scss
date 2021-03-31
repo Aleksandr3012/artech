@@ -1,10 +1,17 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
+	position: relative;
+	z-index: 2;
 	// background-image: url(../img);
 	// background-color: #000000;
+	--sTPB: #{rem(111)};
+
+	.section-title {
+		max-width: rem(930);
+	}
 
 	h1 {
 		margin-bottom: 1px;
@@ -14,42 +21,47 @@
 		margin-bottom: 1px;
 	}
 
-	@include media-breakpoint-up(xl) {}
+	&__decor {
+		position: absolute;
+		z-index: -1;
 
-	@include media-breakpoint-up(lg) {}
+		&--r {
+			right: rem(-173px);
+			top: 0;
+		}
 
-	@include media-breakpoint-up(md) {}
+		&--l {
+			left: rem(-460px);
+			top: 100%;
+		}
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+} // end.headerBlock
 
-	@include media-breakpoint-up(xs) {}
+.scrollBottom {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
 
-	//
-	@include media-breakpoint-between(md, xl) {}
+	&__count {
+		position: relative;
+	}
 
+	.icon {
+		color: $primary;
+		font-size: rem(25);
+	}
 
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
+	&__text {
+		color: $body-color !important;
+		margin-left: rem(15);
+	}
 }
-
-// end.headerBlock

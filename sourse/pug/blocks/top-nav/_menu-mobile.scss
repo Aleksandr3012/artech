@@ -1,13 +1,14 @@
-
-$h: em(2);
+$h: 3px;
 
 .toggle-menu-mobile {
+	cursor: pointer;
 	display: block;
-	height: $h* 12;
+	height: $h * 12;
 	position: relative;
 	color: $primary;
 	font-size: 32px;
-	width: 1em;
+	width: 40px;
+
 	&.on {
 		color: #ffffff;
 	}
@@ -24,16 +25,26 @@ $h: em(2);
 	}
 
 	span:before {
-
-
-		top: $h * 2;
+		top: $h * 2.7;
+		@include media-breakpoint-only(md) {
+			// top: $h * 3;
+		}
+		@include media-breakpoint-only(lg) {
+			top: $h * 3.5;
+		}
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 2.7;
+		@include media-breakpoint-only(md) {
+			// bottom: $h * 3;
+		}
+		@include media-breakpoint-only(lg) {
+			bottom: $h * 3.5;
+		}
 	}
 
-	span { 
+	span {
 		display: block;
 	}
 
@@ -41,13 +52,28 @@ $h: em(2);
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		// width: 1em;
 		height: $h;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
-		border-radius: 6px;
+		// border-radius: 6px;
 		transform-origin: 50% 50%;
+	}
+
+	span {
+		width: 20px;
+		background: $primary;
+	}
+
+	span:after {
+		width: 40px;
+		background: #8c8c8c;
+	}
+
+	span:before {
+		width: 32px;
+		background: #8c8c8c;
 	}
 
 	// &.on {
@@ -60,18 +86,17 @@ $h: em(2);
 
 	&.on span:after,
 	&.on span:before {
-
 		top: 0;
 		bottom: 0;
-		
+		width: rem(30);
 	}
 
 	&.on span:before {
-		transform: rotate3d(0,0,1, 45deg);
+		transform: rotate3d(0, 0, 1, 45deg);
 	}
 
 	&.on span:after {
-		transform: rotate3d(0,0,1, -45deg);
+		transform: rotate3d(0, 0, 1, -45deg);
 	}
 }
 
@@ -84,12 +109,11 @@ $h: em(2);
 	top: 0;
 	// left: 0;
 	right: 0;
-	&:not(.active){
-		transform: translate3d(120%, 0,0);
+	&:not(.active) {
+		transform: translate3d(120%, 0, 0);
 		opacity: 0;
-
 	}
-	@include mt(.6);
+	@include mt(0.6);
 	will-change: transform;
 
 	&__inner {
@@ -101,7 +125,7 @@ $h: em(2);
 		height: 100%;
 	}
 
-	&.active { 
+	&.active {
 		.toggle-menu-mobile {
 			opacity: 1;
 		}
@@ -115,7 +139,7 @@ $h: em(2);
 		opacity: 0;
 		left: 0;
 		right: auto;
-		color: #FFF;
+		color: #fff;
 		top: 10px;
 		z-index: 9999;
 		background-color: transparent;
@@ -123,7 +147,7 @@ $h: em(2);
 		span,
 		span:after,
 		span:before {
-			background-color: #FFF;
+			background-color: #fff;
 		}
 
 		&.on {
@@ -142,14 +166,13 @@ $h: em(2);
 	li {
 		display: block;
 		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		border-top: 1px solid rgba(255, 255, 255, 0.13);
 
 		a {
 			// font-size: 16px;
 
 			padding: 10px;
 			display: block;
-
 		}
 	}
 }
