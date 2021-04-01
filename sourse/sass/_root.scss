@@ -1,19 +1,48 @@
 :root {
 	--animate-delay: 1.2s;
 	--fontSizeBase: #{$em-base};
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(90)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
-	}
-
-	@include md-lg {
+	@media (max-width: 500px) {
 		--fontSizeBase: 16px;
 	}
-
-	--sPT: #{rem(90 / 2)};
+	@include md-xl {
+		--fontSizeBase: 16px;
+	}
+	--sPT: #{rem(18)};
 	--sPB: #{rem(90 / 2)};
 	--sTPB: #{rem(40 / 2)};
+	--h1-font-size: #{rem(55)};
+	--h2-font-size: #{rem(56)};
+	--h3-font-size: #{rem(48)};
+	--h4-font-size: #{rem(32)};
+	--h5-font-size: #{rem(26)};
+	--h6-font-size: #{rem(26)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(40 / 2)};
+		--h1-font-size: #{rem(63)};
+		--h2-font-size: #{rem(63)};
+		--h3-font-size: #{rem(54)};
+		--h4-font-size: #{rem(36)};
+		--h5-font-size: #{rem(29)};
+		--h6-font-size: #{rem(27)};
+	}
+	@include media-breakpoint-up(lg) {
+		--h1-font-size: #{rem(68)};
+		--sPT: #{rem(101)};
+		--sPB: #{rem(101)};
+		--sTPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--sPT: #{rem(90)};
+		--sPB: #{rem(90)};
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+		--h6-font-size: #{$h6-font-size};
+	}
 
 	--swiperArrowSize: #{rem(68)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);

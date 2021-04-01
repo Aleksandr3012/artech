@@ -1,17 +1,24 @@
 .soc {
 	@include roww(15px, m);
 	display: flex;
+	align-items: stretch;
+
 	&__item {
 		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
-		display: grid;
-		place-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		border-radius: 50%;
 		background: #2d393e;
-		padding: rem(12);
+		padding: rem(9);
+		width: 100%;
+		height: 100%;
+		max-width: rem(45);
+		max-height: rem(45);
 
-		&:hover {
+		@include h {
 			background-color: var(--hover-bg);
 		}
 	}
@@ -24,7 +31,7 @@
 		.soc__item {
 			background: #f1f1f1;
 
-			&:hover {
+			@include h {
 				background-color: var(--hover-bg);
 				.icon {
 					color: #fff;
@@ -34,6 +41,18 @@
 
 		.icon {
 			color: #8f9597;
+		}
+	}
+
+	&--sm {
+		@include roww(13px, m);
+		.icon {
+			font-size: rem(15);
+		}
+
+		.soc__item {
+			max-width: rem(36);
+			max-height: rem(36);
 		}
 	}
 }

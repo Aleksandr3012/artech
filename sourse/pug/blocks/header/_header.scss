@@ -1,29 +1,30 @@
+// start .header
+.header {
+	&-inner {
+		background-color: #fff;
+		.top-nav {
+			padding-top: rem(23);
+			padding-bottom: rem(23);
+			@include media-breakpoint-up(xl) {
+				padding-top: rem(17);
+				padding-bottom: rem(17);
+			}
+			@include md-xl {
+				padding-top: rem(24);
+				padding-bottom: rem(24);
+			}
 
-	// start .header
-	.header {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
-
+			&__logoTopBlock {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.header

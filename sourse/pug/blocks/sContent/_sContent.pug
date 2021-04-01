@@ -2,8 +2,124 @@ mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			.row
+			+e.row.row 
+				.col-lg-auto.order-lg-last 
+					+sitebar
+				.col-lg
+					.section__inner
+						p Формовщики гофрокоробов&nbsp;&mdash; упаковочное оборудование, предназначено для формирования четырехклапанного короба в&nbsp;полуавтоматическом режиме, либо автоматическом с&nbsp;проклеиванием его нижних клапанов клейкой лентой типа &laquo;скотч&raquo;. Начиная с&nbsp;1982 года итальянская компания SIAT начала свое производство формовщиков гофрокоробов и&nbsp;в&nbsp;настоящий момент является лидером в&nbsp;данном сегменте оборудования.
+					h2 Заголовок h2
+					.section__inner
+						p При движении гофрокороба вперед передний торцевой клапан гофрокороба упирается в&nbsp;копир и&nbsp;подгибается внутрь коробки. При прохождении гофрокороба по&nbsp;тракту транспортёров, гофрокороб проходит мимо датчика наличия гофрокороба, после чего поступает команда на&nbsp;срабатывание механизмов закрытия продольных клапанов.
+					.pb-2
+					+e.imgWrap
+						+pic('borjomi.jpeg')
+					+e.imgDescr--mb Рис 1. Название
+					h3 H3 Заголовок
+					.section__inner
+						p Продолжая движение далее по&nbsp;тракту, гофрокороб попадает в&nbsp;зону заклейки дна гофрокороба липкой лентой&nbsp;&mdash; скотчем, при этом возникает усилие выталкивания гофрокороба вверх. Для компенсации этого усилия на&nbsp;автомате установлены верхние направляющие 5.
+						p Продолжая движение далее по&nbsp;тракту, гофрокороб попадает в&nbsp;зону заклейки дна гофрокороба липкой лентой&nbsp;&mdash; скотчем, при этом возникает усилие выталкивания гофрокороба вверх. Для компенсации этого усилия на&nbsp;автомате установлены верхние направляющие&nbsp;5.
+					h4 H4 Маркированный список
+					.section__inner
+						ul 
+							li 
+								a(href="#") Промышленный робот Производитель KUKA KR 180 R3200 PA (Германия)
+							li Транспортная система продукта Производитель ООО Форкус
+							li Транспортная система для поддонов Производитель ООО Форкус
+							li 
+								a(href="#") Захватная система Производитель ООО АРТЕХ
+							li 
+								a(href="#") Магазин картонных подложек Производитель ООО АРТЕХ
+							li Автоматический диспенсер пустых поддонов-паллет Производитель ООО АРТЕХ
+							li Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)
+							li 
+								a(href="#") Система управления и безопасности Производитель ООО АРТЕХ 
+					h5 H5 Нумерованный список
+					.section__inner
+						ol 
+							li Транспортная система продукта Производитель ООО Форкус
+							li Транспортная система для поддонов Производитель ООО Форкус
+							li Автоматический диспенсер пустых поддонов-паллет Производитель ООО АРТЕХ
+							li Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)
+			h6 H6 Галерея
+			+e.galeryRow.row 
+				+e.colPB.col-md-6.col-lg-4 
+					+video('content-1.jpg')
+				+e.colPB.col-md-6.col-lg-4 
+					+video('content-2.jpg')
+				+e.colPB.col-md-6.col-lg-4 
+					+video('content-3.jpg')
+				+e.colPB.col-md-6.col-lg-4 
+					+photo('content-4.jpg')
+				+e.colPB.col-md-6.col-lg-4 
+					+photo('content-5.jpg')
+				+e.colPB.col-md-6.col-lg-4 
+					+photo('content-6.jpg')
+			h6 H6 Таблица
+			.section__inner
+				+table
+			br
+			h2 Другие статьи
+			+e.galeryRow.row
+				+e.colPB.col-md-6
+					+article('article-1.jpg')
+				+e.colPB.col-md-6
+					+article('article-2.jpg')
+				+e.colPB.col-md-6.d-none.d-lg-block
+					+article('article-3.jpg')
+				+e.colPB.col-md-6.d-none.d-lg-block
+					+article('article-4.jpg')
+
+
 	// end sContent
+
+mixin article(i, date='10.12.2020', text=`Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации`)
+	+b.article
+		.row
+			+e.col.col-xxl-6
+				+pic(i,'bg')
+			.col
+				+e.wrap
+					+e.date= date 
+					+e.text!= text 
+					div
+						a.btn.btn-primary(href="#") Подробнее
+
+
+mixin table
+	table.table
+		mixin tr(l,r)
+			tr
+				td!= l
+				td!= r
+		+tr('Форм-фактор','Моноблок')
+		+tr('Материал корпуса','Стекло, Алюминий')
+		+tr('Защита корпуса','От влаги и пыли, Водонепроницаемость')
+		+tr('Степень защиты','IP 67')
+		+tr('Операционная система','iOS')
+		+tr('Количество SIM-карт','1')
+		+tr('Тип SIM-карты','Nano-SIM')
+
+mixin photo(i, g='galery')
+	+b.photo(href=`img/@2x/${i}` data-fancybox= g)&attributes(attributes)
+		+pic(i,'','')
+
+mixin video(i, a='https://www.youtube.com/watch?v=kXYiU_JCYtU')
+	+b.video(href= a data-fancybox="video")&attributes(attributes)
+		+pic(i,'','')
+		+e.icon
+
+mixin sitebar 
+	+b.sitebar&attributes(attributes)
+		+e.title Cодержание:
+		ul
+			li
+				+e.link(href="#") Заголовок 1
+			li
+				+e.link(href="#") Заголовок 2
+			li
+				+e.link(href="#") Заголовок 3
+			li
+				+e.link(href="#") Заголовок 4
+		.text-center.text-secondary.fw-600 Поделиться:
+		+soc-sm().light

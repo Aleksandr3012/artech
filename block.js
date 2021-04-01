@@ -21,6 +21,7 @@ const fileSources = {
 			+b.section-title
 				h2 {blockName}
 				
+			.section__inner
 			.row
 	// end {blockName}`,
 	scss: `// start .{blockName}
@@ -29,11 +30,16 @@ const fileSources = {
 	// --sPB: ;
 	// --sTPB: ;
 
-	@include md-lg {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include md-xl {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.{blockName}`
 	,
 	// js: `let {blockName}Vue = new Vue({

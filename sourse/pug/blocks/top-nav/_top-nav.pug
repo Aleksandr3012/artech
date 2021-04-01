@@ -5,9 +5,12 @@ mixin mob-mnu()
 		+e.inner
 			+e.search
 				+input('Поиск по сайту','search')
-				+e.btn(type="submit")
+				+e.btnSearch(type="submit")
 					+icon('search')
 			+mnu()
+			+e.lang.d-md-none(href="#") 
+				img(src="img/svg/lang.svg" alt="")
+				span English
 			.text-right
 	//  мобильное меню
 mixin top-nav() 

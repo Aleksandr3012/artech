@@ -6,14 +6,15 @@ mixin headerBlock()
 				h1 #[span.text-primary Решения и&nbsp;оборудование] для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон
 			+b.scrollBottom.scroll-link(href="#")
 				+e.count 
-					.pieProgress(role='progressbar')
+					img(src="img/svg/progress-demo.svg" alt="")
+					//- .pieProgress(role='progressbar')
 					+icon('arrow-bottom')
 				+e.text Листайте вниз
 
 		+e.decor--r
 			//- img(src="img/@2x/decor.png" alt="" loading="lazy")
 			img(src="img/@2x/decor.png" alt="")
-		+e.decor--l
+		+e.decor--l.d-none.d-lg-block
 			//- img(src="img/@2x/decor.png" alt="" loading="lazy")
 			img(src="img/@2x/decor.png" alt="")
 

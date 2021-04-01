@@ -32,7 +32,7 @@
 								<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="search" type="search" placeholder="Поиск по сайту"/>
 								</div>
 								<!-- +e.input-wrap-->
-								<button class="menu-mobile__btn" type="submit">
+								<button class="menu-mobile__btnSearch" type="submit">
 									<svg class="icon icon-search ">
 										<use xlink:href="img/svg/sprite.svg#search"></use>
 									</svg>
@@ -51,7 +51,7 @@
 								</li>
 								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
 								</li>
-							</ul>
+							</ul><a class="menu-mobile__lang d-md-none" href="#"> <img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 							<div class="text-right"></div>
 						</div>
 					</div>
@@ -101,44 +101,114 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="section-title">
-						<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-					</div><a class="scrollBottom scroll-link" href="#"><span class="scrollBottom__count"> 
-					<div class="pieProgress" role="progressbar"></div>
-					<svg class="icon icon-arrow-bottom ">
-						<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
-					</svg></span><span class="scrollBottom__text">Листайте вниз</span></a>
-				</div>
-				<div class="headerBlock__decor headerBlock__decor--r"><img src="img/@2x/decor.png" alt=""/>
-				</div>
-				<div class="headerBlock__decor headerBlock__decor--l"><img src="img/@2x/decor.png" alt=""/>
-				</div>
-			</div>
-			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+			<main>
+				<!-- start headerBlock-->
+				<div class="headerBlock section" id="headerBlock">
+					<div class="container">
+						<div class="section-title">
+							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
+						</div><a class="scrollBottom scroll-link" href="#"><span class="scrollBottom__count"> <img src="img/svg/progress-demo.svg" alt=""/>
+						<svg class="icon icon-arrow-bottom ">
+							<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
+						</svg></span><span class="scrollBottom__text">Листайте вниз</span></a>
 					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
+					<div class="headerBlock__decor headerBlock__decor--r"><img src="img/@2x/decor.png" alt=""/>
 					</div>
-					<div class="row"></div>
+					<div class="headerBlock__decor headerBlock__decor--l d-none d-lg-block"><img src="img/@2x/decor.png" alt=""/>
+					</div>
 				</div>
-			</section>
-			<!-- end sContact-->
-			<footer class="footer"></footer>
+				<!-- end headerBlock-->
+				<!-- start sAbout-->
+				<section class="sAbout section" id="sAbout">
+					<div class="container">
+						<div class="sAbout__mainRow"> 
+							<div class="col-md-6 col-lg-12">
+								<div class="sAbout__row row">
+									<div class="col-xl-6">
+										<div class="sAbout__wrap">
+											<h3>Решения</h3>
+											<p>Мы&nbsp;спроектировали и&nbsp;отработали в&nbsp;производственных условиях большое количество решений по&nbsp;паллетированию и&nbsp;групповой упаковке бутылей, канистр, коробов, продуктов в&nbsp;мягкой таре, мешков и&nbsp;прочей упаковки. Предлагаем Вам ознакомиться с&nbsp;нашим опытом.</p>
+											<div class="sAbout__roww row align-items-center justify-content-between">
+												<div class="col-auto"><a class="link" href="#">Подробнее</a>
+												</div>
+												<div class="col-auto">
+													<div class="sAbout__count">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6"> 
+										<div class="sAbout__imgWrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
+												<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-12">
+								<div class="sAbout__row row">
+									<div class="col-xl-6">
+										<div class="sAbout__wrap">
+											<h3>Решения</h3>
+											<p>Мы&nbsp;спроектировали и&nbsp;отработали в&nbsp;производственных условиях большое количество решений по&nbsp;паллетированию и&nbsp;групповой упаковке бутылей, канистр, коробов, продуктов в&nbsp;мягкой таре, мешков и&nbsp;прочей упаковки. Предлагаем Вам ознакомиться с&nbsp;нашим опытом.</p>
+											<div class="sAbout__roww row align-items-center justify-content-between">
+												<div class="col-auto"><a class="link" href="#">Подробнее</a>
+												</div>
+												<div class="col-auto">
+													<div class="sAbout__count">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6"> 
+										<div class="sAbout__imgWrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/equipment.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/equipment.webp"/>
+												<source type="image/jpg" srcset="img/@2x/equipment.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/equipment.jpg"/><img src="img/@2x/equipment.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAbout-->
+				<!-- start sForm-->
+				<section class="sForm section" id="sForm">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sForm</h2>
+						</div>
+						<div class="row"></div>
+					</div>
+				</section>
+				<!-- end sForm-->
+				<!-- start sContact-->
+				<section class="sContact section" id="sContact">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sContact</h2>
+						</div>
+						<div class="row"></div>
+					</div>
+				</section>
+				<!-- end sContact-->
+			</main>
+			<footer class="footer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quod ipsa, similique sequi excepturi sint nihil obcaecati possimus, sed beatae omnis architecto aliquid iusto magni reiciendis minus optio dolor harum?
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">

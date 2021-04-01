@@ -15,7 +15,7 @@
 	// background-color: #{rgba(var(--color-link), .5)};
 	padding-top: rem(24);
 	padding-bottom: rem(24);
-	@include md-lg {
+	@include md-xl {
 		padding-top: rem(30);
 		padding-bottom: rem(30);
 	}
@@ -47,6 +47,7 @@
 	}
 
 	&__tel {
+		font-weight: 600;
 		text-decoration: none;
 		color: #263237 !important;
 		@include media-breakpoint-down(md) {
@@ -81,7 +82,7 @@
 	}
 
 	.toggle-menu-mobile {
-		@include md-lg {
+		@include md-xl {
 			margin-left: rem(30);
 		}
 	}
@@ -93,8 +94,9 @@
 			margin-right: rem(15);
 		}
 		@include media-breakpoint-up(xl) {
-			margin-right: rem(27);
+			margin-right: rem(25);
 		}
+
 		@include media-breakpoint-up(xxxl) {
 			margin-right: rem(85);
 		}
@@ -106,16 +108,18 @@
 			}
 		}
 
-		@include media-breakpoint-only(xxl) {
-			width: rem(112px);
+		@include media-breakpoint-down(xxl) {
+			width: rem(100px);
 		}
-		@include md-lg {
+		@include md-xl {
 			width: rem(110);
 		}
-
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
+			margin-left: auto;
+			margin-right: auto;
+			width: auto;
 			img {
-				width: rem(130);
+				width: rem(170);
 			}
 		}
 	}
@@ -144,7 +148,7 @@
 			margin-left: rem(17);
 		}
 
-		@include md-lg {
+		@include md-xl {
 			margin-left: rem(10);
 		}
 	}

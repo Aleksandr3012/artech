@@ -3,7 +3,7 @@ $small: rem(16px);
 $url: "../img/";
 $path2: "@2x/";
 $path1: "@1x/";
-$rfs-breakpoint: 1200px !default;
+$rfs-breakpoint: 1450px !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI",
 	Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -21,7 +21,7 @@ $utilities: (
 				// 25: .25,
 				// 50: .5,
 				// 75: .75,
-				// 100: 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+				// 100: 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 			),
 	),
 );
@@ -96,7 +96,7 @@ $colors: (
 
 // scss-docs-start theme-color-variables
 $primary: #00b2ff !default;
-$secondary: $gray-600 !default;
+$secondary: #8f9597 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -362,7 +362,7 @@ $container-max-widths: (
 	sm: 570px,
 	md: 750px,
 	lg: 990px,
-	xl: 1170px,
+	xl: 1165px,
 	xxl: 1350px,
 ) !default;
 // scss-docs-end container-max-widths
@@ -475,11 +475,11 @@ $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
 $h1-font-size: rem(72) !default;
-$h2-font-size: rem(45) !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h2-font-size: rem(56px) !default;
+$h3-font-size: rem(48px) !default;
+$h4-font-size: rem(32px) !default;
+$h5-font-size: rem(26px) !default;
+$h6-font-size: rem(24px) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -558,8 +558,8 @@ $mark-bg: #fcf8e3 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y: 0.5rem !default;
-$table-cell-padding-x: 0.5rem !default;
+$table-cell-padding-y: 0.45rem !default;
+$table-cell-padding-x: 1.3rem !default;
 $table-cell-padding-y-sm: 0.25rem !default;
 $table-cell-padding-x-sm: 0.25rem !default;
 
@@ -1415,7 +1415,7 @@ $breadcrumb-font-size: null !default;
 $breadcrumb-padding-y: 0 !default;
 $breadcrumb-padding-x: 0 !default;
 $breadcrumb-item-padding-x: 0.5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
+$breadcrumb-margin-bottom: 0.5em !default;
 $breadcrumb-bg: null !default;
 $breadcrumb-divider-color: $gray-600 !default;
 $breadcrumb-active-color: $gray-600 !default;

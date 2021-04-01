@@ -28,7 +28,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/images";
 @import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
-// @import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
 // @import "./node_modules/bootstrap/scss/transitions";
@@ -76,6 +76,16 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 .breadcrumb {
+	padding-top: rem(60);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(45);
+	}
+	@include media-breakpoint-up(xxl) {
+		padding-top: rem(50);
+	}
+	@include media-breakpoint-down(xxl) {
+		margin-bottom: 0.8rem;
+	}
 	a {
 		text-decoration: none;
 		color: $body-color;

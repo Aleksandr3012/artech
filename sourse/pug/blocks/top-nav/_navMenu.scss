@@ -3,7 +3,7 @@
 	@include media-breakpoint-up(xxl) {
 		display: flex;
 		flex-wrap: wrap;
-		@include roww(24px);
+		@include roww(21px);
 	}
 	@include media-breakpoint-up(xxxl) {
 		@include roww(45px);

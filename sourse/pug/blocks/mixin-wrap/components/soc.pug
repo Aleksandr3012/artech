@@ -18,3 +18,14 @@ mixin soc()
 			+item-sos('twitter')(style="--hover-bg: #03A9F4")
 
 //- /social buttons 
+
+mixin soc-sm()
+	+b.soc--sm&attributes(attributes)
+		if block
+			block
+		else
+			+item-sos('fb')(style="--hover-bg: #4267B2")
+			+item-sos('vk')(style="--hover-bg: #4A76A8")
+			+item-sos('telegram')(style="--hover-bg: #139BD0")
+			+item-sos('twitter')(style="--hover-bg: #03A9F4")
+			+item-sos('mail-bg')(style="--hover-bg: #FF5D00")
