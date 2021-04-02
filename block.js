@@ -30,8 +30,6 @@ const fileSources = {
 	// --sPB: ;
 	// --sTPB: ;
 
-	@include md-xl {
-	}
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-between(md, xl) {

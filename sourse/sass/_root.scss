@@ -4,7 +4,7 @@
 	@media (max-width: 500px) {
 		--fontSizeBase: 16px;
 	}
-	@include md-xl {
+	@include media-breakpoint-between(md, xxl) {
 		--fontSizeBase: 16px;
 	}
 	--sPT: #{rem(18)};

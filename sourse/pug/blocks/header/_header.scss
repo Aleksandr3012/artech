@@ -9,7 +9,7 @@
 				padding-top: rem(17);
 				padding-bottom: rem(17);
 			}
-			@include md-xl {
+			@include media-breakpoint-between(md, xxl) {
 				padding-top: rem(24);
 				padding-bottom: rem(24);
 			}
