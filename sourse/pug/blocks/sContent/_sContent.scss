@@ -126,6 +126,11 @@
 	}
 } // end.sContent
 
+p {
+	line-height: 180%;
+	margin-bottom: rem(31);
+}
+
 .table > :not(caption) > * > * {
 	border-bottom-width: 1px;
 }

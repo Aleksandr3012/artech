@@ -3,22 +3,40 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	--h3-font-size: #{rem(45)};
 
 	position: relative;
 	z-index: 2;
+
+	h3 {
+		font-size: calc(var(--h3-font-size) / 1.1);
+		padding-bottom: 2px;
+	}
+
+	p {
+		line-height: calc(32 / 18);
+	}
 
 	&__mainRow {
 	}
 
 	&__col {
+		&:last-child {
+			.sAbout__row {
+				padding-bottom: var(--sPB);
+			}
+		}
 		&:nth-child(even) {
 			.sAbout__row {
 				flex-direction: row-reverse;
 				.sAbout__imgWrap {
-					margin-right: rem(-200);
-					margin-left: rem(-100);
+					margin-right: rem(-323);
+					margin-left: rem(-88);
 				}
+			}
+
+			.sAbout__wrap {
+				margin-left: rem(11);
+				margin-right: rem(-87);
 			}
 		}
 		&:nth-child(odd) {
@@ -27,6 +45,10 @@
 					margin-left: rem(-323);
 					margin-right: rem(-88);
 				}
+			}
+
+			.sAbout__wrap {
+				margin-left: rem(-87);
 			}
 		}
 	}
@@ -44,8 +66,13 @@
 		}
 	}
 
+	&__roww {
+		padding-top: rem(5);
+		margin-top: auto;
+	}
+
 	&__row {
-		padding-bottom: var(--sPB);
+		padding-bottom: calc(var(--sPB) * 3);
 		@include media-breakpoint-up(lg) {
 			@include roww(0);
 		}
@@ -55,14 +82,17 @@
 		color: $primary;
 		font-size: rem(45);
 		font-weight: 600;
+		line-height: 1;
 	}
 
 	&__wrap {
-		padding: rem(80) rem(90);
+		padding: rem(80) rem(100) rem(88) rem(90);
 		background: rgba($color: #fff, $alpha: 0.9);
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		z-index: 5;
-		margin-left: rem(-85);
+		min-height: rem(500);
 	}
 
 	@include media-breakpoint-up(sm) {

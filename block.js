@@ -32,7 +32,7 @@ const fileSources = {
 
 	@include media-breakpoint-up(sm) {
 	}
-	@include media-breakpoint-between(md, xl) {
+	@include media-breakpoint-between(md, xxl) {
 	}
 	@include media-breakpoint-only(xl) {
 	}

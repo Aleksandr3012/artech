@@ -1,0 +1,62 @@
+// start .sAboutText
+.sAboutText {
+	// --sPT: 0;
+	--sPB: #{rem(100)};
+	// --sTPB: ;
+
+	padding-top: calc(var(--sPT) / 1.2);
+
+	h2 {
+		@extend .h1;
+	}
+
+	.section-title {
+		max-width: rem(872);
+	}
+
+	&__numb {
+		font-size: var(--h1-font-size);
+		font-weight: 600;
+		margin-bottom: rem(18);
+	}
+
+	&__row {
+		@include media-breakpoint-up(xxl) {
+			@include roww(20px);
+		}
+	}
+
+	&__roww {
+		@include media-breakpoint-up(xxl) {
+			@include roww(100px);
+		}
+	}
+
+	&__txtWrap {
+		border-bottom: solid 1px #fff;
+		margin-bottom: rem(70);
+	}
+
+	&__txtCol {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__text {
+		padding-top: rem(7);
+		padding-bottom: rem(10);
+		margin-bottom: auto;
+	}
+
+	p {
+		line-height: calc(32 / 18);
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutText
