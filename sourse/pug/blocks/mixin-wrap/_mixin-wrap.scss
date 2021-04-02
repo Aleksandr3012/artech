@@ -15,8 +15,9 @@
 		padding: rem(9);
 		width: 100%;
 		height: 100%;
-		max-width: rem(45);
-		max-height: rem(45);
+		width: rem(45);
+		height: rem(45);
+		flex:  0 0 auto;
 
 		@include h {
 			background-color: var(--hover-bg);

@@ -156,6 +156,24 @@ h6,
 	@include media-breakpoint-up(xxl) {
 		padding-bottom: rem(85);
 	}
+	.form-wrap{
+		padding-top: rem(22);
+		&__btn{
+			width: rem(312);
+		}
+		&__input{
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			padding-left: 0;
+		}
+		&__input,
+		&__btn{
+			padding-top: rem(13);
+			padding-bottom: rem(13);
+		}
+	}
+
 }
 
 .main-overflow {
@@ -554,6 +572,7 @@ iframe {
 	display: inline-flex;
 	align-items: center;
 	font-weight: 600;
+	justify-content: center;
 
 	.icon {
 		font-size: rem(12);
@@ -586,3 +605,12 @@ iframe {
 		}
 	}
 }
+.form-select,
+.form-control,
+.btn{
+	box-shadow: none !important;
+}
+
+.form-check-input[type=checkbox] {
+	background-size: 50%;
+} 

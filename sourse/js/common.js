@@ -314,7 +314,20 @@ function eventHandler() {
 
 	});
 	// modal window
-
+	$(document).on("click", '.sitebar-link:not(.sitebar-link--back)', function(e){
+		e.preventDefault();
+		$(this).slideUp().addClass("active").next().slideDown(function(){
+			$(this).addClass("active")
+		}).parent().siblings().slideUp().addClass("active")
+		$(".sitebar__title").slideUp().addClass("active")
+	})
+	$(document).on("click", '.sitebar-link--back', function(e){
+		e.preventDefault();
+		$(this).parent().slideUp(function(){
+			$(this).removeClass("active")
+		}).prev().slideDown().removeClass("active").parent().siblings().slideDown().removeClass("active")
+		$(".sitebar__title").slideDown().removeClass("active")
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

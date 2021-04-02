@@ -123,6 +123,8 @@ $output-bourbon-deprecation-warnings: false;
 .pagination-wrapper ul {
 	@extend .pagination;
 	@include roww(10px);
+	justify-content: center;
+	padding-top: rem(30);
 }
 
 .pagination-wrapper li .page-numbers {
