@@ -250,6 +250,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	JSCCommon.getCurrentYear('.currentYear');
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -301,6 +302,18 @@ function eventHandler() {
 			// }
 		},
 	}
+
+	const partnerSlider = new Swiper('.footer__slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		loop: false,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		spaceBetween: 60
+
+	});
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,

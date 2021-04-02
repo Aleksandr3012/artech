@@ -40,13 +40,20 @@ a {
 		}
 
 		&__input {
-			font-size: rem(40);
+			font-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(40);
+			}
 			border-left: none;
 			border-right: none;
 			border-top: none;
 			border-bottom-color: #fff;
 			color: #fff;
 			box-shadow: none;
+			padding: 0.3rem 0.5rem;
+			@include media-breakpoint-up(md) {
+				padding: 0.3rem 3rem 0.3rem 0;
+			}
 		}
 
 		&__btn {
@@ -55,6 +62,7 @@ a {
 			@include a-cent(y);
 			right: 0;
 			z-index: 5;
+			padding: 0;
 
 			.icon {
 				color: $primary;

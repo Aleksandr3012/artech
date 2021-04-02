@@ -16,7 +16,7 @@
 		display: block;
 		text-align: center;
 		// padding: rem(3) rem(0);
-		color: $body-color !important;
+		color: $body-color;
 		position: relative;
 		&::before {
 			content: "";
@@ -30,6 +30,7 @@
 		}
 
 		&:hover {
+			color: $body-color;
 			&::before {
 				width: 100%;
 			}
@@ -40,6 +41,20 @@
 		&.active {
 			.navMenu__link::before {
 				width: 100%;
+			}
+		}
+	}
+
+	&.light {
+		.navMenu__link {
+			font-weight: 600;
+			color: #fff;
+			&::before {
+				display: none;
+			}
+
+			&:hover {
+				color: rgba($color: #fff, $alpha: 0.5);
 			}
 		}
 	}
