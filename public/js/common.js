@@ -258,7 +258,8 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.sendForm();
 
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll();
+	JSCCommon.getCurrentYear('.currentYear'); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host; // let screenName;
 	// screenName = document.body.dataset.bg;
@@ -290,6 +291,16 @@ function eventHandler() {
 		},
 		watchOverflow: true
 	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
+	var partnerSlider = new Swiper('.footer__slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		loop: false,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		spaceBetween: 60
+	});
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,

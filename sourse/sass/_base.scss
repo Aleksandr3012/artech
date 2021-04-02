@@ -212,7 +212,9 @@ h6,
 }
 
 .main-overflow {
-	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		overflow: hidden;
+	}
 }
 
 .main-wrapper {
@@ -613,6 +615,13 @@ iframe {
 	.icon {
 		font-size: rem(12);
 		margin-left: rem(10);
+	}
+
+	&-arrow {
+		padding: 0.7rem 1.7rem;
+		@include media-breakpoint-up(xxl) {
+			padding: 0.7rem 2.1rem;
+		}
 	}
 }
 

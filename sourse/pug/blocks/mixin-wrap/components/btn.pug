@@ -3,3 +3,12 @@ mixin btn(name, typ= "a")
 		+e.A.btn(href="#")&attributes(attributes)= name
 	else if typ== "button" || "submit"
 		+e.BUTTON.btn(type= typ)&attributes(attributes)= name
+
+
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary-arrow(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t

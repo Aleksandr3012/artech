@@ -13,12 +13,12 @@
 	<body>
 		<div class="main-wrapper">
 			<script>
-				let screenName = 'main-1920.jpg'
+				//- let screenName = 'main-1920.jpg'
 				//- let screenName = 'main-1320.jpg'
 				//- let screenName = 'main-1140.jpg'
 				//- let screenName = 'mian-960.jpg'
 				//- let screenName = 'main-720.jpg'
-				//- let screenName = 'main_540.jpg'
+				let screenName = 'main_540.jpg'
 				
 			</script>
 			<!-- start header-->
@@ -108,7 +108,7 @@
 					<div class="container">
 						<div class="section-title">
 							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-						</div><a class="scrollBottom scroll-link" href="#"><span class="scrollBottom__count"> <img src="img/svg/progress-demo.svg" alt=""/>
+						</div><a class="scrollBottom scroll-link" href="#"><span class="scrollBottom__count"> <img class="scrollBottom__img" src="img/svg/progress-demo.svg" alt="" role="presentation"/>
 						<svg class="icon icon-arrow-bottom ">
 							<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
 						</svg></span><span class="scrollBottom__text">Листайте вниз</span></a>
@@ -122,10 +122,22 @@
 				<!-- start sAbout-->
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
-						<div class="sAbout__mainRow"> 
+						<div class="sAbout__mainRow row"> 
 							<div class="sAbout__col col-md-6 col-lg-12">
 								<div class="sAbout__row row">
-									<div class="col-xl-6">
+									<div class="col-lg-6 order-lg-last"> 
+										<div class="sAbout__imgWrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
+												<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+									</div>
+									<div class="col-lg-6">
 										<div class="sAbout__wrap">
 											<h3>Решения</h3>
 											<p>Мы&nbsp;спроектировали и&nbsp;отработали в&nbsp;производственных условиях большое количество решений по&nbsp;паллетированию и&nbsp;групповой упаковке бутылей, канистр, коробов, продуктов в&nbsp;мягкой таре, мешков и&nbsp;прочей упаковки. Предлагаем Вам ознакомиться с&nbsp;нашим опытом.</p>
@@ -139,23 +151,23 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-6"> 
-										<div class="sAbout__imgWrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
-												<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
-												<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
-												<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
 								</div>
 							</div>
 							<div class="sAbout__col col-md-6 col-lg-12">
 								<div class="sAbout__row row">
-									<div class="col-xl-6">
+									<div class="col-lg-6 order-lg-last">
+										<div class="sAbout__imgWrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/equipment.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/equipment.webp"/>
+												<source type="image/jpg" srcset="img/@2x/equipment.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/equipment.jpg"/><img src="img/@2x/equipment.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+									</div>
+									<div class="col-lg-6">
 										<div class="sAbout__wrap">
 											<h3>Оборудование</h3>
 											<p>Мы&nbsp;предлагаем оборудование, при котором проектирование, разработка управляющих программ и&nbsp;выбор компоновочных решений будет эффективны на&nbsp;вашем производстве.</p>
@@ -169,18 +181,6 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-6"> 
-										<div class="sAbout__imgWrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/equipment.webp" media="(min-width:576px)"/>
-												<source type="image/webp" srcset="img/@1x/webp/equipment.webp"/>
-												<source type="image/jpg" srcset="img/@2x/equipment.jpg" media="(min-width:576px)"/>
-												<source type="image/jpg" srcset="img/@1x/equipment.jpg"/><img src="img/@2x/equipment.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -189,42 +189,64 @@
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
 				<section class="sAboutText section" id="sAboutText">
+					<div class="sAboutText__decor sAboutText__decor--r"><img src="img/@2x/decor-2.png" alt=""/>
+					</div>
+					<div class="sAboutText__decor sAboutText__decor--l d-none d-xxl-block"><img src="img/@2x/decor-3.png" alt=""/>
+					</div>
 					<div class="container">
 						<div class="sAboutText__row row">
-							<div class="sAboutText__col col-xxl-9"> 
+							<div class="sAboutText__col col-xl-9"> 
 								<div class="sAboutText__txtWrap">
 									<div class="section-title">
 										<h2><span class="text-primary">Компания АРТЕХ</span> - это профессиональный подход в промышленной автоматизации</h2>
 									</div>
-									<div class="d-xxl-none"> 
+									<div class="d-xl-none"> 
 										<p>Специалисты нашей компании работают на&nbsp;рынке робототехники более десяти лет. На&nbsp;наших глазах и&nbsp;нашими руками промышленная роботизация возрождалась в&nbsp;России.</p>
 										<p>Узнайте подробнее о&nbsp;том, почему мы&nbsp;выбрали для себя направление по&nbsp;автоматизации групповой упаковки и&nbsp;укладки, почему мы&nbsp;считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и&nbsp;планы.</p>
 									</div>
 								</div>
 								<div class="sAboutText__roww row"> 
 									<div class="col-md-4">
-										<div class="sAboutText__numb">40
+										<div class="sAboutText__numRow row align-items-center">
+											<div class="col-2 col-md-12">
+												<div class="sAboutText__numb">40
+												</div>
+											</div>
+											<div class="col">
+												<p>Решений установили на&nbsp;базе промышленных роботов для 31&nbsp;компаний</p>
+											</div>
 										</div>
-										<p>Решений установили на&nbsp;базе промышленных роботов для 31&nbsp;компаний</p>
 									</div>
 									<div class="col-md-4">
-										<div class="sAboutText__numb">58
+										<div class="sAboutText__numRow row align-items-center">
+											<div class="col-2 col-md-12">
+												<div class="sAboutText__numb">58
+												</div>
+											</div>
+											<div class="col">
+												<p>Промышленных роботов внедрили для наших клиентов</p>
+											</div>
 										</div>
-										<p>Промышленных роботов внедрили для наших клиентов</p>
 									</div>
 									<div class="col-md-4">
-										<div class="sAboutText__numb">25
+										<div class="sAboutText__numRow row align-items-center">
+											<div class="col-2 col-md-12">
+												<div class="sAboutText__numb">25
+												</div>
+											</div>
+											<div class="col">
+												<p>Профессиональных сотрудников в&nbsp;компании на&nbsp;2020 год</p>
+											</div>
 										</div>
-										<p>Профессиональных сотрудников в&nbsp;компании на&nbsp;2020 год</p>
 									</div>
 								</div>
 							</div>
 							<div class="sAboutText__txtCol col"> 
-								<div class="sAboutText__text d-none d-xxl-block">
+								<div class="sAboutText__text d-none d-xl-block">
 									<p>Специалисты нашей компании работают на&nbsp;рынке робототехники более десяти лет. На&nbsp;наших глазах и&nbsp;нашими руками промышленная роботизация возрождалась в&nbsp;России.</p>
 									<p>Узнайте подробнее о&nbsp;том, почему мы&nbsp;выбрали для себя направление по&nbsp;автоматизации групповой упаковки и&nbsp;укладки, почему мы&nbsp;считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и&nbsp;планы.</p>
 								</div>
-								<div><a class="btn btn-primary" href="#">Подробнее о компании
+								<div><a class="btn btn-primary btn-primary-arrow" href="#">Подробнее о компании
 										<svg class="icon icon-arrow-r ">
 											<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
 										</svg></a>
@@ -235,7 +257,116 @@
 				</section>
 				<!-- end sAboutText-->
 			</main>
-			<footer class="footer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quod ipsa, similique sequi excepturi sint nihil obcaecati possimus, sed beatae omnis architecto aliquid iusto magni reiciendis minus optio dolor harum?
+			<footer class="footer"> 
+				<div class="footer__sliderWrap">
+					<div class="container container--fluid">
+						<div class="footer__slider footer__slider--js swiper-container">
+							<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="footer__partnerTxt">Наши партнеры
+										</div>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-2.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-3.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-4.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-5.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-6.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-7.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-8.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-9.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-10.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-11.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-12.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-13.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-14.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-15.svg" alt="" loading="lazy"/>
+									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-16.svg" alt="" loading="lazy"/>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container container--fluid"> 
+					<div class="footer__topRow row align-items-center">
+						<div class="col col-lg-auto"><a class="footer__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt=""/></a>
+						</div>
+						<div class="col d-none d-lg-block">
+							<ul class="navMenu light" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-auto">
+							<div class="footer__contactWrap"> <a class="footer__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="footer__mail" href="mailto:">info@artech.si</a>
+							</div>
+						</div>
+						<div class="col-md-auto"><a class="btn btn-outline-primary" href="#">Связаться с нами</a></div>
+					</div>
+					<div class="footer__row row align-items-center justify-content-between"> 
+						<div class="col-md-6">
+							<div class="soc"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF0000;">
+								<svg class="icon icon-youtube ">
+									<use xlink:href="img/svg/sprite.svg#youtube"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #E94754;">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
+								<svg class="icon icon-twitter ">
+									<use xlink:href="img/svg/sprite.svg#twitter"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="footer__location">450520, Уфимский район, с. Нижегородка, ул. Заводская 36/1
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center"> 
+						<div class="col-md-auto">
+							<div class="footer__copyright">© ООО «АРТЕХ» <span class="currentYear"></span>
+							</div>
+						</div>
+						<div class="col-md">
+							<div class="footer__linksWrap"> <a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Пользовательское соглашение</a>
+							</div>
+						</div>
+						<div class="col-md-auto"><a class="footer__dev" href="http://artsman.ru/" target="_blank">Создание сайта – <span>Artsman</span></a>
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
 		<!--  start modals-->

@@ -19,6 +19,9 @@
 		padding-top: rem(30);
 		padding-bottom: rem(30);
 	}
+	@include media-breakpoint-down(md) {
+		border-bottom: solid 2px #fff;
+	}
 
 	&.fixed {
 		bottom: auto;
@@ -113,6 +116,9 @@
 		}
 		@include media-breakpoint-between(md, xxl) {
 			width: rem(110);
+		}
+		@include media-breakpoint-only(xxl) {
+			width: rem(115);
 		}
 		@include media-breakpoint-down(md) {
 			margin-left: auto;

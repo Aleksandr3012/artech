@@ -1,2 +1,44 @@
 mixin footer()
-	+b.FOOTER.footer Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quod ipsa, similique sequi excepturi sint nihil obcaecati possimus, sed beatae omnis architecto aliquid iusto magni reiciendis minus optio dolor harum?
+	+b.FOOTER.footer 
+		+e.sliderWrap
+			.container.container--fluid
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i)
+							.swiper-slide
+								if i
+									img(src=`img/svg/partnerLogo-${i}.svg` alt="" loading="lazy")
+								else
+									+e.partnerTxt Наши партнеры
+						+slide()
+						- for (var i = 2; i < 17; i++)
+							+slide(i)
+		.container.container--fluid 
+			+e.topRow.row.align-items-center
+				.col.col-lg-auto
+					+e.logo(href="/")
+						img.res-i(src="img/svg/logo.svg" alt="")
+				.col.d-none.d-lg-block
+					+mnu().light
+				.col-md-auto
+					+e.contactWrap 
+						+e.tel(href="tel:+73472210790") +7 (347) 221-07-90
+						+e.mail(href="mailto:") info@artech.si
+				.col-md-auto
+					a.btn.btn-outline-primary(href="#") Связаться с нами
+			+e.row.row.align-items-center.justify-content-between 
+				.col-md-6
+					+soc()
+				.col-md-6
+					+e.location 450520, Уфимский район, с. Нижегородка, ул. Заводская 36/1
+			.row.align-items-center 
+				.col-md-auto
+					+e.copyright © ООО «АРТЕХ» 
+						span.currentYear
+				.col-md
+					+e.linksWrap 
+						+e.link(href="#") Политика конфиденциальности
+						+e.link(href="#") Пользовательское соглашение
+				.col-md-auto
+					+e.dev(href="http://artsman.ru/" target="_blank") Создание сайта – 
+						span Artsman
