@@ -696,3 +696,30 @@ iframe {
 	font-weight: 600;
 	@include a-cent(x);
 }
+
+.page-bg{
+		@include media-breakpoint-up(lg) {
+
+			padding-top: 20vh;
+			padding-bottom: 20vh;
+		}
+		padding-top: 10vh;
+		padding-bottom: 10vh;
+	picture{
+		&::after{
+			content: '';
+			position: absolute;
+			@include a-cent;
+			background: linear-gradient(0deg, rgba(38, 50, 55, 0.5), rgba(38, 50, 55, 0.5));
+		}
+	}
+	color: #fff;
+	.page-head__date,
+	.breadcrumb a{
+		color: #fff;
+
+	}
+	.breadcrumb-item.active{
+		opacity: 0.5;
+	}
+}
