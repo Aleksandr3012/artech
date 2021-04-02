@@ -3,7 +3,7 @@ mixin sAbout(data)
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
 			+e.mainRow 
-				.col-md-6.col-lg-12
+				+e.col.col-md-6.col-lg-12
 					+e.row.row
 						.col-xl-6
 							+e.wrap
@@ -13,11 +13,11 @@ mixin sAbout(data)
 									.col-auto
 										+link
 									.col-auto
-										+e.count
+										+e.count 01
 						.col-xl-6 
 							+e.imgWrap
 								+pic('borjomi.jpg')
-				.col-md-6.col-lg-12
+				+e.col.col-md-6.col-lg-12
 					+e.row.row
 						.col-xl-6
 							+e.wrap
@@ -27,7 +27,7 @@ mixin sAbout(data)
 									.col-auto
 										+link
 									.col-auto
-										+e.count
+										+e.count 02
 						.col-xl-6 
 							+e.imgWrap
 								+pic('equipment.jpg')

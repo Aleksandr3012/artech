@@ -1,48 +1,40 @@
 // start .sAbout
 .sAbout {
-	--sPT: 0;
+	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	--h3-font-size: #{rem(45)};
 
 	position: relative;
 	z-index: 2;
 
-	&__row {
-		list-style-type: none;
-		counter-reset: item;
-		padding-bottom: var(--sPB);
-		@include media-breakpoint-up(lg) {
-			@include roww(0);
-		}
+	&__mainRow {
+	}
+
+	&__col {
 		&:nth-child(even) {
-			flex-direction: row-reverse;
-			.sAbout__imgWrap {
-				margin-right: rem(-200);
+			.sAbout__row {
+				flex-direction: row-reverse;
+				.sAbout__imgWrap {
+					margin-right: rem(-200);
+					margin-left: rem(-100);
+				}
 			}
 		}
 		&:nth-child(odd) {
-			.sAbout__imgWrap {
-				margin-left: rem(-200);
+			.sAbout__row {
+				.sAbout__imgWrap {
+					margin-left: rem(-323);
+					margin-right: rem(-88);
+				}
 			}
 		}
 	}
 
-	&__count {
-		&::before {
-			content: counter(item);
-			counter-increment: item;
-		}
-	}
-	&__wrap {
-		padding: rem(80) rem(90);
-		background: rgba($color: #fff, $alpha: 0.9);
-		position: relative;
-		z-index: 5;
-	}
 	&__imgWrap {
-		@include block(1074, 662);
-		margin-top: rem(-20);
-		margin-bottom: rem(-20);
+		@include block(1074, 682);
+		margin-top: calc(var(--sPT) * -1);
+		margin-bottom: rem(-110);
 
 		img {
 			width: 100%;
@@ -50,6 +42,27 @@
 			object-fit: cover;
 			@include a-cent;
 		}
+	}
+
+	&__row {
+		padding-bottom: var(--sPB);
+		@include media-breakpoint-up(lg) {
+			@include roww(0);
+		}
+	}
+
+	&__count {
+		color: $primary;
+		font-size: rem(45);
+		font-weight: 600;
+	}
+
+	&__wrap {
+		padding: rem(80) rem(90);
+		background: rgba($color: #fff, $alpha: 0.9);
+		position: relative;
+		z-index: 5;
+		margin-left: rem(-85);
 	}
 
 	@include md-xl {
