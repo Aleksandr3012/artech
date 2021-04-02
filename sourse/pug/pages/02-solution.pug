@@ -1,0 +1,78 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '2. Решения'
+	title= title
+block pagecontent
+	script.
+		let screenName = '02-1920.jpg'
+		//- let screenName = '09_1140.jpg'
+		//- let screenName = '9-960.jpg'
+		//- let screenName = '9-720.jpg'
+		//- let screenName = '9-540.jpg'
+
+	//- +mob-mnu()
+	+header().header-inner
+		+top-nav()
+		.container 
+			+breadcrumb('Главная','Решения')
+		+page-head 
+			h1 Решения
+			+form-wrap
+				.row
+					.col
+						+input('Поиск по всем решениям')
+					+e.col-btn.col-auto
+						+e.btn.btn.btn-primary(type="submit") 
+							+icon("search")
+							span Найти
+	+b.main-block.section
+		.container
+			+e.row.row 
+				.col-lg-auto.order-lg-last 
+					+filter()
+				+e.col-main.col-lg
+					- for (var x = 0; x < 6; x++)
+						+e.colPB.col-12
+							+article('article-1.jpg','Укладка на поддон','Роботизированный комплекс по укладке групповых упаковок с йогуртом в термоусадочной пленке на поддон').article--lg
+					+pugin
+		+sContent
+			h2 Решения для групповой упаковки и&nbsp;укладки на&nbsp;поддон
+			p Специалисты нашей компании работают на&nbsp;рынке робототехники более десяти лет. На&nbsp;наших глазах и&nbsp;нашими руками промышленная роботизация возрождалась в&nbsp;России.
+
+			p Узнайте подробнее о&nbsp;том, почему мы&nbsp;выбрали для себя направление по&nbsp;автоматизации групповой упаковки и&nbsp;укладки, почему мы&nbsp;считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и&nbsp;планы.
+			
+	//- .container.section
+	//- 	.mb-3
+	//- 		+btn-primary
+	//- 	.mb-3
+	//- 		a.btn.btn-outline-primary(href="#") Связаться с нами
+	//- 	.mb-3
+	//- 		+soc()
+	//- 	.mb-3
+	//- 		+soc().light
+	//- 	.mb-3
+	//- 		+pugin
+	//- 	.mb-3 
+	//- 		+link()
+	//- 	.mb-3 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов')
+	//- 	.mb-3.bg-dark 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов').light
+	+footer()
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t
+

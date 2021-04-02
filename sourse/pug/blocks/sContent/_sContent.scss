@@ -1,6 +1,10 @@
+
 // start .sContent
 .sContent {
 	padding-bottom: calc(var(--sPB) / 1.3);
+	h2{
+		max-width: rem(1100)
+	}
 	&__row {
 		@include roww(90px);
 		margin-bottom: rem(5);
@@ -11,9 +15,7 @@
 		margin-bottom: rem(30);
 	}
 
-	.sitebar {
-		min-width: 312px;
-	}
+	
 
 	p {
 		line-height: 180%;
@@ -202,81 +204,24 @@ p {
 	}
 }
 
-.sitebar {
-	position: sticky;
-	top: rem(10);
-	left: 0;
-	background: #ffffff;
-	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-	padding-bottom: rem(29);
-	margin-bottom: rem(21);
-	@include media-breakpoint-up(md) {
-		padding-bottom: rem(40);
-		margin-bottom: rem(24);
-	}
-	@include media-breakpoint-up(lg) {
-		padding-bottom: rem(29);
-		margin-bottom: rem(49);
-	}
 
-	.soc {
-		justify-content: center;
-		margin-top: rem(10);
-	}
-
-	ul {
-		list-style: none;
-		margin-bottom: rem(25);
-
-		li {
-			border-top: solid 1px #f1f1f1;
-			border-bottom: solid 1px #f1f1f1;
-			margin-top: -1px;
-			padding: 0;
-			&::before {
-				display: none;
-			}
-
-			a {
-				border: none;
-				margin: 0;
-			}
-		}
-	}
-
-	&__title {
-		color: $secondary;
-	}
-	&__title,
-	&__link {
-		padding: rem(20) rem(24);
-		@include media-breakpoint-up(md) {
-			padding: rem(24.5) rem(24);
-		}
-		@include media-breakpoint-up(xxl) {
-			padding: rem(23) rem(24);
-		}
-		font-weight: 600;
-	}
-	&__link {
-		text-decoration: none;
-		display: block;
-		color: $body-color !important;
-	}
-}
 
 .article {
 	background-color: #fff;
 
 	.row {
-		@include roww(48px);
+		// @include roww(48px);
+			@include media-breakpoint-up(md){
+				--bs-gutter-x: 48px;
+			}
 	}
 
 	&__col {
 		@include media-breakpoint-up(xxl) {
-			width: 51.5% !important;
+			width: 51.5% ;
 		}
 	}
+
 
 	picture {
 		@include block(540, 360);
@@ -296,6 +241,28 @@ p {
 			height: 100%;
 			object-fit: cover;
 			@include a-cent;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+
+		&--lg &__col{
+			width: auto;
+			
+			picture{
+				width: rem(312);
+				@include block;
+			}
+		}
+		
+		&--lg &__text{
+			min-height: em(140);
+		}
+	 
+
+		&--lg{
+			.article__wrap{
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -340,3 +307,5 @@ p {
 		}
 	}
 }
+
+

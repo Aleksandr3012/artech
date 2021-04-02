@@ -1,0 +1,137 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= ' 3. Типовая страница решения'
+	title= title
+block pagecontent
+	script.
+		//- let screenName = '03-1920.jpg'
+		let screenName = '09_1140.jpg'
+		//- let screenName = '9-960.jpg'
+		//- let screenName = '9-720.jpg'
+		//- let screenName = '9-540.jpg'
+
+	//- +mob-mnu()
+	+header().header-inner
+		+top-nav()
+		.container 
+			+breadcrumb('Главная','Решения',`Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон`)
+		+page-head 
+			h1 Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон
+		
+	+b.main-block.section
+		.container
+			+e.row.row 
+				.col-lg-auto.order-lg-last 
+					+sitebar().text-lg-center
+						
+							+e.group
+								.row.justify-content-center.align-items-center
+									.col-lg-12.col-auto
+										+pic("logo-sol.png",'',0).mb-2
+									.col-lg-12.col-auto
+										.text-secondary.fw-600 Заказчик:
+										.fw-600 ООО АКВА СТАР для IDS <br class="d-none d-lg-block">  Borjomi Russia
+							+e.group 
+								.row.row--lg
+									.col-lg-12.col
+										.text-secondary.fw-600 Тип проекта:
+									.col
+										.fw-600 Укладка на поддон
+								.row.row--lg
+									.col-lg-12.col
+										.text-secondary.fw-600 Что укладываем:
+									.col
+										.fw-600 Бутыли
+							+e.group.text-lg-center
+								.text-center
+									a.btn.btn-primary.w-100.mb-3(href="#") Отправить запрос
+								.row.justify-content-center.align-items-center
+										.col-lg-12.col-auto
+											.text-secondary.fw-600 Поделиться:
+										.col-lg-12.col-auto
+											+soc-sm().light.pb-1
+				+e.col-main.col-lg
+					+b.sContent.section.pt-0
+						h4 Цель проекта
+						.section__inner
+							p Увеличение производительности линии за счет сокращения времени простоя основного оборудования, сокращение ФОТ.
+						h4 Основные операции
+						.section__inner
+							p Автоматическая подача паллет в зону укладки бутылей, укладка роботом листа картона на поддон, укладка бутылей на поддон, укладка верхнего ПВХ листа, обмотка поддона стретч-пленкой. 
+						h4 Описание проекта
+						.section__inner
+							p Роботизированный комплекс укладки упаковок бутилированной воды в термоусадочной пленке на паллеты с дальнейшей упаковкой в стретч-пленку. 
+
+							p #[strong Транспорт паллет.] Из автоматического магазина паллеты подаются последовательно в зону укладки, на обмотку и на выходной рольганг. 
+
+							p #[strong Транспорт продукта.] Бутыли из термоусадочной машины поступают на буферный накопительный транспортер, далее в зав м исимости от схемы укладки бутыли подаются на пикпоинт в прямом или развернутом виде, где подготавливаются для захвата роботом.
+
+							p #[strong Захват.] Захват робота универсальный: позволяет укладывать картонные подложки и ряды бутылей по 4 или 8 упаковок на поддон. 
+
+							p #[strong Обмотка.] В зависимости от программы предусмотрена укладка верхнего ПВХ листа, обмотка поддона или трансфер без обмотки.
+						h4 Результат по итогам реализации
+						.section__inner
+							p Внедрение линии позволило увеличить производительность основного оборудования за счет сокращения времени простоев, уменьшить количество обслуживающего персонала, добиться целевой производительности в 1300 упаковок в час, 13000 литров в час.
+			+e.row-md.row
+				mixin slider(t,i)
+					.col-md-6
+						h4= t
+						+b.gal-block
+							+e.slider--js.swiper-container
+								.swiper-wrapper
+									- for (var x = 0; x < 3; x++)
+										+e.slide.swiper-slide.bg-wrap(href="#" data-fancybox="gal")
+											+pic(i,'bg').picture-bg
+							.swiper-pagination
+							+arrow()
+				+slider(`Моделирование`,`gal-1.png`)
+				+slider(`Реализация`,`gal-2.png`)
+			.sContent.section
+				+e.row.row  
+					+e.col-main.col-lg
+						h4 Оборудование в проекте
+						.section__inner
+							ul 
+								li: a(href="#")  Промышленный робот Производитель KUKA KR 180 R3200 PA (Германия)
+								li Транспортная система продукта Производитель ООО Форкус
+								li Транспортная система для поддонов Производитель ООО Форкус
+								lii: a(href="#")  Захватная система Производитель ООО АРТЕХ
+								lii: a(href="#")  Магазин картонных подложек Производитель ООО АРТЕХ
+								li Автоматический диспенсер пустых поддонов-паллет Производитель ООО АРТЕХ
+								li Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)
+								lii: a(href="#")  Система управления и безопасности Производитель ООО АРТЕХ
+	//- .container.section
+	//- 	.mb-3
+	//- 		+btn-primary
+	//- 	.mb-3
+	//- 		a.btn.btn-outline-primary(href="#") Связаться с нами
+	//- 	.mb-3
+	//- 		+soc()
+	//- 	.mb-3
+	//- 		+soc().light
+	//- 	.mb-3
+	//- 		+pugin
+	//- 	.mb-3 
+	//- 		+link()
+	//- 	.mb-3 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов')
+	//- 	.mb-3.bg-dark 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов').light
+	+footer()
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t
+

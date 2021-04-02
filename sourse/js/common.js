@@ -289,18 +289,15 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+		
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// 	// renderBullet: function (index, className) {
+		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// 	// }
+		// },
 	}
 
 	const partnerSlider = new Swiper('.footer__slider--js', {
@@ -327,10 +324,43 @@ function eventHandler() {
 
 	});
 	// modal window
+	$(document).on("click", '.sitebar-link:not(.sitebar-link--back)', function(e){
+		e.preventDefault();
+		$(this).slideUp().addClass("active").next().slideDown(function(){
+			$(this).addClass("active")
+		}).parent().siblings().slideUp().addClass("active")
+		$(".sitebar__title").slideUp().addClass("active")
+	})
+	$(document).on("click", '.sitebar-link--back', function(e){
+		e.preventDefault();
+		$(this).parent().slideUp(function(){
+			$(this).removeClass("active")
+		}).prev().slideDown().removeClass("active").parent().siblings().slideDown().removeClass("active")
+		$(".sitebar__title").slideDown().removeClass("active")
+	})
 
-};
-if (document.readyState !== 'loading') {
-	eventHandler();
+	let galBlock= document.querySelectorAll(".gal-block");
+	galBlock.forEach(function(el){
+
+		const swiper5 = new Swiper(el.querySelector('.gal-block__slider--js'), {
+			// slidesPerView: 5,
+			...defaultSl,
+			slidesPerView: 1, 
+			pagination: {
+				el: el.querySelector('.swiper-pagination'),
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev'),
+			},
+		});
+	})
+		
+		
+	};
+	if (document.readyState !== 'loading') {
+		eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }

@@ -1,0 +1,82 @@
+// start .sEquipments
+.sEquipments {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	.sitebar{
+		width: 100%;
+	}
+	.row{
+		--bs-gutter-x: 24px;
+	}
+	&__item{
+		min-height: calc(100% - var(--bs-gutter-x));
+		margin-bottom: var(--bs-gutter-x);
+		background-color: #fff;
+		picture{
+			background: #D4D4D4;
+			@include media-breakpoint-up(lg) {
+			--ratio:1;
+			}
+			@include block(540, 400);
+			img{
+				@include a-cent;
+				max-width: 90%;
+				max-height: 90%;
+			}
+			
+		}
+	}
+	&__caption{
+		padding: rem(17) rem(24) rem(24);
+		position: relative;
+		top: 0;
+		@include media-breakpoint-up(lg) {
+			// padding-bottom: 0;
+		}
+		background-color: #fff;
+		@include mt;
+		position: relative;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@include mt;
+		// transform: scaleY(0);
+		margin-top: var(--bth-sp);
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			opacity: 0;
+			transform: scaleY(0);
+			transform-origin: left top;
+			 
+			overflow: hidden; 
+			// bottom: 0;
+		}
+	}
+	--bth-sp: #{rem(15)};
+	@include media-breakpoint-up(lg) {
+		--bth-sp: #{rem(25)};
+		--bth-y: #{rem(45)};
+		&__item:hover &__caption{
+		top: calc(-1*(var(--bth-y) + var(--bth-sp)));
+		
+	}
+	&__title{
+		margin-bottom: -10px;
+	}
+	&__item:hover &__btn{
+		opacity: 1; 
+		transform: scaleY(1);
+	}
+}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sEquipments
