@@ -1,4 +1,7 @@
 .sitebar {
+	@include media-breakpoint-up(lg) {
+	width: var(--sidebar-size);
+	}
 	position: sticky;
 	top: rem(10);
 	left: 0;
@@ -12,7 +15,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 		// padding-bottom: rem(29);
-		margin-bottom: rem(49);
+		margin-bottom: rem(119);
 	}
 
 	.soc {
@@ -70,19 +73,50 @@
 	}
 	&__title,
 	&__link {
+			border-top: solid 1px #f1f1f1;
+			border-bottom: solid 1px #f1f1f1;
+			margin-top: -1px;
 		padding: rem(20) rem(24);
+		@include media-breakpoint-up(md) {
+			padding: rem(30) rem(24);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(30) rem(24);
+		}
+	}
+	&__link {
+		text-decoration: none;
+		display: block;
+		color: $body-color !important;
+	}
+	.btn{
+		max-width: 264px;
+		padding: rem(14.5);
+	}
+	&__group{
+		border-top: solid 1px #f1f1f1;
+			border-bottom: solid 1px #f1f1f1;
+			margin-top: -1px;
+			padding: rem(20) rem(24);
 		@include media-breakpoint-up(md) {
 			padding: rem(24.5) rem(24);
 		}
 		@include media-breakpoint-up(xxl) {
 			padding: rem(23) rem(24);
 		}
-		font-weight: 600;
-	}
-	&__link {
-		text-decoration: none;
-		display: block;
-		color: $body-color !important;
+		.row--lg{
+			// --bs-gutter-x: 96px;
+				@include media-breakpoint-up(lg) {
+					padding-left: 0;
+					padding-right: 0;
+				}
+				
+				@include media-breakpoint-up(sm) {
+					padding-left: rem(20);
+					padding-right: rem(20);
+				}
+
+			}
 	}
 }
 

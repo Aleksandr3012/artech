@@ -7,7 +7,7 @@ mixin sContent()
 			else
 				+e.row.row 
 					.col-lg-auto.order-lg-last 
-						+sitebar
+						+sitebar("Cодержание:")
 					.col-lg
 						.section__inner
 							p Формовщики гофрокоробов&nbsp;&mdash; упаковочное оборудование, предназначено для формирования четырехклапанного короба в&nbsp;полуавтоматическом режиме, либо автоматическом с&nbsp;проклеиванием его нижних клапанов клейкой лентой типа &laquo;скотч&raquo;. Начиная с&nbsp;1982 года итальянская компания SIAT начала свое производство формовщиков гофрокоробов и&nbsp;в&nbsp;настоящий момент является лидером в&nbsp;данном сегменте оборудования.
@@ -112,9 +112,10 @@ mixin video(i, a='https://www.youtube.com/watch?v=kXYiU_JCYtU')
 		+pic(i,'','')
 		+e.icon
 
-mixin sitebar(t="Cодержание:")
+mixin sitebar(t)
 	+b.sitebar&attributes(attributes)
-		+e.title= t
+		if t
+			+e.title= t
 		if block 
 			block 
 		else

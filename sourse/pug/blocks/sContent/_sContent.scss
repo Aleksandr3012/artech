@@ -1,22 +1,4 @@
-.main-block{ 
-	&__colPB{
-			padding-bottom: 18px;
-		@include media-breakpoint-up(md) {
-			padding-bottom: 24px;
-		}
-	}
-	&__row {
-		// @include roww(90px);
-		@include media-breakpoint-up(xl) {
-		--bs-gutter-x: #{rem(90)};
-		}
-		margin-bottom: rem(5);
-	}
-	// padding-bottom: calc(var(--sPB) / 1.3);
-}
-.sitebar {
-		min-width: 312px;
-	}
+
 // start .sContent
 .sContent {
 	padding-bottom: calc(var(--sPB) / 1.3);
