@@ -272,15 +272,17 @@ p {
 			}
 		}
 		
-}
-&--lg &__text{
-	min-height: em(140);
-}
-&--lg{
+		&--lg &__text{
+			min-height: em(140);
+		}
+	 
+
+		&--lg{
 			.article__wrap{
 				padding-left: 0;
 			}
 		}
+	}
 
 	&__wrap {
 		display: flex;
