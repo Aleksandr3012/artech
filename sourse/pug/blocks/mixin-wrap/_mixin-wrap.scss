@@ -14,9 +14,9 @@
 		background: #2d393e;
 		padding: rem(9);
 		width: 100%;
-		height: 100%;
+		// height: 100%;
 		max-width: rem(45);
-		max-height: rem(45);
+		height: rem(45);
 
 		@include h {
 			background-color: var(--hover-bg);
@@ -52,7 +52,7 @@
 
 		.soc__item {
 			max-width: rem(36);
-			max-height: rem(36);
+			height: rem(36);
 		}
 	}
 }
