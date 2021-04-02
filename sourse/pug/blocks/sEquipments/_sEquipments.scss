@@ -3,6 +3,9 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	.sitebar{
+		width: 100%;
+	}
 	.row{
 		--bs-gutter-x: 24px;
 	}
@@ -26,8 +29,10 @@
 	}
 	&__caption{
 		padding: rem(17) rem(24) rem(24);
+		position: relative;
+		top: 0;
 		@include media-breakpoint-up(lg) {
-			padding-bottom: 0;
+			// padding-bottom: 0;
 		}
 		background-color: #fff;
 		@include mt;
@@ -40,14 +45,13 @@
 		// transform: scaleY(0);
 		margin-top: var(--bth-sp);
 		@include media-breakpoint-up(lg) {
-
+			position: absolute;
 			opacity: 0;
-			height: 0px;
-			margin-top: 0;
-			overflow: hidden;
-			padding-top: 0;
-			padding-bottom: 0;
-			// border-width: 0;
+			transform: scaleY(0);
+			transform-origin: left top;
+			 
+			overflow: hidden; 
+			// bottom: 0;
 		}
 	}
 	--bth-sp: #{rem(15)};
@@ -55,17 +59,14 @@
 		--bth-sp: #{rem(25)};
 		--bth-y: #{rem(45)};
 		&__item:hover &__caption{
-		margin-top: calc(-1*(var(--bth-y) + var(--bth-sp)));
+		top: calc(-1*(var(--bth-y) + var(--bth-sp)));
 		
 	}
 	&__title{
 		margin-bottom: -10px;
 	}
 	&__item:hover &__btn{
-		opacity: 1;
-		margin-top:  var(--bth-sp);
-		
-		height: var(--bth-y);
+		opacity: 1; 
 		transform: scaleY(1);
 	}
 }

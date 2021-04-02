@@ -45,7 +45,7 @@
 			}
 
 			a {
-				border: none !important;
+				border-bottom: none !important;
 				margin: 0;
 			}
 			
@@ -126,6 +126,20 @@
 		color: $body-color !important;
 	display: block;
 	padding: rem(20) rem(24);
+	&--cat{
+		border-left: 2px solid transparent;
+		line-height: (21 / 18);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&:not(.active) {
+			color: #8F9597 !important;
+
+		}
+	}
+	&.active{
+		border-color: $primary;
+	}
 	&--back{
 			color: #8F9597 !important;
 			padding-left: rem(58) !important;

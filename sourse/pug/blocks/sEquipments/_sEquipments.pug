@@ -1,4 +1,10 @@
-//- mixin eq-item()
+mixin eq-item(t='Транспортные системы')
+	+e.item 
+		+pic('eq.png','',0)
+		+e.caption 
+			+e.title.fw-600= t
+			+e.btn(href="#") Подробнее
+
 mixin sEquipments(data)
 	// start sEquipments
 	+b.SECTION.sEquipments.section.pt-0&attributes(attributes)
@@ -6,11 +12,41 @@ mixin sEquipments(data)
 			.row
 				- for (var x = 0; x < 7; x++)
 					+e.col.col-xl-3.col-lg-4.col-sm-6
-						+e.item 
-							+pic('eq.png','',0)
-							+e.caption 
-								+e.title.fw-600 Транспортные системы
-								+e.btn(href="#") Подробнее
+						+eq-item
 					// /+e.col.col-xl-3.col-lg-4
 				
+	// end sEquipments
+mixin sEquipments5(data)
+	// start sEquipments
+	+b.SECTION.sEquipments.section.pt-0&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+sitebar()
+						ul
+							li
+								+b.sitebar-link--cat.active(href="#") Формирователи гофрокоробов
+									+e.count 12
+							li
+								+b.sitebar-link--cat(href="#") Транспортные системы
+									+e.count 12
+							li
+								+b.sitebar-link--cat(href="#") Маркировка
+									+e.count 12
+							li
+								+b.sitebar-link--cat(href="#") Захваты
+									+e.count 12
+							li
+								+b.sitebar-link--cat(href="#") Обмотчики
+									+e.count 12
+							li
+								+b.sitebar-link--cat(href="#") Диспенсеры пленки
+									+e.count 12
+				.col
+					.row
+						- for (var x = 0; x < 7; x++)
+							+e.col.col-lg-4.col-sm-6
+								+eq-item(`Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)`)
+							// /+e.col.col-xl-3.col-lg-4
+					
 	// end sEquipments
