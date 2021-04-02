@@ -3,7 +3,7 @@
 .sContent {
 	padding-bottom: calc(var(--sPB) / 1.3);
 	h2{
-		max-width: rem(1000)
+		max-width: rem(1100)
 	}
 	&__row {
 		@include roww(90px);

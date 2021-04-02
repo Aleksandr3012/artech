@@ -158,8 +158,43 @@ h6,
 	}
 	.form-wrap{
 		padding-top: rem(22);
+		
+		@include media-breakpoint-up(xl) {
+		--btn-w: #{rem(312)};
+		}
+		
+		@include media-breakpoint-up(md) {
+			--btn-w: #{rem(292)};
+		}
+		.row{
+			position: relative;
+		}
+		&__col-btn{
+			@include media-breakpoint-down(md) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			}
+		}
 		&__btn{
-			width: rem(312);
+			width: var(--btn-w);
+			@include media-breakpoint-down(md) {
+					padding: 0;
+					width: auto;
+					background: none !important;
+					border: none;
+					height: rem(60);
+					span{
+						display: none ;
+					}
+			}
+			.icon{
+				@include media-breakpoint-up(md) {
+				display: none;
+				}
+				font-size: 20px;
+				color: $primary;
+			}
 		}
 		&__input{
 			border-left: none;

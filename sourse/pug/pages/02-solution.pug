@@ -30,9 +30,10 @@ block pagecontent
 				.row
 					.col
 						+input('Поиск по всем решениям')
-					.col-auto
-						+e.btn.btn.btn-primary(type="submit") Найти
-	
+					+e.col-btn.col-auto
+						+e.btn.btn.btn-primary(type="submit") 
+							+icon("search")
+							span Найти
 	+b.main-block.section
 		.container
 			+e.row.row 

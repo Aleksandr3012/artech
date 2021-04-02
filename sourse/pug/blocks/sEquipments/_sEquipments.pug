@@ -1,0 +1,16 @@
+//- mixin eq-item()
+mixin sEquipments(data)
+	// start sEquipments
+	+b.SECTION.sEquipments.section.pt-0&attributes(attributes)
+		.container
+			.row
+				- for (var x = 0; x < 7; x++)
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+e.item 
+							+pic('eq.png','',0)
+							+e.caption 
+								+e.title.fw-600 Транспортные системы
+								+e.btn(href="#") Подробнее
+					// /+e.col.col-xl-3.col-lg-4
+				
+	// end sEquipments

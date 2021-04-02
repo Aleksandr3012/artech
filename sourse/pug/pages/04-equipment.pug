@@ -3,13 +3,14 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sEquipments/_sEquipments.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= '2. Решения'
+	- let  title= '4. Оборудование'
 	title= title
 block pagecontent
 	script.
@@ -23,31 +24,25 @@ block pagecontent
 	+header().header-inner
 		+top-nav()
 		.container 
-			+breadcrumb('Главная','Решения')
+			+breadcrumb('Главная','Оборудование')
 		+page-head 
-			h1 Решения
+			h1 Оборудование
 			+form-wrap
 				.row
 					.col
-						+input('Поиск по всем решениям')
-					.col-auto
-						+e.btn.btn.btn-primary(type="submit") Найти
+						+input('Поиск по оборудованию')
+					+e.col-btn.col-auto
+						+e.btn.btn.btn-primary(type="submit") 
+							+icon("search")
+							span Найти
 	
 	+b.main-block.section
-		.container
-			+e.row.row 
-				.col-lg-auto.order-lg-last 
-					+filter()
-				+e.col-main.col-lg
-					- for (var x = 0; x < 6; x++)
-						+e.colPB.col-12
-							+article('article-1.jpg','Укладка на поддон','Роботизированный комплекс по укладке групповых упаковок с йогуртом в термоусадочной пленке на поддон').article--lg
-					+pugin
+		+sEquipments
 		+sContent
-			h2 Решения для групповой упаковки и&nbsp;укладки на&nbsp;поддон
-			p Специалисты нашей компании работают на&nbsp;рынке робототехники более десяти лет. На&nbsp;наших глазах и&nbsp;нашими руками промышленная роботизация возрождалась в&nbsp;России.
+			h2 Оборудование для групповой упаковки и&nbsp;укладки на&nbsp;поддон
+			p Специалисты нашей компании работают на рынке робототехники более десяти лет. На наших глазах и нашими руками промышленная роботизация возрождалась в России.
 
-			p Узнайте подробнее о&nbsp;том, почему мы&nbsp;выбрали для себя направление по&nbsp;автоматизации групповой упаковки и&nbsp;укладки, почему мы&nbsp;считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и&nbsp;планы.
+			p Узнайте подробнее о том, почему мы выбрали для себя направление по автоматизации групповой упаковки и укладки, почему мы считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и планы.
 			
 	//- .container.section
 	//- 	.mb-3
