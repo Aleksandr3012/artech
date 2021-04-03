@@ -8,13 +8,16 @@
 	}
 
 	&__partnerTxt {
-		display: inline-flex;
 		align-items: center;
 		position: relative;
 		z-index: 15;
 		height: 90px;
 		// margin-bottom: -90px;
 		padding-right: rem(15);
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: inline-flex;
+		}
 		@include media-breakpoint-up(xxl) {
 			height: 120px;
 			// margin-bottom: -120px;
@@ -37,7 +40,9 @@
 		padding-left: rem(20);
 		align-items: center;
 		min-height: 90px;
-		margin-top: -90px;
+		@include media-breakpoint-up(md) {
+			margin-top: -90px;
+		}
 		@include media-breakpoint-up(xxl) {
 			margin-top: -120px;
 			min-height: 120px;
@@ -59,6 +64,7 @@
 	&__sliderWrap {
 		background: #2d393e;
 		overflow: hidden;
+		text-align: left;
 	}
 
 	&__slider {
