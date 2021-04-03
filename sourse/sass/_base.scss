@@ -643,11 +643,12 @@ iframe {
 		height: 2px;
 		background-color: $primary;
 		@include mt;
+		transform-origin: left;
 	}
 
 	&:hover {
 		&::before {
-			width: 0;
+			transform: scale(0, 1);
 		}
 	}
 }

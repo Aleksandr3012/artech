@@ -303,12 +303,16 @@ function eventHandler() {
 	var partnerSlider = new Swiper('.footer__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		loop: false,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
+		loop: true,
+		autoplay: true,
+		disableOnInteraction: true,
 		spaceBetween: 60
+	});
+	$(".footer__slider--js").mouseenter(function () {
+		partnerSlider.autoplay.stop();
+	});
+	$(".footer__slider--js").mouseleave(function () {
+		partnerSlider.autoplay.start();
 	});
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',

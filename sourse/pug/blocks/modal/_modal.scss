@@ -24,6 +24,18 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	.fancybox-button {
+		padding: 0;
+		svg {
+			@include mt;
+		}
+		&:hover {
+			svg {
+				color: $primary;
+			}
+		}
+	}
 }
 
 a {
@@ -31,6 +43,7 @@ a {
 }
 
 #modal-search {
+	padding: 0;
 	width: calc(100vw - 6px);
 	height: calc(100vh - 12px);
 	background: rgba($color: #263237, $alpha: 0.9);

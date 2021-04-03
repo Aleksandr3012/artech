@@ -244,6 +244,7 @@ $h: 3px;
 	.navMenu {
 		padding-bottom: rem(10);
 		&__link {
+			font-weight: 600;
 			position: relative;
 			z-index: 2;
 			text-align: left;
@@ -279,6 +280,7 @@ $h: 3px;
 			&.active,
 			&:hover {
 				.navMenu__link {
+					color: $primary;
 					&::after {
 						opacity: 1;
 					}

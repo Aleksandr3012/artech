@@ -2,14 +2,13 @@ mixin footer()
 	+b.FOOTER.footer 
 		+e.sliderWrap
 			.container.container--fluid
+				+e.partnerTxt Наши партнеры
 				+e.slider--js.swiper-container
 					.swiper-wrapper
 						mixin slide(i)
 							.swiper-slide
-								if i
-									img(src=`img/svg/partnerLogo-${i}.svg` alt="" loading="lazy")
-								else
-									+e.partnerTxt Наши партнеры
+								img(src=`img/svg/partnerLogo-${i}.svg` alt="" loading="lazy")
+
 						+slide()
 						- for (var i = 2; i < 16; i++)
 							+slide(i)

@@ -80,6 +80,10 @@
 			margin-bottom: rem(40);
 		}
 	}
+
+	.form-check-input:checked[type="checkbox"] {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.808.585l-.393-.393A.651.651 0 0010.95 0a.651.651 0 00-.464.192L4.964 5.715 1.513 2.264a.652.652 0 00-.464-.192.652.652 0 00-.464.192l-.393.393A.652.652 0 000 3.12c0 .176.068.34.192.464l3.896 3.896a.15.15 0 00.017.02l.393.387a.648.648 0 00.465.185h.002c.176 0 .341-.062.464-.185l.394-.39.015-.017 5.97-5.97a.655.655 0 000-.926z' fill='#263237'/%3E%3C/svg%3E");
+	}
 	@include media-breakpoint-up(xs) {
 	}
 	@include media-breakpoint-between(md, xl) {
@@ -93,6 +97,16 @@
 .form-wrap {
 	&__poline {
 		font-size: 14px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.custom-input__text {
+		a {
+			text-decoration: none;
+		}
 	}
 }
 

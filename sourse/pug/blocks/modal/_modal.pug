@@ -12,10 +12,11 @@ mixin modal()
 
 	+b.modal-win(id="modal-search" class=" " style="display: none" )
 		+form-wrap
-			+e.wrap
-				+input("Начните поиск",'search')(required)  
-				+e.BUTTON.btn.btn(type="submit")
-					+icon('search')
+			.container
+				+e.wrap
+					+input("Начните поиск",'search')(required)  
+					+e.BUTTON.btn.btn(type="submit")
+						+icon('search')
 
 	+b.modal-win(id="modal-thanks" class=" " style="display: none" )
 		+form-wrap
