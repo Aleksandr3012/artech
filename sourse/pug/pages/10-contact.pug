@@ -1,0 +1,86 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sEquipments/_sEquipments.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sTimeLine/_sTimeLine.pug
+include ../blocks/sLogos/_sLogos.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '10. Контакты'
+	title= title
+block pagecontent
+	script.
+		let screenName = '02-1920.jpg'
+		//- let screenName = '09_1140.jpg'
+		//- let screenName = '9-960.jpg'
+		//- let screenName = '9-720.jpg'
+		//- let screenName = '9-540.jpg'
+
+	//- +mob-mnu()
+	+header().header-inner
+		+top-nav() 
+		.container 
+			+breadcrumb('Главная','Контакты')
+		+page-head 
+			h1 Контакты
+	+b.main-block.section
+		.container
+			+e.row.row 
+				+e.col-main.col-lg
+					+b.contact-block.section__inner.mb-lg-0.pt-3
+						.row
+							+e.col.col-6: +e.item
+								+e.title Компания
+								p ООО «АРТЕХ»
+								a.btn.btn-outline-primary(href="#")  Карточка партнера
+							+e.col.col-6: +e.item
+								+e.title Адрес:
+								p 450520, Уфимский район, с. Нижегородка, ул&nbsp;Заводская 36/1
+							+e.col.col-6: +e.item
+								+e.title E-mail:
+								p
+									a.text-body.tdn(href="mailto:info@artech.si") info@artech.si 
+							+e.col.col-6: +e.item
+								+e.title Телефон:
+								p
+									a.text-body.tdn(href="tel:+7(347)221-07-90") +7 (347) 221-07-90
+				.col-lg-auto
+					+sitebar()
+						+e.map-block
+							+pic('map.png','bg',0)
+							+icon("map")
+						+e.group.text-center.border-0
+							a.btn.btn-primary.w-100(href="#") Отправить запрос
+	//- .container.section
+	//- 	.mb-3
+	//- 		+btn-primary
+	//- 	.mb-3
+	//- 		a.btn.btn-outline-primary(href="#") Связаться с нами
+	//- 	.mb-3
+	//- 		+soc()
+	//- 	.mb-3
+	//- 		+soc().light
+	//- 	.mb-3
+	//- 		+pugin
+	//- 	.mb-3 
+	//- 		+link()
+	//- 	.mb-3 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов')
+	//- 	.mb-3.bg-dark 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов').light
+	+footer()
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t
+

@@ -7,5 +7,6 @@
 1. <https://Aleksandr3012.github.io/artech/public/06-equipment-page-one.html>
 1. <https://Aleksandr3012.github.io/artech/public/07-about.html>
 1. <https://Aleksandr3012.github.io/artech/public/09-content.html>
-1. <https://Aleksandr3012.github.io/artech/public/12-search.html>
-2. <https://Aleksandr3012.github.io/artech/public/13-search-empy.html>
+2. <https://Aleksandr3012.github.io/artech/public/10-contact.html>
+3. <https://Aleksandr3012.github.io/artech/public/12-search.html>
+4. <https://Aleksandr3012.github.io/artech/public/13-search-empy.html>

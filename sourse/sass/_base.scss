@@ -760,3 +760,26 @@ iframe {
 		opacity: 0.5;
 	}
 }
+
+.contact-block{
+	font-weight: 600;
+	// padding-bottom: 0;
+	&__title{
+		color: $secondary;
+		margin-bottom: rem(8);
+	}
+	p{
+		margin-bottom: reM(16);
+	}
+	&__col:nth-child(1) &__item,
+	&__col:nth-child(2) &__item{
+		border-bottom: 1px solid #F1F1F1;
+
+		padding-bottom: rem(48);
+	}
+	&__item{
+		height: 100%;	
+	
+		padding-top: rem(40);
+	}
+}
