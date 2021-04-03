@@ -34,6 +34,7 @@ a {
 	width: calc(100vw - 6px);
 	height: calc(100vh - 12px);
 	background: rgba($color: #263237, $alpha: 0.9);
+	max-width: calc(100vw - 30px);
 
 	form,
 	.form-wrap {

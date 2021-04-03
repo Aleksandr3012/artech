@@ -86,6 +86,7 @@
 	display: flex;
 	align-items: center;
 	text-decoration: none;
+	// transition: none;
 
 	&__count {
 		position: relative;
@@ -105,9 +106,25 @@
 		}
 	}
 
-	&__img {
-		@include media-breakpoint-between(md, xxl) {
-			width: rem(60);
+	&__svg {
+		width: rem(60);
+		// transform: rotate(-90deg);
+		// @include mt;
+	}
+
+	&__value {
+		stroke-dasharray: 254.469;
+		stroke-dashoffset: 254.469;
+		@include mt(1s);
+	}
+
+	&:hover {
+		.scrollBottom__svg {
+			// transform: rotate(-90deg);
+		}
+		.scrollBottom__value {
+			stroke-dasharray: 339.292;
+			stroke-dashoffset: 0;
 		}
 	}
 }

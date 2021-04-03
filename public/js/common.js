@@ -236,7 +236,7 @@ var JSCCommon = {
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
 				scrollTop: destination
-			}, 1100);
+			}, 0);
 			return false;
 		});
 	},
@@ -249,7 +249,7 @@ var JSCCommon = {
 		var file = $(".add-file input[type=file]");
 		file.change(function () {
 			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
+			var name = $(".add-file__btn span ");
 			name.text(filename);
 		});
 	}
