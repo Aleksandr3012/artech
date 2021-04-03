@@ -228,7 +228,7 @@ const JSCCommon = {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
-			$('html, body').animate({ scrollTop: destination }, 1100);
+			$('html, body').animate({ scrollTop: destination }, 0);
 
 			return false;
 		});
@@ -243,7 +243,7 @@ const JSCCommon = {
 		var file = $(".add-file input[type=file]");
 		file.change(function () {
 			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
+			var name = $(".add-file__btn span ");
 			name.text(filename);
 
 		});
