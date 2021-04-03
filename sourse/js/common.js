@@ -27,12 +27,12 @@ const JSCCommon = {
 					// ZOOM: "Zoom"
 				},
 			},
-			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
-			},
-			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
-			},
+			// beforeLoad: function () {
+			// 	document.querySelector("html").classList.add("fixed")
+			// },
+			// afterClose: function () {
+			// 	document.querySelector("html").classList.remove("fixed")
+			// },
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -367,6 +367,31 @@ function eventHandler() {
 			},
 		});
 	})
+	const swiper6 = new Swiper('.sTimeLine__slider--js', {
+			// slidesPerView: 5,
+			...defaultSl,
+			slidesPerView: 1, 
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderCustom: function (swiper, current, total) {
+				var names = [];
+				$("..sTimeLine .swiper-slide").each(function (i) {
+					names.push($(this).data("name"));
+				});
+				var text = "<ul>";
+				for (let i = 1; i <= total; i++) {
+					if (current == i) {
+						text += `<li class="swiper-pagination-bullet active">${names[i]}</li>`;
+					} else {
+						text += `<li class="swiper-pagination-bullet">${names[i]}</li>`;
+					}
+				}
+				text += "</ul>";
+				return text;
+			}
+		}
+		}); 
 		
 		
 	};

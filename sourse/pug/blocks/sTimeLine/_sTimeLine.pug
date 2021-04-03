@@ -1,10 +1,18 @@
 mixin sTimeLine(data)
 	// start sTimeLine
-	+b.SECTION.sTimeLine.section#sTimeLine&attributes(attributes)
-		.container
-			+b.section-title
-				h2 sTimeLine
-				
-			.section__inner
-			.row
+	+b.sTimeLine&attributes(attributes)
+		.swiper-pagination
+		+e.slider--js.swiper-container 
+			.swiper-wrapper
+				mixin slide(y) 
+					+e.slide.swiper-slide(data-year= y)
+						+e.item.border
+							.container 
+								.row= y
+				+slide(`1999`)
+				+slide(`2007`)
+				+slide(`2016`)
+				+slide(`2017`)
+				+slide(`2018`)
+				+slide(`2019`)
 	// end sTimeLine

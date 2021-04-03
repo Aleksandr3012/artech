@@ -30,13 +30,13 @@ var JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
-			},
-			beforeLoad: function beforeLoad() {
-				document.querySelector("html").classList.add("fixed");
-			},
-			afterClose: function afterClose() {
-				document.querySelector("html").classList.remove("fixed");
-			}
+			} // beforeLoad: function () {
+			// 	document.querySelector("html").classList.add("fixed")
+			// },
+			// afterClose: function () {
+			// 	document.querySelector("html").classList.remove("fixed")
+			// },
+
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -347,6 +347,31 @@ function eventHandler() {
 			}
 		}));
 	});
+	var swiper6 = new Swiper('.sTimeLine__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderCustom: function renderCustom(swiper, current, total) {
+				var names = [];
+				$("..sTimeLine .swiper-slide").each(function (i) {
+					names.push($(this).data("name"));
+				});
+				var text = "<ul>";
+
+				for (var i = 1; i <= total; i++) {
+					if (current == i) {
+						text += "<li class=\"swiper-pagination-bullet active\">".concat(names[i], "</li>");
+					} else {
+						text += "<li class=\"swiper-pagination-bullet\">".concat(names[i], "</li>");
+					}
+				}
+
+				text += "</ul>";
+				return text;
+			}
+		}
+	}));
 }
 
 ;
