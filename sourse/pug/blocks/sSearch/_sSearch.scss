@@ -1,0 +1,30 @@
+// start .sSearch
+.sSearch {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	&__item{
+		background-color: #fff;
+		padding: rem(18) rem(24);
+		margin-bottom: 12px;
+		.breadcrumb{
+			padding-top: rem(10);
+			margin-bottom: 0;
+		}
+	}	
+	&__title{
+		color: $body-color 	!important;
+		text-decoration: none !important;
+		font-weight: 600;
+
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSearch

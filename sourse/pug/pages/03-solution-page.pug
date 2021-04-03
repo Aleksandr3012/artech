@@ -89,8 +89,10 @@ block pagecontent
 							+e.slider--js.swiper-container
 								.swiper-wrapper
 									- for (var x = 0; x < 3; x++)
-										+e.slide.swiper-slide.bg-wrap(href="#" data-fancybox="gal")
+										+e.slide.swiper-slide.bg-wrap(href=`img/@2x/${i}` data-fancybox="gal")
 											+pic(i,'bg').picture-bg
+											+e.zoom
+												
 							.swiper-pagination
 							+arrow()
 				+slider(`Моделирование`,`gal-1.png`)

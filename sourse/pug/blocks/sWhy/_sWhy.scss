@@ -1,0 +1,38 @@
+// start .sWhy
+.sWhy {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	.row{
+		--bs-gutter-x: 24px;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+			@include media-breakpoint-up(md) {
+				min-height: rem(260);
+			}
+			min-height: 190px;
+		height: calc(100% - var(--bs-gutter-x) );
+		margin-bottom: var(--bs-gutter-x);
+		padding: rem(20) rem(48);
+		p{
+			margin-bottom: 0;
+		}
+	}
+	&__icon-wrap{
+		width: rem(90);
+		flex: 0 0 auto;
+		margin-right: rem(48);
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sWhy

@@ -1,0 +1,15 @@
+// start .sTimeLine
+.sTimeLine {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTimeLine

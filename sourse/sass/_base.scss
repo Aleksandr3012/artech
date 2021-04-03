@@ -145,6 +145,9 @@ h6,
 }
 
 .page-head {
+	p{
+		padding-top: 1em;
+	}
 	&__date {
 		color: #8f9597;
 	}
@@ -695,6 +698,31 @@ iframe {
 	margin-bottom: rem(50);
 	&__slide{
 		@include block(630, 470);
+	}
+	&--full &__slide{
+		@include block(1920, 800);
+		min-height: 480px;
+	}
+	&__zoom{
+		width: rem(60);
+		height: rem(60);
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include mt;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.91683 19.832H7.0835V26.9154H14.1668V24.082H9.91683V19.832ZM7.0835 14.1654H9.91683V9.91537H14.1668V7.08203H7.0835V14.1654ZM24.0835 24.082H19.8335V26.9154H26.9168V19.832H24.0835V24.082ZM19.8335 7.08203V9.91537H24.0835V14.1654H26.9168V7.08203H19.8335Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-position: center center;
+		background-size: 34px;
+		background-color: #263237;
+		background-repeat: no-repeat;
+		&:hover{
+			background-color: rgba($color: #263237, $alpha: .5);
+		}
+
 	}
 }
 
