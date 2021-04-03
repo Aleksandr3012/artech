@@ -3,13 +3,10 @@ mixin modal()
 	//  start modals
 
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
-		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			+polite()
+		+sForm('modal')
+			h3 Разработаем решение<br> 
+				span.text-primary под ваши задачи
+			p.mw Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: #[a(href="tel:+73472210790") +7 (347) 221-07-90]
 	// #modal-call
 
 
@@ -19,5 +16,12 @@ mixin modal()
 				+input("Начните поиск",'search')(required)  
 				+e.BUTTON.btn.btn(type="submit")
 					+icon('search')
+
+	+b.modal-win(id="modal-thanks" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				h3 Спасибо за обращение!
+				p Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, как только получим вашу заявку.
+				+e.BUTTON.btn.btn.btn-primary(type="button") Закрыть
 	// #modal-search
 	// end modals

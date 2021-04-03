@@ -237,7 +237,17 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
+	},
+
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+
+		});
+	},
 };
 const $ = jQuery;
 
@@ -251,6 +261,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.getCurrentYear('.currentYear');
+	JSCCommon.CustomInputFile();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;

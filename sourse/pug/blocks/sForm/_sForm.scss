@@ -1,29 +1,113 @@
+// start .sForm
+.sForm {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(10)};
+	}
+	p {
+		a {
+			text-decoration: none;
+			color: $body-color !important;
+			font-weight: 600;
+			display: inline-block;
+		}
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+		&.mw {
+			max-width: rem(569);
+		}
+	}
+	.form-wrap {
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include roww(60px);
+			}
+		}
 
+		&__input {
+			padding-bottom: rem(10);
+		}
+
+		&__input-wrap {
+			padding-bottom: rem(43);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(63);
+			}
+		}
+	}
+
+	.section__inner {
+		@include media-breakpoint-up(xxl) {
+			padding: rem(80) rem(89);
+		}
+		@include media-breakpoint-down(xxl) {
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
+	}
+
+	textarea {
+		min-height: rem(160);
+		background-image: repeating-linear-gradient(
+			0deg,
+			#fff 0,
+			#fff #{rem(52px)},
+			#dedede #{rem(52px)},
+			#dedede #{rem(54px)},
+			#fff #{rem(54px)},
+			#fff #{rem(108px)},
+			#dedede #{rem(108px)},
+			#dedede #{rem(110px)},
+			#fff #{rem(110px)},
+			#fff #{rem(162px)},
+			#fff #{rem(162px)}
+		);
+		margin-bottom: rem(10);
+		// border-bottom: none;
+		&:focus,
+		&:active {
+			line-height: 3;
+		}
+	}
+
+	.btn-primary {
+		display: flex;
+		@include media-breakpoint-up(md) {
+			max-width: rem(430);
+		}
+	}
+
+	.add-file {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(40);
+		}
+	}
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sForm
+
+.form-wrap {
+	&__poline {
+		font-size: 14px;
+	}
+}
+
+.add-file {
+	&__input {
+		@extend .invisible;
+	}
+
+	&__btn {
+		cursor: pointer;
+		display: block;
+	}
+	.icon {
+		color: $primary;
+		font-size: rem(24);
+		margin-right: rem(13);
+	}
+}

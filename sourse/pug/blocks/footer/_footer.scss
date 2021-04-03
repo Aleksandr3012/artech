@@ -16,11 +16,13 @@
 
 	.swiper-slide {
 		width: auto;
-		filter: saturate(0) grayscale(1) contrast(0.1);
-		@include mt;
+		img {
+			filter: saturate(0) grayscale(1) contrast(0.1);
+			@include mt;
 
-		&:hover {
-			filter: none;
+			&:hover {
+				filter: none;
+			}
 		}
 	}
 

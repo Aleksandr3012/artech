@@ -1,9 +1,51 @@
-mixin sForm()
+mixin sForm(modal)
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+	if modal 
+		+b.sForm--modal#sForm&attributes(attributes)
+			.container
+				if block
+					block
+				else
+					h3 Задать вопрос
+					p Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: #[a(href="tel:+73472210790") +7 (347) 221-07-90]
+				+form-wrap
+					.row
+						.col-lg-6 
+							+input('Ваше имя')(required)
+							+input('Телефон или e-mail')(required)
+						.col-lg-6 
+							+input('Ваше сообщение','textarea')(required)
+						.col-lg-6.order-lg-last
+							+add-file
+						.col-lg-6
+							+polite
+					.row
+						.col-lg-6
+						.col-lg-6
+							+btn-primary('Отправить')
+	else
+		+b.SECTION.sForm#sForm&attributes(attributes)
+			.section
+				.container
+					.section__inner
+						if block
+							block
+						else
+							h3 Задать вопрос
+							p Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: #[a(href="tel:+73472210790") +7 (347) 221-07-90]
+						+form-wrap
+							.row
+								.col-lg-6 
+									+input('Ваше имя')(required)
+									+input('Телефон или e-mail')(required)
+								.col-lg-6 
+									+input('Ваше сообщение','textarea')(required)
+								.col-lg-6.order-lg-last
+									+add-file
+								.col-lg-6
+									+polite
+							.row
+								.col-lg-6
+								.col-lg-6
+									+btn-primary('Отправить')
 	// end sForm

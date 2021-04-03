@@ -1,9 +1,8 @@
-
 // start .sContent
 .sContent {
 	padding-bottom: calc(var(--sPB) / 1.3);
-	h2{
-		max-width: rem(1100)
+	h2 {
+		max-width: rem(1100);
 	}
 	&__row {
 		@include roww(90px);
@@ -14,8 +13,6 @@
 		@include roww(24px);
 		margin-bottom: rem(30);
 	}
-
-	
 
 	p {
 		line-height: 180%;
@@ -118,6 +115,10 @@
 		}
 	}
 
+	.pagination-wrapper li:before {
+		display: none;
+	}
+
 	@include media-breakpoint-up(xs) {
 	}
 	@include media-breakpoint-between(md, xl) {
@@ -204,24 +205,21 @@ p {
 	}
 }
 
-
-
 .article {
 	background-color: #fff;
 
 	.row {
 		// @include roww(48px);
-			@include media-breakpoint-up(md){
-				--bs-gutter-x: 48px;
-			}
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: 48px;
+		}
 	}
 
 	&__col {
 		@include media-breakpoint-up(xxl) {
-			width: 51.5% ;
+			width: 51.5%;
 		}
 	}
-
 
 	picture {
 		@include block(540, 360);
@@ -244,23 +242,21 @@ p {
 		}
 	}
 	@include media-breakpoint-up(lg) {
-
-		&--lg &__col{
+		&--lg &__col {
 			width: auto;
-			
-			picture{
+
+			picture {
 				width: rem(312);
 				@include block;
 			}
 		}
-		
-		&--lg &__text{
+
+		&--lg &__text {
 			min-height: em(140);
 		}
-	 
 
-		&--lg{
-			.article__wrap{
+		&--lg {
+			.article__wrap {
 				padding-left: 0;
 			}
 		}
@@ -307,5 +303,3 @@ p {
 		}
 	}
 }
-
-
