@@ -257,7 +257,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
+	var _defaultSl, _Swiper;
 
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
@@ -299,17 +299,15 @@ function eventHandler() {
 		},
 		watchOverflow: true
 	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
-	var partnerSlider = new Swiper('.footer__slider--js', {
+	var partnerSlider = new Swiper('.footer__slider--js', (_Swiper = {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loop: true,
-		autoplay: {
-			delay: 0
-		},
-		disableOnInteraction: true,
-		spaceBetween: 60,
-		speed: 1800
-	});
+		autoplay: true
+	}, _defineProperty(_Swiper, "autoplay", {
+		delay: 0,
+		disableOnInteraction: false
+	}), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "spaceBetween", 60), _defineProperty(_Swiper, "speed", 1800), _Swiper));
 	$(".footer__slider--js").mouseenter(function () {
 		partnerSlider.autoplay.stop();
 	});
