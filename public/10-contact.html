@@ -25,8 +25,6 @@
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="menu-mobile menu-mobile--js d-xxl-none">
-						<div class="toggle-menu-mobile toggle-menu-mobile--js on"><span></span>
-						</div>
 						<div class="menu-mobile__inner">
 							<div class="container">
 								<div class="menu-mobile__contacts d-md-none text-center"> <a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
@@ -230,40 +228,25 @@
 			<footer class="footer"> 
 				<div class="footer__sliderWrap">
 					<div class="container container--fluid">
+						<div class="footer__partnerTxt">Наши партнеры
+						</div>
 						<div class="footer__slider footer__slider--js swiper-container">
 							<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="footer__partnerTxt">Наши партнеры
-										</div>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-2.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-3.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-4.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-5.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-6.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-7.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-8.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-9.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-10.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-11.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-12.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-13.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-14.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="swiper-slide"><img src="img/svg/partnerLogo-15.svg" alt="" loading="lazy"/>
-									</div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-undefined.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-2.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-3.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-4.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-5.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-6.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-7.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-8.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-9.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-10.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-11.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-12.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-13.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-14.svg" alt="" loading="lazy"/></div>
+									<div class="swiper-slide"><img src="img/svg/partnerLogo-15.svg" alt="" loading="lazy"/></div>
 							</div>
 						</div>
 					</div>
@@ -394,15 +377,17 @@
 		<div class="modal-win" id="modal-search" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<div class="form-wrap__wrap">
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="search" placeholder="Начните поиск"/> 
+					<div class="container">
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="search" placeholder="Начните поиск"/> 
+							</div>
+							<!-- +e.input-wrap-->
+							<button class="form-wrap__btn btn" type="submit">
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
 						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit">
-							<svg class="icon icon-search ">
-								<use xlink:href="img/svg/sprite.svg#search"></use>
-							</svg>
-						</button>
 					</div>
 				</form>
 			</div>

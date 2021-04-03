@@ -1,12 +1,12 @@
 mixin sTimeLine(data)
 	// start sTimeLine
 	+b.sTimeLine&attributes(attributes)
-		.swiper-pagination
+		.swiper-pagination.swiper-pagination--year
 		+e.slider--js.swiper-container 
 			.swiper-wrapper
 				mixin slide(y) 
 					+e.slide.swiper-slide(data-year= y)
-						+e.item.border
+						+e.item.border.p-3
 							.container 
 								.row= y
 				+slide(`1999`)

@@ -18,6 +18,16 @@
 				margin-bottom: 0;
 			}
 		}
+
+		.menu-mobile {
+			top: 89px;
+			@include media-breakpoint-up(md) {
+				top: 127px;
+			}
+			@include media-breakpoint-up(xl) {
+				top: 127px;
+			}
+		}
 	}
 	@include media-breakpoint-up(xs) {
 	}

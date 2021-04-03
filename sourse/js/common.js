@@ -314,14 +314,19 @@ function eventHandler() {
 	const partnerSlider = new Swiper('.footer__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		loop: false,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
+		loop: true,
+		autoplay: true,
+    disableOnInteraction: true,
 		spaceBetween: 60
-
 	});
+
+	$(".footer__slider--js").mouseenter(function() {
+    partnerSlider.autoplay.stop();
+  });
+
+  $(".footer__slider--js").mouseleave(function() {
+    partnerSlider.autoplay.start();
+  });
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
@@ -367,28 +372,20 @@ function eventHandler() {
 			},
 		});
 	})
+
+	var names = [];
+	$(".sTimeLine .swiper-slide").each(function (i) {
+		names.push($(this).data("year"));
+	});
 	const swiper6 = new Swiper('.sTimeLine__slider--js', {
 			// slidesPerView: 5,
 			...defaultSl,
 			slidesPerView: 1, 
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.sTimeLine .swiper-pagination',
 			clickable: true,
-			renderCustom: function (swiper, current, total) {
-				var names = [];
-				$("..sTimeLine .swiper-slide").each(function (i) {
-					names.push($(this).data("name"));
-				});
-				var text = "<ul>";
-				for (let i = 1; i <= total; i++) {
-					if (current == i) {
-						text += `<li class="swiper-pagination-bullet active">${names[i]}</li>`;
-					} else {
-						text += `<li class="swiper-pagination-bullet">${names[i]}</li>`;
-					}
-				}
-				text += "</ul>";
-				return text;
+			renderBullet: function (index, className) {
+				return '<span class=" btn-year ' + className + '">' + (names[index]) + '</span>';
 			}
 		}
 		}); 
