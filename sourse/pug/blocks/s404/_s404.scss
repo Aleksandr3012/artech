@@ -1,0 +1,63 @@
+// start .s404
+.s404 {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	padding-bottom: calc(var(--sPB) * 1.1);
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	position: relative;
+
+	&__btn {
+		position: relative;
+		z-index: 10;
+		margin-top: auto;
+	}
+
+	h1,
+	p {
+		position: relative;
+		z-index: 10;
+	}
+
+	p {
+		@include media-breakpoint-down(md) {
+			max-width: rem(540);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__img {
+		@include a-cent1();
+		left: 45%;
+		// margin-right: 10px;
+		bottom: 0;
+
+		img {
+			max-width: 500px;
+			@include media-breakpoint-up(sm) {
+				max-width: 700px;
+			}
+			@include media-breakpoint-up(md) {
+				max-width: 950px;
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: none;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.s404

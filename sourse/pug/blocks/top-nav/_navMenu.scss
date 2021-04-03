@@ -31,14 +31,12 @@
 
 		&:hover {
 			color: $body-color;
-			&::before {
-				width: 100%;
-			}
 		}
 	}
 
 	&__item {
-		&.active {
+		&.active,
+		&:hover {
 			.navMenu__link::before {
 				width: 100%;
 			}
@@ -53,7 +51,8 @@
 				display: none;
 			}
 
-			&:hover {
+			&:hover,
+			&.active {
 				color: rgba($color: #fff, $alpha: 0.5);
 			}
 		}

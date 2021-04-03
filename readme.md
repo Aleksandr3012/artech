@@ -9,5 +9,6 @@
 1. <https://Aleksandr3012.github.io/artech/public/08-articles.html>
 1. <https://Aleksandr3012.github.io/artech/public/09-content.html>
 1. <https://Aleksandr3012.github.io/artech/public/10-contact.html>
+1. <https://Aleksandr3012.github.io/artech/public/11-404.html>
 1. <https://Aleksandr3012.github.io/artech/public/12-search.html>
 1. <https://Aleksandr3012.github.io/artech/public/13-search-empy.html>

@@ -3,15 +3,20 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js.on
 			span
 		+e.inner
-			+e.search
-				+input('Поиск по сайту','search')
-				+e.btnSearch(type="submit")
-					+icon('search')
-			+mnu()
-			+e.lang.d-md-none(href="#") 
-				img(src="img/svg/lang.svg" alt="")
-				span English
-			.text-right
+			.container
+				+e.contacts.d-md-none.text-center 
+					+e.tel(href="tel:+73472210790") +7 (347) 221-07-90
+					+e.mail(href="mailto:") 
+						span info@artech.si
+				+e.search
+					+input('Поиск по сайту','search')
+					+e.btnSearch(type="submit")
+						+icon('search')
+				+mnu()
+				+e.lang.d-md-none(href="#") 
+					img(src="img/svg/lang.svg" alt="")
+					span English
+
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

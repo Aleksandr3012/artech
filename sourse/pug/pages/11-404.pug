@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAboutText/_sAboutText.pug
+include ../blocks/s404/_s404.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Ошибка'
+	title= title
+block pagecontent
+	script.
+		//- let screenName = 'main-1920.jpg'
+		//- let screenName = 'main-1320.jpg'
+		//- let screenName = 'main-1140.jpg'
+		//- let screenName = 'mian-960.jpg'
+		//- let screenName = 'main-720.jpg'
+		let screenName = 'main_540.jpg'
+
+	//- +mob-mnu()
+	+s404
+
+
+
+

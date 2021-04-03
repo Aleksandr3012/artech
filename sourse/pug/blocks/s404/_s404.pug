@@ -1,0 +1,12 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+
+		h1 Страница не найдена
+		p Неправильно набран адрес, или такой страницы не&nbsp;существует.
+
+		+e.img 
+			+pic('404.png')
+
+		+e.btn.btn.btn-primary(href="/") Вернуться на главную
+	// end s404
