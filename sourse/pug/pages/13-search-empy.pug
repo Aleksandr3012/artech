@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sEquipments/_sEquipments.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= ' 12.1. Результаты поиска'
+	title= title
+block pagecontent
+	script.
+		let screenName = '02-1920.jpg'
+		//- let screenName = '09_1140.jpg'
+		//- let screenName = '9-960.jpg'
+		//- let screenName = '9-720.jpg'
+		//- let screenName = '9-540.jpg'
+
+	//- +mob-mnu()
+	+header().header-inner
+		+top-nav()
+		.container 
+			+breadcrumb('Главная','Поиск по сайту')
+		+page-head 
+			h1 Поиск по сайту
+			+form-wrap
+				.row
+					.col
+						+input('Поиск по оборудованию')(value="KR CYBERTECH")
+					+e.col-btn.col-auto
+						+e.btn.btn.btn-primary(type="submit") 
+							+icon("search")
+							span Найти
+	
+	+b.main-block.section
+		+b.SECTION.sSearch.section.pt-0
+			.container
+				+e.empty  По вашему запросу ничего не найдено. Попробуйте скорректировать запрос.
+	+footer()
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t
+

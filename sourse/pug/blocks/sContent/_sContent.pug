@@ -76,6 +76,71 @@ mixin sContent()
 
 	// end sContent
 
+
+mixin sContent6()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container
+			if block 
+				block 
+			else
+				+e.row.row 
+					.col-lg-auto.order-lg-last 
+						+sitebar().text-lg-center
+							+e.group 
+								.row.row--lg
+									.col.order-lg-last.text-secondary Грузоподъемность
+									.col-lg-12.col
+										.h6.fw-600.mb-1 8-20 кг
+								.row.row--lg
+									.col.order-lg-last.text-secondary Радиус действия
+									.col-lg-12.col
+										.h6.fw-600.mb-1 1612 - 2013
+							+e.group.text-lg-center
+								.text-center
+									a.btn.btn-primary.w-100.mb-3(href="#") Отправить запрос
+								.row.justify-content-center.align-items-center
+										.col-lg-12.col-auto
+											.text-secondary.fw-600 Поделиться:
+										.col-lg-12.col-auto
+											+soc-sm().light.pb-1
+					.col-lg 
+						h4 Описание оборудования
+						.section__inner
+							p Промышленные роботы серии KR CYBERTECH представляют собой самый широкий в мире ассортимент моделей в классе низкой грузоподъемности с наибольшей удельной мощностью. Они идеально подходят для работы в компактных ячейках и обеспечивают наилучшую производительность при особенно низких дополнительных затратах.
+
+							p Мощные многофункциональные роботы серии KR CYBERTECH предназначены для выполнения задач по манипулированию: манипулирование большими деталями, обработка, монтаж, укладка на палеты и сварка в среде защитного газа.
+
+							p Управление ими осуществляется посредством KR C4 или KR C4 extended. Главное новшество серии KR CYBERTECH: промышленные роботы стали еще компактнее.
+
+							p Воспользуйтесь преимуществами более высокой плотности интеграции и меньшего количества контуров помех! Выберите из нашего широкого ассортимента подходящего промышленного робота для любого применения!
+				
+				h4 Галерея
+				+e.galeryRow.row 
+					+e.colPB.col-md-6.col-lg-4 
+						+video('content-1.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+video('content-2.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+video('content-3.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-4.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-5.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-6.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-4.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-5.jpg')
+					+e.colPB.col-md-6.col-lg-4 
+						+photo('content-6.jpg')
+				h4 Характеристики оборудования
+				.section__inner
+					+table
+
+	// end sContent
+
 mixin article(i, date='10.12.2020', text=`Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации`)
 	+b.article&attributes(attributes)
 		.row

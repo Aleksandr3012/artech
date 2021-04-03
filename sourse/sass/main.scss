@@ -60,11 +60,11 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
-.breadcrumb-item + .breadcrumb-item {
+.breadcrumb-item + .breadcrumb-item a{
 	padding-left: rem(13);
+	
 	&:before {
-		content: "";
-		background-image: url("../img/svg/chevron-right.svg");
+		content:  url("../img/svg/chevron-right.svg");
 		background-position: center;
 		background-repeat: no-repeat;
 		display: inline-block;
@@ -74,9 +74,19 @@ $output-bourbon-deprecation-warnings: false;
 		margin-top: 1px;
 	}
 }
+.breadcrumb-item+.breadcrumb-item:before {
 
+	display: none;
+}
 .breadcrumb {
 	padding-top: rem(60);
+	display: block;
+	&::before{
+	}
+	li{
+		display: inline;
+		position: relative;
+	}
 	@include media-breakpoint-up(md) {
 		padding-top: rem(45);
 	}

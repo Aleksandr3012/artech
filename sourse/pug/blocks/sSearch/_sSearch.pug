@@ -1,0 +1,10 @@
+mixin sSearch(data)
+	// start sSearch
+	+b.SECTION.sSearch.section.pt-0
+		.container
+			- for (var x = 0; x < 6; x++)
+				+e.item 
+					+e.title(href="#") KR CYBERTECH
+					+breadcrumb('Главная','Результаты поиска','KR CYBERTECH')
+			+pugin
+	// end sSearch

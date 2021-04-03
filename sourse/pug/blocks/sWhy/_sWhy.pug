@@ -1,0 +1,19 @@
+mixin sWhy(data)
+	// start sWhy
+	+b.SECTION.sWhy.section#sWhy&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Почему клиенты выбирают нас
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-6 
+						+e.item 
+							+e.icon-wrap 
+								img.res-i(loading="lazy" src=`img/svg/about-${i}.svg`, alt="")
+							p!= t
+					// /+e.col.col-lg-6 
+				+item(`1`,`Мы&nbsp;основательно продумали те&nbsp;продукты, которые предлагаем. Мы&nbsp;уверены, что они востребованы, так как приносят прибыль Вам.`)
+				+item(`2`,`У&nbsp;нас одна из&nbsp;самых опытных команд. Вы&nbsp;покупаете наш опыт, а&nbsp;не&nbsp;оплачиваете его накопление.`)
+				+item(`3`,`Мы&nbsp;заботимся об&nbsp;эффективности нашего бизнеса и&nbsp;не&nbsp;просим Вас оплачивать наши амбиции. А&nbsp;значит можем предложить лучшую стоимость.`)
+				+item(`4`,`Мы&nbsp;рядом с&nbsp;Вами. А&nbsp;значит быстро оказываем сервис и&nbsp;гарантийное обслуживание.`)
+	// end sWhy

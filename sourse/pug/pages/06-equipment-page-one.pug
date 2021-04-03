@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sEquipments/_sEquipments.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '6. Типовая страница оборудования'
+	title= title
+block pagecontent
+	script.
+		let screenName = '02-1920.jpg'
+		//- let screenName = '09_1140.jpg'
+		//- let screenName = '9-960.jpg'
+		//- let screenName = '9-720.jpg'
+		//- let screenName = '9-540.jpg'
+
+	//- +mob-mnu()
+	+header().header-inner
+		+top-nav()
+		+b.page-bg.bg-wrap 
+			+pic("head-bg",'bg').picture-bg
+			.container 
+				+breadcrumb('Главная','Оборудование','KR CYBERTECH ')
+			+page-head 
+				h1 KR CYBERTECH 
+				+e.date Формирователь гофрокоробов
+	
+	+sContent6
+			
+	//- .container.section
+	//- 	.mb-3
+	//- 		+btn-primary
+	//- 	.mb-3
+	//- 		a.btn.btn-outline-primary(href="#") Связаться с нами
+	//- 	.mb-3
+	//- 		+soc()
+	//- 	.mb-3
+	//- 		+soc().light
+	//- 	.mb-3
+	//- 		+pugin
+	//- 	.mb-3 
+	//- 		+link()
+	//- 	.mb-3 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов')
+	//- 	.mb-3.bg-dark 
+	//- 		+breadcrumb('Главная','Оборудование','Формирователи гофрокоробов').light
+	+footer()
+
+mixin btn-primary(t='Подробнее о компании')
+	a.btn.btn-primary.btn-primary(href="#")&attributes(attributes)!= t
+		+icon('arrow-r')
+
+mixin link(t= 'Подробнее')
+	a.link(href="#")&attributes(attributes)!= t
+

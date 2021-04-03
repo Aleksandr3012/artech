@@ -89,8 +89,10 @@ block pagecontent
 							+e.slider--js.swiper-container
 								.swiper-wrapper
 									- for (var x = 0; x < 3; x++)
-										+e.slide.swiper-slide.bg-wrap(href="#" data-fancybox="gal")
+										+e.slide.swiper-slide.bg-wrap(href=`img/@2x/${i}` data-fancybox="gal")
 											+pic(i,'bg').picture-bg
+											+e.zoom
+												
 							.swiper-pagination
 							+arrow()
 				+slider(`Моделирование`,`gal-1.png`)
@@ -104,11 +106,11 @@ block pagecontent
 								li: a(href="#")  Промышленный робот Производитель KUKA KR 180 R3200 PA (Германия)
 								li Транспортная система продукта Производитель ООО Форкус
 								li Транспортная система для поддонов Производитель ООО Форкус
-								lii: a(href="#")  Захватная система Производитель ООО АРТЕХ
-								lii: a(href="#")  Магазин картонных подложек Производитель ООО АРТЕХ
+								li: a(href="#")  Захватная система Производитель ООО АРТЕХ
+								li: a(href="#")  Магазин картонных подложек Производитель ООО АРТЕХ
 								li Автоматический диспенсер пустых поддонов-паллет Производитель ООО АРТЕХ
 								li Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)
-								lii: a(href="#")  Система управления и безопасности Производитель ООО АРТЕХ
+								li: a(href="#")  Система управления и безопасности Производитель ООО АРТЕХ
 	//- .container.section
 	//- 	.mb-3
 	//- 		+btn-primary

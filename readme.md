@@ -4,5 +4,10 @@
 1. <https://Aleksandr3012.github.io/artech/public/03-solution-page.html>
 1. <https://Aleksandr3012.github.io/artech/public/04-equipment.html>
 1. <https://Aleksandr3012.github.io/artech/public/05-equipment-page.html>
+1. <https://Aleksandr3012.github.io/artech/public/06-equipment-page-one.html>
+1. <https://Aleksandr3012.github.io/artech/public/07-about.html>
 1. <https://Aleksandr3012.github.io/artech/public/08-articles.html>
 1. <https://Aleksandr3012.github.io/artech/public/09-content.html>
+1. <https://Aleksandr3012.github.io/artech/public/10-contact.html>
+1. <https://Aleksandr3012.github.io/artech/public/12-search.html>
+1. <https://Aleksandr3012.github.io/artech/public/13-search-empy.html>

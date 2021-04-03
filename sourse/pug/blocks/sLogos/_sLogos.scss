@@ -1,0 +1,35 @@
+// start .sLogos
+.sLogos {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	h2{
+		max-width: rem(900);
+	}
+	.row{
+		--bs-gutter-x: 24px;
+	}
+	&__item{
+		background-color: #fff;
+		height: calc(100% - var(--bs-gutter-x));
+		min-height: 156px;
+		margin-bottom: var(--bs-gutter-x);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			max-width: 90%;
+			max-height: 90%;
+			flex: 0 0 auto;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xxl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sLogos
