@@ -6,7 +6,7 @@ mixin sLogos(data)
 				h2 Компании, которые используют решения АРТЕХ 
 			.row
 				- for (var x = 1; x < 9; x++)
-					+e.col.col-3 
+					+e.col.col-lg-3.col-6 
 						+e.item 
 							+pic(`logo-${x}.png`,'',0)
 	// end sLogos

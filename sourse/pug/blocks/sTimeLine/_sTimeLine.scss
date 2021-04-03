@@ -2,7 +2,86 @@
 .sTimeLine {
 	// --sPT: ;
 	// --sPB: ;
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(30)};
+	}
+	@include media-breakpoint-up(md){
+		--sPB: #{rem(60)};
+	}
 	// --sTPB: ;
+	.swiper-button-hand{
+		color: $primary !important;
+		background: none;
+		border: none;
+		top: 595px;
+		bottom: auto;
+		@include media-breakpoint-up(md){
+		}
+	}
+	&__head{
+		text-align: center;
+		margin-bottom: rem(33);
+	}
+	.swiper-button-hand,
+	&__head{
+			@include media-breakpoint-up(md){
+				display: none;
+			}
+	}
+	p,
+	.h2{
+		margin-bottom: 20px;
+	}
+	 
+	&__item{
+		background-color: #fff;
+		
+		padding-top: rem(30);
+			@include media-breakpoint-up(lg){
+				padding-top: rem(120);
+				text-align: left;
+				padding-bottom: rem(120);
+			}
+			padding-bottom: rem(40);
+			text-align: center;
+	}
+	picture{
+		@include block(672, 480);
+		margin-bottom: 2rem;
+			@include media-breakpoint-up(xxl){
+				width: rem(672);
+			}
+			@include media-breakpoint-up(xl){
+				// width: rem(672);
+				width: rem(582);
+			}
+			@include media-breakpoint-up(lg){
+				width: rem(492);
+			}
+			
+			@include media-breakpoint-up(md){
+				width: rem(372);
+				height: auto;
+			}
+			height: 406px;
+
+		img{
+			position: absolute;
+			@include a-cent;
+		}
+	}
+	.row{
+		align-items: center;
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(88)};
+		}
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(73)};
+		}
+	}
+	&__caption{
+		max-width: rem(560);
+	}
 
 	@include media-breakpoint-up(sm) {
 	}
@@ -17,8 +96,24 @@
 .swiper-pagination--year{
 	display: flex;
 	width: 100%;
-	span {
-		flex-grow: 1;
-		display: flex;
+	position: relative;
+}
+.btn-year {
+	flex-grow: 1;
+	// display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90px;
+	font-weight: 600;
+	border-radius: 0;
+	background: #F1F1F1;
+	margin-left: 0px;
+	border-right: 1px solid #fff;
+	margin-right: 0;
+	&:hover,
+	&.swiper-pagination-bullet-active{
+		background-color: #fff;
+		color: $primary;
 	}
 }

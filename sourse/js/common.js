@@ -384,6 +384,10 @@ function eventHandler() {
 			// slidesPerView: 5,
 			...defaultSl,
 			slidesPerView: 1, 
+		navigation: {
+			nextEl: '.sTimeLine .swiper-button-next',
+			prevEl: '.sTimeLine .swiper-button-prev',
+		},
 		pagination: {
 			el: '.sTimeLine .swiper-pagination',
 			clickable: true,

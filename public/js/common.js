@@ -359,6 +359,10 @@ function eventHandler() {
 	});
 	var swiper6 = new Swiper('.sTimeLine__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sTimeLine .swiper-button-next',
+			prevEl: '.sTimeLine .swiper-button-prev'
+		},
 		pagination: {
 			el: '.sTimeLine .swiper-pagination',
 			clickable: true,

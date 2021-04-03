@@ -1,14 +1,23 @@
 mixin sTimeLine(data)
 	// start sTimeLine
-	+b.sTimeLine&attributes(attributes)
-		.swiper-pagination.swiper-pagination--year
+	+b.sTimeLine.section.pt-0&attributes(attributes)
+		.swiper-pagination.swiper-pagination--year.d-none.d-md-flex
 		+e.slider--js.swiper-container 
+			+arrow
 			.swiper-wrapper
 				mixin slide(y) 
 					+e.slide.swiper-slide(data-year= y)
-						+e.item.border.p-3
+						+e.item
+							+e.head= y
 							.container 
-								.row= y
+								.row
+									+e.col.col-md-auto
+										+pic(`article-3.jpg`,'bg')
+									.col
+										+e.caption
+											p.text-secondary История компании
+											.h2=`${y} год`
+											p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.
 				+slide(`1999`)
 				+slide(`2007`)
 				+slide(`2016`)
