@@ -264,12 +264,12 @@ function eventHandler() {
 	JSCCommon.CustomInputFile();
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
 	// let screenName;
 	// screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
 
 
@@ -315,9 +315,12 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loop: true,
-		autoplay: true,
+		autoplay: {
+			delay: 0,
+		},
     disableOnInteraction: true,
-		spaceBetween: 60
+		spaceBetween: 60,
+		speed: 1800
 	});
 
 	$(".footer__slider--js").mouseenter(function() {
