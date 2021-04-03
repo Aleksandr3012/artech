@@ -11,7 +11,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= '12. Результаты поиска'
+	- let  title= ' 12.1. Результаты поиска'
 	title= title
 block pagecontent
 	script.
@@ -25,9 +25,9 @@ block pagecontent
 	+header().header-inner
 		+top-nav()
 		.container 
-			+breadcrumb('Главная','Результаты поиска')
+			+breadcrumb('Главная','Поиск по сайту')
 		+page-head 
-			h1 Результаты поиска
+			h1 Поиск по сайту
 			+form-wrap
 				.row
 					.col
@@ -38,7 +38,9 @@ block pagecontent
 							span Найти
 	
 	+b.main-block.section
-		+sSearch
+		+b.SECTION.sSearch.section.pt-0
+			.container
+				+e.empty  По вашему запросу ничего не найдено. Попробуйте скорректировать запрос.
 	+footer()
 
 mixin btn-primary(t='Подробнее о компании')
