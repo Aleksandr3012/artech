@@ -2,6 +2,10 @@
 	@include media-breakpoint-up(lg) {
 	width: var(--sidebar-size);
 	}
+	.form-check-input{
+		background-color: transparent;
+		background-size: rem(12);
+	}
 	position: sticky;
 	top: rem(10);
 	left: 0;
