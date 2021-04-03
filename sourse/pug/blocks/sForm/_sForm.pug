@@ -1,7 +1,7 @@
 mixin sForm(modal)
 	// start sForm
 	if modal 
-		+b.sForm--modal#sForm&attributes(attributes)
+		+b.sForm--modal&attributes(attributes)
 			.container
 				if block
 					block
@@ -24,7 +24,7 @@ mixin sForm(modal)
 						.col-lg-6
 							+btn-primary('Отправить')
 	else
-		+b.SECTION.sForm#sForm&attributes(attributes)
+		+b.SECTION.sForm&attributes(attributes)
 			.section
 				.container
 					.section__inner
