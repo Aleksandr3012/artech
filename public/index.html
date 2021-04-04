@@ -7,9 +7,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta content="width=570,  maximum-scale=1.0, user-scalable=no"  name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
+	<style>.loaded_hiding::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
+	<body class="loaded_hiding"> </body>
 	<body>
 		<div class="main-wrapper">
 			<script>
@@ -24,7 +27,7 @@
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav block-with-lazy wow animate__fadeIn" data-wow-delay="1.5s">
 					<div class="menu-mobile menu-mobile--js d-xxl-none">
 						<div class="menu-mobile__inner">
 							<div class="container">
@@ -103,23 +106,27 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<main class="main-overflow">
+			<main class="main-overflow wow  animate__fadeInUp" data-wow-delay="2s" href="#sAbout">
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
 						<div class="section-title">
 							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-						</div><a class="scrollBottom scroll-link" href="#sAbout"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
+						</div>
+						<div class="scrollBottom scroll-link">
+							<div class="scrollBottom__count"> 
+								<div class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
 <circle cx="60" cy="60" r="54" fill="none" stroke="#D8D8D8" stroke-width="4" />
 <circle class="scrollBottom__value" cx="60" cy="60" r="54" fill="none" stroke="#00B2FF" stroke-width="4" />
-</svg></span>
-						<svg class="icon icon-arrow-bottom ">
-							<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
-						</svg></span><span class="scrollBottom__text">Листайте вниз</span></a>
-					</div>
-					<div class="headerBlock__decor headerBlock__decor--r"><img src="img/@2x/decor.png" alt=""/>
-					</div>
-					<div class="headerBlock__decor headerBlock__decor--l d-none d-lg-block"><img src="img/@2x/decor.png" alt=""/>
+</svg>
+								</div>
+								<svg class="icon icon-arrow-bottom ">
+									<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
+								</svg>
+							</div>
+							<div class="scrollBottom__text">Листайте вниз
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
@@ -193,10 +200,6 @@
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
 				<section class="sAboutText section" id="sAboutText">
-					<div class="sAboutText__decor sAboutText__decor--r"><img src="img/@2x/decor-2.png" alt=""/>
-					</div>
-					<div class="sAboutText__decor sAboutText__decor--l d-none d-xxl-block"><img src="img/@2x/decor-3.png" alt=""/>
-					</div>
 					<div class="container">
 						<div class="sAboutText__row row">
 							<div class="sAboutText__col col-xl-9"> 
@@ -453,6 +456,7 @@
 		<script src="libs/swiper/js/swiper.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

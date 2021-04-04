@@ -405,6 +405,12 @@ function eventHandler() {
 			}
 		}
 		}); 
+
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+	});
+	wow.init();
 		
 		
 	};

@@ -7,9 +7,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta content="width=570,  maximum-scale=1.0, user-scalable=no"  name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
+	<style>.loaded_hiding::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
+	<body class="loaded_hiding"> </body>
 	<body>
 		<div class="main-wrapper">
 			<script>
@@ -23,7 +26,7 @@
 			<!-- start header-->
 			<header class="header header-inner" id="header">
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav block-with-lazy wow animate__fadeIn" data-wow-delay="1.5s">
 					<div class="menu-mobile menu-mobile--js d-xxl-none">
 						<div class="menu-mobile__inner">
 							<div class="container">
@@ -444,6 +447,7 @@
 		<script src="libs/swiper/js/swiper.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

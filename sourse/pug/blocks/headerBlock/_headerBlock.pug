@@ -4,7 +4,7 @@ mixin headerBlock()
 		.container
 			+b.section-title
 				h1 #[span.text-primary Решения и&nbsp;оборудование] для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон
-			+b.scrollBottom.scroll-link(href="#sAbout")
+			+b.scrollBottom.scroll-link
 				+e.count 
 					+e.img
 						<svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
@@ -14,12 +14,12 @@ mixin headerBlock()
 					+icon('arrow-bottom')
 				+e.text Листайте вниз
 
-		+e.decor--r
-			//- img(src="img/@2x/decor.png" alt="" loading="lazy")
-			img(src="img/@2x/decor.png" alt="")
-		+e.decor--l.d-none.d-lg-block
-			//- img(src="img/@2x/decor.png" alt="" loading="lazy")
-			img(src="img/@2x/decor.png" alt="")
+		//- +e.decor--r
+		//- 	//- img(src="img/@2x/decor.png" alt="" loading="lazy")
+		//- 	img(src="img/@2x/decor.png" alt="")
+		//- +e.decor--l.d-none.d-lg-block
+		//- 	//- img(src="img/@2x/decor.png" alt="" loading="lazy")
+		//- 	img(src="img/@2x/decor.png" alt="")
 
 
 	// end headerBlock
