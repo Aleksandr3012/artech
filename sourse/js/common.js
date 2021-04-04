@@ -235,8 +235,15 @@ const JSCCommon = {
 	},
 	getCurrentYear(el) {
 		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
+		let currentYear = document.querySelectorAll(el);
+
+		if (currentYear) {
+
+			currentYear.forEach(function(el){
+
+				el.innerText = now.getFullYear();
+			})
+		}
 	},
 
 	CustomInputFile: function CustomInputFile() {
@@ -321,7 +328,7 @@ function eventHandler() {
 			disableOnInteraction: false
 		},
     disableOnInteraction: true,
-		spaceBetween: 60,
+		spaceBetween: 0,
 		speed: 1800
 	});
 

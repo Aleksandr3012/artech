@@ -1,10 +1,13 @@
 // start .sEquipments
 .sEquipments {
 	// --sPT: ;
-	// --sPB: ;
+	--sPB: #{rem(30)};
 	// --sTPB: ;
 	.sitebar{
 		width: 100%;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(18);
+		}
 	}
 	.row{
 		--bs-gutter-x: 24px;
@@ -28,7 +31,7 @@
 		}
 	}
 	&__caption{
-		padding: rem(17) rem(24) rem(24);
+		padding: rem(17) rem(24) ;
 		position: relative;
 		top: 0;
 		@include media-breakpoint-up(lg) {
@@ -43,7 +46,7 @@
 		@extend .btn-primary;
 		@include mt;
 		// transform: scaleY(0);
-		margin-top: var(--bth-sp);
+		margin-top: 10px;
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			opacity: 0;
@@ -56,14 +59,14 @@
 	}
 	--bth-sp: #{rem(15)};
 	@include media-breakpoint-up(lg) {
-		--bth-sp: #{rem(25)};
+		// --bth-sp: #{rem(25)};
 		--bth-y: #{rem(45)};
 		&__item:hover &__caption{
-		top: calc(-1*(var(--bth-y) + var(--bth-sp)));
+		top: calc(-1*(var(--bth-y) + 15px));
 		
 	}
 	&__title{
-		margin-bottom: -10px;
+		// margin-bottom: -10px;
 	}
 	&__item:hover &__btn{
 		opacity: 1; 

@@ -46,25 +46,33 @@
 
 	textarea {
 		min-height: rem(160);
+		--line-color: #dedede;
 		background-image: repeating-linear-gradient(
 			0deg,
 			#fff 0,
 			#fff #{rem(52px)},
-			#dedede #{rem(52px)},
-			#dedede #{rem(54px)},
+			var(--line-color) #{rem(52px)},
+			var(--line-color) #{rem(54px)},
 			#fff #{rem(54px)},
 			#fff #{rem(108px)},
-			#dedede #{rem(108px)},
-			#dedede #{rem(110px)},
+			var(--line-color) #{rem(108px)},
+			var(--line-color) #{rem(110px)},
 			#fff #{rem(110px)},
 			#fff #{rem(162px)},
 			#fff #{rem(162px)}
 		);
 		margin-bottom: rem(10);
 		// border-bottom: none;
+		line-height: 2.9;
+		padding-top: 0;
+		&.border-danger{
+			--line-color: #{$danger};
+			
+		}
 		&:focus,
 		&:active {
-			line-height: 3;
+			--line-color: #80d9ff;
+			border-color: #80d9ff !important;
 		}
 	}
 

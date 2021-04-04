@@ -14,7 +14,7 @@ mixin sForm(modal)
 							+input('Ваше имя')(required)
 							+input('Телефон или e-mail')(required)
 						.col-lg-6 
-							+input('Ваше сообщение','textarea')(required)
+							+input('Ваше сообщение','textarea')(class="border-danger" required)
 						.col-lg-6.order-lg-last
 							+add-file
 						.col-lg-6
@@ -39,7 +39,7 @@ mixin sForm(modal)
 									+input('Ваше имя')(required)
 									+input('Телефон или e-mail')(required)
 								.col-lg-6 
-									+input('Ваше сообщение','textarea')(required)
+									+input('Ваше сообщение','textarea')(class="border-danger" required)
 								.col-lg-6.order-lg-last
 									+add-file
 								.col-lg-6

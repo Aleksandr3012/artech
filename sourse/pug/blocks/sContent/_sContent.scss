@@ -44,6 +44,7 @@
 	}
 
 	&__imgDescr {
+		color: $secondary;
 		&--mb {
 			margin-bottom: rem(40);
 			@include media-breakpoint-up(md) {
@@ -210,7 +211,8 @@ p {
 
 	.row {
 		// @include roww(48px);
-		@include media-breakpoint-up(md) {
+		align-items: center;
+		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: 48px;
 		}
 	}
@@ -241,7 +243,7 @@ p {
 			@include a-cent;
 		}
 	}
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 		&--lg &__col {
 			width: auto;
 

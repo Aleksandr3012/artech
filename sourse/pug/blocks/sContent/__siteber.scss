@@ -1,4 +1,7 @@
 .sitebar {
+	&--map{
+		margin-bottom: rem(0);
+	}
 	@include media-breakpoint-up(lg) {
 	width: var(--sidebar-size);
 	}
@@ -6,18 +9,18 @@
 		background-color: transparent;
 		background-size: rem(12);
 	}
-	position: sticky;
 	top: rem(10);
 	left: 0;
 	background: #ffffff;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 	// padding-bottom: rem(29);
 	margin-bottom: rem(60);
-	@include media-breakpoint-up(md) {
-		// padding-bottom: rem(40);
-		margin-bottom: rem(24);
-	}
-	@include media-breakpoint-up(lg) {
+	// @include media-breakpoint-up(md) {
+		// 	// padding-bottom: rem(40);
+		// 	margin-bottom: rem(24);
+		// }
+		@include media-breakpoint-up(lg) {
+		position: sticky;
 		// padding-bottom: rem(29);
 		margin-bottom: rem(119);
 	}
@@ -119,13 +122,16 @@
 					padding-left: rem(20);
 					padding-right: rem(20);
 				}
-
+				
 			}
+		}
+		
+		&__map-block{
+			position: relative;
+			@include media-breakpoint-up(xxl) {
+		height: rem(324);
 	}
-
-	&__map-block{
-		position: relative;
-		height: rem(312);
+	height: rem(330);
 		picture,
 		img{
 			height: 100%;

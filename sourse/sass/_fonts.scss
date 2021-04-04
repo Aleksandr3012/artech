@@ -34,6 +34,12 @@ $file-format: woff2;
 	600,
 	$file-formats: $file-format
 );
+@include font-face(
+	$default-font,
+	$addr + "Gilroy-Black",
+	900,
+	$file-formats: $file-format
+);
 
 // font-weight helper:
 // 100 Thin

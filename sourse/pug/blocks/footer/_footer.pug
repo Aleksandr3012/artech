@@ -31,7 +31,7 @@ mixin footer()
 				.col-md-6
 					+e.location 450520, Уфимский район, с. Нижегородка, ул. Заводская 36/1
 			.row.align-items-center 
-				.col-md-auto
+				.col-md-auto.d-block.d-lg-block.d-md-none
 					+e.copyright © ООО «АРТЕХ» 
 						span.currentYear
 				.col-md
@@ -39,5 +39,8 @@ mixin footer()
 						+e.link(href="#") Политика конфиденциальности
 						+e.link(href="#") Пользовательское соглашение
 				.col-md-auto
+					.d-none.d-md-block.d-lg-none.text-md-end
+						+e.copyright © ООО «АРТЕХ» 
+							span.currentYear
 					+e.dev(href="http://artsman.ru/" target="_blank") Создание сайта – 
 						span Artsman

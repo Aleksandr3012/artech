@@ -242,8 +242,13 @@ var JSCCommon = {
 	},
 	getCurrentYear: function getCurrentYear(el) {
 		var now = new Date();
-		var currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
+		var currentYear = document.querySelectorAll(el);
+
+		if (currentYear) {
+			currentYear.forEach(function (el) {
+				el.innerText = now.getFullYear();
+			});
+		}
 	},
 	CustomInputFile: function CustomInputFile() {
 		var file = $(".add-file input[type=file]");
@@ -307,7 +312,7 @@ function eventHandler() {
 	}, _defineProperty(_Swiper, "autoplay", {
 		delay: 0,
 		disableOnInteraction: false
-	}), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "spaceBetween", 60), _defineProperty(_Swiper, "speed", 1800), _Swiper));
+	}), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "spaceBetween", 0), _defineProperty(_Swiper, "speed", 1800), _Swiper));
 	$(".footer__slider--js").mouseenter(function () {
 		partnerSlider.autoplay.stop();
 	});

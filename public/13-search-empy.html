@@ -30,7 +30,7 @@
 								<div class="menu-mobile__contacts d-md-none text-center"> <a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
 								</div>
 								<div class="menu-mobile__search">
-									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="search" type="search" placeholder="Поиск по сайту"/>
+									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="menu-mobile__btnSearch" type="submit">
@@ -223,7 +223,7 @@
 						</div>
 					</div>
 					<div class="row align-items-center"> 
-						<div class="col-md-auto">
+						<div class="col-md-auto d-block d-lg-block d-md-none">
 							<div class="footer__copyright">© ООО «АРТЕХ» <span class="currentYear"></span>
 							</div>
 						</div>
@@ -231,7 +231,11 @@
 							<div class="footer__linksWrap"> <a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Пользовательское соглашение</a>
 							</div>
 						</div>
-						<div class="col-md-auto"><a class="footer__dev" href="http://artsman.ru/" target="_blank">Создание сайта – <span>Artsman</span></a>
+						<div class="col-md-auto">
+							<div class="d-none d-md-block d-lg-none text-md-end">
+								<div class="footer__copyright">© ООО «АРТЕХ» <span class="currentYear"></span>
+								</div>
+							</div><a class="footer__dev" href="http://artsman.ru/" target="_blank">Создание сайта – <span>Artsman</span></a>
 						</div>
 					</div>
 				</div>
@@ -256,7 +260,7 @@
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
-									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control border-danger" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -296,7 +300,7 @@
 				<form>
 					<div class="container">
 						<div class="form-wrap__wrap">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="search" placeholder="Начните поиск"/> 
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/> 
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn btn" type="submit">
