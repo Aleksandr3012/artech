@@ -201,7 +201,7 @@ mixin filter-group(t, ...items)
 		each item in items
 			+in-c("", item)
 mixin filter()
-	+sitebar('Выберите тип проекта:')
+	+sitebar('Выберите тип проекта:').--filter
 		ul
 			li.has-children
 				+b.sitebar-link(href="#") Групповая упаковка

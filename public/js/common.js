@@ -330,17 +330,14 @@ function eventHandler() {
 
 	$(document).on("click", '.sitebar-link:not(.sitebar-link--back)', function (e) {
 		e.preventDefault();
-		$(this).slideUp().addClass("active").next().slideDown(function () {
-			$(this).addClass("active");
-		}).parent().siblings().slideUp().addClass("active");
-		$(".sitebar__title").slideUp().addClass("active");
+		$(".sitebar__title").slideUp();
+		$(this).parent().siblings().slideUp();
+		$(this).slideUp().next().slideDown();
 	});
 	$(document).on("click", '.sitebar-link--back', function (e) {
 		e.preventDefault();
-		$(this).parent().slideUp(function () {
-			$(this).removeClass("active");
-		}).prev().slideDown().removeClass("active").parent().siblings().slideDown().removeClass("active");
-		$(".sitebar__title").slideDown().removeClass("active");
+		$(this).parent().slideUp().prev().slideDown().parent().siblings().slideDown();
+		$(".sitebar__title").slideDown();
 	});
 	var galBlock = document.querySelectorAll(".gal-block");
 	galBlock.forEach(function (el) {
@@ -374,14 +371,14 @@ function eventHandler() {
 			}
 		}
 	}));
-	var wow = new WOW({
-		mobile: false,
-		animateClass: 'animate__animated'
-	});
-	wow.init();
 
 	window.onload = function () {
 		document.body.classList.remove("loaded_hiding");
+		var wow = new WOW({
+			mobile: false,
+			animateClass: 'animate__animated'
+		});
+		wow.init();
 	};
 }
 
