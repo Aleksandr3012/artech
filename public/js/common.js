@@ -6,11 +6,20 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px'; // мы должны вставить элемент в документ, иначе размеры будут равны 0
+
+document.body.append(div);
+var scrollWidth = div.offsetWidth - div.clientWidth;
+div.remove();
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
+		// alert(scrollWidth);
 		$(".link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
@@ -30,13 +39,13 @@ var JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
-			} // beforeLoad: function () {
-			// 	document.querySelector("html").classList.add("fixed")
-			// },
-			// afterClose: function () {
-			// 	document.querySelector("html").classList.remove("fixed")
-			// },
-
+			},
+			beforeLoad: function beforeLoad() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
+			},
+			afterClose: function afterClose() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null; // 	document.querySelector("html").classList.remove("fixed")
+			}
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -81,19 +90,30 @@ var JSCCommon = {
 			[document.body, document.querySelector('html')].forEach(function (el) {
 				return el.classList.toggle("fixed");
 			});
+			document.querySelector("body").style.marginRight = scrollWidth + 'px'; // document.querySelector("body").style.marginRight = scrollWidth + 'px';
+			// if (document.querySelector("html").style.marginRight > 0) {
+			// 	document.querySelector("html").style.marginRight = 0
+			// } else{
+			// }
 		}, {
 			passive: true
 		});
 	},
 	closeMenu: function closeMenu() {
-		if (!this.menuMobile) return;
-		this.btnToggleMenuMobile.forEach(function (element) {
-			return element.classList.remove("on");
-		});
-		this.menuMobile.classList.remove("active");
-		[document.body, document.querySelector('html')].forEach(function (el) {
-			return el.classList.remove("fixed");
-		});
+		var menu = this.menuMobile;
+		if (!menu) return;
+
+		if (menu.classList.contains("active")) {
+			this.btnToggleMenuMobile.forEach(function (element) {
+				return element.classList.remove("on");
+			});
+			menu.classList.remove("active");
+			[document.body, document.querySelector('html')].forEach(function (el) {
+				return el.classList.remove("fixed");
+			}); // document.querySelector("html").style.marginRight = null;
+
+			document.querySelector("body").style.marginRight = null;
+		}
 	},
 	mobileMenu: function mobileMenu() {
 		var _this = this;
@@ -105,12 +125,18 @@ var JSCCommon = {
 
 			var link = event.target.closest(".navMenu__link"); // (1)
 
-			if (!container || link) _this.closeMenu();
+			if (!container || link) {
+				_this.closeMenu();
+			}
 		}, {
 			passive: true
 		});
 		window.addEventListener('resize', function () {
-			if (window.matchMedia("(min-width: 992px)").matches) _this.closeMenu();
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				_this.closeMenu();
+			}
+
+			;
 		}, {
 			passive: true
 		});
