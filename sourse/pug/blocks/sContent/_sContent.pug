@@ -144,12 +144,13 @@ mixin sContent6()
 mixin article(i, date='10.12.2020', text=`Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации`)
 	+b.article&attributes(attributes)
 		.row
-			+e.col
-				+pic(i,'bg')
+			+e.col()
+				a(href="#") 
+					+pic(i,'bg')
 			.col
 				+e.wrap
 					+e.date= date 
-					+e.text!= text 
+					+e.text(href="#")!= text 
 					div
 						a.btn.btn-primary(href="#") Подробнее
 

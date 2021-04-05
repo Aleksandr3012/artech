@@ -16,6 +16,10 @@
 		min-height: calc(100% - var(--bs-gutter-x));
 		margin-bottom: var(--bs-gutter-x);
 		background-color: #fff;
+			@include mt;
+	@include h() {
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+	}
 		picture{
 			background: #D4D4D4;
 			@include media-breakpoint-up(lg) {
