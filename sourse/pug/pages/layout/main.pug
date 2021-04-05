@@ -30,9 +30,8 @@ html(lang="ru")
 		+allcss()
 	block variables
 	style.
-		.loaded_hiding::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}
-	body.loaded_hiding(class= mainPage) 
-	body(class= mainPage data-bg= bg)
+		body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}
+	body.loaded_hiding(class= mainPage data-bg= bg)
 		.main-wrapper
 			block pagecontent
 				h3 content

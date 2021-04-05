@@ -30,7 +30,7 @@ body {
 	background-image: url(../img/@2x/webp/gray-bg.webp);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	&::after{
+	&:not(.loaded_hiding)::after{
 		@include mt(1.5s);
 		transform: translateY(-100%);
 	}

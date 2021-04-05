@@ -379,6 +379,10 @@ function eventHandler() {
 		animateClass: 'animate__animated'
 	});
 	wow.init();
+
+	window.onload = function () {
+		document.body.classList.remove("loaded_hiding");
+	};
 }
 
 ;

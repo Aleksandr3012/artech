@@ -412,6 +412,10 @@ function eventHandler() {
 	});
 	wow.init();
 		
+	window.onload = function () {
+		document.body.classList.remove("loaded_hiding")
+	};
+
 		
 	};
 	if (document.readyState !== 'loading') {
