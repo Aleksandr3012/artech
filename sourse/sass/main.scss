@@ -127,7 +127,10 @@ $output-bourbon-deprecation-warnings: false;
 		}
 	}
 }
-
+.pagination-wrapper li .page-numbers.default:hover{
+	background-color: #fff;
+	color: $body-color;
+}
 @import "./node_modules/bootstrap/scss/pagination";
 
 .pagination-wrapper ul {

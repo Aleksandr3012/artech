@@ -1,3 +1,14 @@
+.fixed .top-nav {
+	&::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 99%;
+		// 	width: 30px;
+		// 	height: 100%;
+		// 	background-color: #e5e5e5;
+	}
+}
 .top-nav {
 	position: relative;
 	// left: 0;
@@ -10,6 +21,7 @@
 	// background-color: #fff;
 	// border-bottom: 1px solid #000;
 	// --color-link: 255,
+	width: 100%;
 	// 0,
 	// 0;
 	// background-color: #{rgba(var(--color-link), .5)};
