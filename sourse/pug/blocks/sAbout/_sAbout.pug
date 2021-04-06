@@ -4,9 +4,9 @@ mixin sAbout(data)
 		.container
 			+e.mainRow.row 
 				+e.col.col-md-6.col-lg-12
-					+e.row.row
+					+e.row.row(class="animate__fadeInUp" data-wow-delay="1s")
 						.col-lg-6.order-lg-last 
-							+e.imgWrap
+							+e.imgWrap(href="#")
 								+pic('borjomi.jpg')
 						.col-lg-6
 							+e.wrap
@@ -19,9 +19,9 @@ mixin sAbout(data)
 										+e.count 01
 
 				+e.col.col-md-6.col-lg-12
-					+e.row.row
+					+e.row.row(class="animate__fadeInUp" data-wow-delay="1s")
 						.col-lg-6.order-lg-last
-							+e.imgWrap
+							+e.imgWrap(href="#")
 								+pic('equipment.jpg')
 						.col-lg-6
 							+e.wrap
