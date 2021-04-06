@@ -25,17 +25,21 @@ mixin mnu()
 
 //- menu
 mixin mnu()
-	-
-		var nav= {
-			"Главная":"/",
-			"Решения ":"#",
-			"Оборудование ":"#",
-			"О компании":"#",
-			"Статьи":"#",
-			"Контакты":"#"
+	//- -
+	//- 	var nav= {
+	//- 		"Главная":"/",
+	//- 		"Решения ":"#",
+	//- 		"Оборудование ":"#",
+	//- 		"О компании":"#",
+	//- 		"Статьи":"#",
+	//- 		"Контакты":"#"
 
-			}
+	//- 		}
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes)
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+
+		+e.LI.item.active( itemprop="item" ): +e.A.link(href="/" itemprop="url") Главная
+		+e.LI.item( itemprop="item" ): +e.A.link(href="/" itemprop="url") Решения
+		+e.LI.item( itemprop="item" ): +e.A.link(href="/" itemprop="url") О компании
+		+e.LI.item( itemprop="item" ): +e.A.link(href="/" itemprop="url") Статьи
+		+e.LI.item( itemprop="item" ): +e.A.link(href="/" itemprop="url") Контакты
 //- /menu

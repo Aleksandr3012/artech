@@ -20,7 +20,7 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn"  data-wow-delay="1.5s" )
+	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn" data-wow-delay="1.5s" )
 		+mob-mnu
 		.container.container--fluid
 			.row.align-items-center
@@ -29,8 +29,8 @@ mixin top-nav()
 						span
 				+e.col.col.col-md-auto.order-2.order-md-1
 					+e.logo(href="/")
-						+e.logoTopBlock.d-none.d-md-block(src="img/svg/logo-top.svg" alt="")
-						img(src="img/svg/logo-sm.svg" alt="")
+						img.d-none.d-md-block(src="img/svg/logo.svg" alt="")
+						img.d-md-none(src="img/svg/logo-sm.svg" alt="")
 				.col.d-none.d-xxl-block.order-1
 					+mnu()
 				.col-auto.order-1.order-xxl-5.d-none.d-md-block

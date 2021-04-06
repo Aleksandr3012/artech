@@ -138,12 +138,6 @@
 		}
 	}
 
-	&__logoTopBlock {
-		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(4);
-		}
-	}
-
 	&__search {
 		display: inline-block;
 		@include media-breakpoint-up(xxxl) {
