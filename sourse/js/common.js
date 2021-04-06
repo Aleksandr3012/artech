@@ -19,6 +19,15 @@ const JSCCommon = {
 	modalCall() {
 		
 		// alert(scrollWidth);
+		$("[data-fancybox]").fancybox({
+			beforeLoad: function () {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
+			},
+			afterClose: function () {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null;
+				// 	document.querySelector("html").classList.remove("fixed")
+			},
+		})
 		$(".link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
@@ -334,6 +343,7 @@ function eventHandler() {
 
 
 	let defaultSl = {
+		speed: 500,
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true,
@@ -386,13 +396,13 @@ function eventHandler() {
 
 	});
 	// modal window
-	$(document).on("click", '.sitebar-link:not(.sitebar-link--back)', function(e){
+	$('.sitebar--filter').on("click", ' .sitebar-link:not(.sitebar-link--back)', function(e){
 		e.preventDefault();
 		$(".sitebar__title").slideUp()
 		$(this).parent().siblings().slideUp()
 		$(this).slideUp().next().slideDown()
 	})
-	$(document).on("click", '.sitebar-link--back', function(e){
+	$('.sitebar--filter').on("click", ' .sitebar-link--back', function(e){
 		e.preventDefault();
 		$(this).parent().slideUp()
 		.prev().slideDown()
@@ -407,6 +417,10 @@ function eventHandler() {
 			// slidesPerView: 5,
 			...defaultSl,
 			slidesPerView: 1, 
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			pagination: {
 				el: el.querySelector('.swiper-pagination'),
 				type: 'fraction',

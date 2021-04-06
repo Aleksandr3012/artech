@@ -60,6 +60,9 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+.breadcrumb-item + .breadcrumb-item {
+	padding-left: 0;
+}
 .breadcrumb-item + .breadcrumb-item a{
 	padding-left: rem(13);
 	
@@ -127,6 +130,11 @@ $output-bourbon-deprecation-warnings: false;
 		}
 	}
 }
+.pagination-wrapper li .page-numbers.disabled{
+	opacity: 0.5;
+	pointer-events: none;
+}
+.pagination-wrapper li .page-numbers.disabled:hover,
 .pagination-wrapper li .page-numbers.default:hover{
 	background-color: #fff;
 	color: $body-color;

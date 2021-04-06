@@ -1,5 +1,9 @@
 // start .sWhy
 .sWhy {
+	@include media-breakpoint-up(xl) {
+		--sPT: 5.61111rem;
+	}
+	--sPT: 5rem;
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
@@ -10,6 +14,10 @@
 		display: flex;
 		align-items: center;
 		background-color: #fff;
+		@include mt;
+	@include h() {
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+	}
 			@include media-breakpoint-up(md) {
 				min-height: rem(260);
 			}

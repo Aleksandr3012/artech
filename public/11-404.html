@@ -12,7 +12,10 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
-	<body class="loaded_hiding">
+	<body class="loaded_hiding page-404">
+		<div class="bg-block">
+			<div class="bg-block-inner"></div>
+		</div>
 		<div class="main-wrapper">
 			<script>
 				//- let screenName = 'main-1920.jpg'
@@ -28,7 +31,12 @@
 				<h1>Страница не найдена</h1>
 				<p>Неправильно набран адрес, или такой страницы не&nbsp;существует.</p>
 				<div class="s404__title"> <span>4</span>04
-					<div class="s404__img"> <img src="img/@2x/webp/404.webp" alt=""/>
+					<div class="s404__img"> 
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/404.webp"/><img src="img/@2x/404.png" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
 				</div><a class="s404__btn btn btn-primary" href="/">Вернуться на главную</a>
 			</section>

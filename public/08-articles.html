@@ -13,6 +13,9 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding">
+		<div class="bg-block">
+			<div class="bg-block-inner"></div>
+		</div>
 		<div class="main-wrapper">
 			<script>
 				//- let screenName = '8-1920.jpg'
@@ -132,7 +135,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -155,7 +158,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -178,7 +181,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -201,7 +204,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -224,7 +227,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -247,7 +250,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -260,7 +263,7 @@
 					</div>
 					<div class="pagination-wrapper">
 						<ul class="page-numbers">
-									<li><span class="prev page-numbers">
+									<li><span class="prev page-numbers disabled">
 											<svg class="icon icon-chevron-l ">
 												<use xlink:href="img/svg/sprite.svg#chevron-l"></use>
 											</svg></span>
@@ -286,54 +289,52 @@
 			</div>
 			<!-- end sContent-->
 			<!-- start sForm-->
-			<section class="sForm">
-				<div class="section">
-					<div class="container">
-						<div class="section__inner">
-							<h3>Задать вопрос</h3>
-							<p>Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: <a href="tel:+73472210790">+7 (347) 221-07-90</a></p>
-							<div class="form-wrap">
-								<form>
-									<div class="row">
-										<div class="col-lg-6"> 
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/>
-											</div>
-											<!-- +e.input-wrap-->
+			<section class="sForm section"> 
+				<div class="container">
+					<div class="section__inner mb-0">
+						<h3>Задать вопрос</h3>
+						<p>Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: <a href="tel:+73472210790">+7 (347) 221-07-90</a></p>
+						<div class="form-wrap">
+							<form>
+								<div class="row">
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
 										</div>
-										<div class="col-lg-6"> 
-											<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
-											</div>
-											<!-- +e.input-wrap-->
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/>
 										</div>
-										<div class="col-lg-6 order-lg-last">
-											<div class="add-file">
-												<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> 
-													<svg class="icon icon-add ">
-														<use xlink:href="img/svg/sprite.svg#add"></use>
-													</svg><span>Прикрепить файл</span></span>
-												</label><span class="add-file__filename"> </span>
-											</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
 										</div>
-										<div class="col-lg-6">
-											<div class="form-wrap__polite">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Отправляя, Вы соглашетесь <a href="#">с политикой конфиденциальности</a> и <a href="#">пользовательским соглашением</a></small>
-												</label>
-											</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6 order-lg-last">
+										<div class="add-file">
+											<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> 
+												<svg class="icon icon-add ">
+													<use xlink:href="img/svg/sprite.svg#add"></use>
+												</svg><span>Прикрепить файл</span></span>
+											</label><span class="add-file__filename"> </span>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-lg-6"></div>
-										<div class="col-lg-6"><a class="btn btn-primary btn-primary-arrow" href="#">Отправить
-												<svg class="icon icon-arrow-r ">
-													<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-												</svg></a>
+									<div class="col-lg-6">
+										<div class="form-wrap__polite">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Отправляя, Вы соглашетесь <a href="#">с политикой конфиденциальности</a> и <a href="#">пользовательским соглашением</a></small>
+											</label>
 										</div>
 									</div>
-								</form>
-							</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6"></div>
+									<div class="col-lg-6"><a class="btn btn-primary btn-primary-arrow" href="#">Отправить
+											<svg class="icon icon-arrow-r ">
+												<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+											</svg></a>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

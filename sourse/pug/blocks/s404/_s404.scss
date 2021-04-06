@@ -1,8 +1,19 @@
 // start .s404
 .s404 {
-	// --sPT: ;
-	// --sPB: ;
 	// --sTPB: ;
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(90)};
+		--sPB: #{rem(90)};
+			
+		}
+		// --sPT: ;
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+			
+		}
+		// --sPT: ;
+		// --sPB: ;
 	// padding-bottom: calc(var(--sPB) * 1.1);
 	max-width: 100vw;
 	width: 100%;
@@ -18,14 +29,20 @@
 	&__btn {
 		position: relative;
 		z-index: 10;
+		width: rem(264px);
+		height: rem(60px);
 		// margin-top: auto;
 	}
 	&__title{
-		@include rfs(500px);
+		position: relative;
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(500);
+		}
+		// line-height: .8;
+		line-height: 1;
+		@include rfs(400px);
 		font-weight: 900;
 		color: #fff;
-		line-height: 1;
-		position: relative;
 		span{
 			position: relative;
 			z-index: 4;

@@ -16,7 +16,7 @@ mixin sContent()
 							p При движении гофрокороба вперед передний торцевой клапан гофрокороба упирается в&nbsp;копир и&nbsp;подгибается внутрь коробки. При прохождении гофрокороба по&nbsp;тракту транспортёров, гофрокороб проходит мимо датчика наличия гофрокороба, после чего поступает команда на&nbsp;срабатывание механизмов закрытия продольных клапанов.
 						.pb-2
 						+e.imgWrap
-							+pic('borjomi.jpeg')
+							+pic('borjomi.jpg')
 						+e.imgDescr--mb Рис 1. Название
 						h3 H3 Заголовок
 						.section__inner
@@ -88,7 +88,7 @@ mixin sContent6()
 					.col-lg-auto.order-lg-last 
 						+sitebar().text-lg-center
 							+e.group 
-								.row.row--lg
+								.row.row--lg.pb-3
 									.col.order-lg-last.text-secondary Грузоподъемность
 									.col-lg-12.col
 										.h6.fw-600.mb-1 8-20 кг
@@ -98,7 +98,7 @@ mixin sContent6()
 										.h6.fw-600.mb-1 1612 - 2013
 							+e.group.text-lg-center
 								.text-center
-									a.btn.btn-primary.w-100.mb-3(href="#") Отправить запрос
+									a.btn.btn-primary.w-100.mb-3.link-modal-js(href="#modal-call") Отправить запрос
 								.row.justify-content-center.align-items-center
 										.col-lg-12.col-auto
 											.text-secondary.fw-600 Поделиться:
@@ -147,7 +147,7 @@ mixin article(i, date='10.12.2020', text=`Компания АРТЕХ&nbsp;&mdas
 			+e.col()
 				a(href="#") 
 					+pic(i,'bg')
-			.col
+			+e.col-caption.col
 				+e.wrap
 					+e.date= date 
 					+e.text(href="#")!= text 
@@ -194,8 +194,9 @@ mixin sitebar(t)
 					+b.sitebar-link(href="#") Заголовок 3
 				li
 					+b.sitebar-link(href="#") Заголовок 4
-			.text-center.text-secondary.fw-600 Поделиться:
-			+soc-sm().light
+			+e.footer
+				.text-center.text-secondary.fw-600 Поделиться:
+				+soc-sm().light
 mixin filter-group(t, ...items)
 	+b.filter-group
 		+e.title= t

@@ -17,6 +17,7 @@
 		// height: 100%;
 		width: rem(45);
 		height: rem(45);
+		border: none !important;
 
 		@include h {
 			background-color: var(--hover-bg);
