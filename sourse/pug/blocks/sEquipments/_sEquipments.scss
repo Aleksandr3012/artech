@@ -16,27 +16,35 @@
 		min-height: calc(100% - var(--bs-gutter-x));
 		margin-bottom: var(--bs-gutter-x);
 		background-color: #fff;
+		overflow: hidden;
 			@include mt;
 	@include h() {
 		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+		img{
+			transform: scale(1.04);
+		}
 	}
 		picture{
 			background: #D4D4D4;
+			overflow: hidden; 
 			@include media-breakpoint-up(lg) {
 			--ratio:1;
 			}
 			@include block(540, 400);
 			img{
+				@include mt;
 				@include a-cent;
-				max-width: 90%;
-				max-height: 90%;
+				// max-width: 90%;
+				// max-height: 90%;
 			}
 			
 		}
 	}
 	&__caption{
 		padding: rem(17) rem(24) ;
+		padding-right: rem(10);
 		position: relative;
+		
 		top: 0;
 		@include media-breakpoint-up(lg) {
 			// padding-bottom: 0;
@@ -54,7 +62,8 @@
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			opacity: 0;
-			transform: scaleY(0);
+			// transform: scaleY(0);
+			transform: translateY(100%);
 			transform-origin: left top;
 			 
 			overflow: hidden; 
@@ -71,10 +80,14 @@
 	}
 	&__title{
 		// margin-bottom: -10px;
+		a{
+			color: $body-color !important;
+			text-decoration: none !important;
+		}
 	}
 	&__item:hover &__btn{
 		opacity: 1; 
-		transform: scaleY(1);
+		transform: translateY(0);
 	}
 }
 

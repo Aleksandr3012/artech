@@ -27,11 +27,11 @@ block pagecontent
 		+page-head 
 			h1 Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон
 		
-	+b.main-block.section
+	+b.main-block.section.pb-0
 		.container
 			+e.row.row 
 				.col-lg-auto.order-lg-last 
-					+sitebar().text-lg-center
+					+sitebar().text-lg-center.position-sticky
 						
 							+e.group
 								.row.justify-content-center.align-items-center
@@ -53,14 +53,14 @@ block pagecontent
 										.fw-600 Бутыли
 							+e.group.text-lg-center
 								.text-center
-									a.btn.btn-primary.w-100.mb-3(href="#") Отправить запрос
+									a.btn.btn-primary.w-100.mb-3.link-modal-js(href="#modal-call") Отправить запрос
 								.row.justify-content-center.align-items-center
 										.col-lg-12.col-auto
 											.text-secondary.fw-600 Поделиться:
 										.col-lg-12.col-auto
 											+soc-sm().light.pb-1
 				+e.col-main.col-lg
-					+b.sContent.section.pt-0
+					+b.sContent.section.py-0
 						h4 Цель проекта
 						.section__inner
 							p Увеличение производительности линии за счет сокращения времени простоя основного оборудования, сокращение ФОТ.
@@ -83,7 +83,7 @@ block pagecontent
 							p Внедрение линии позволило увеличить производительность основного оборудования за счет сокращения времени простоев, уменьшить количество обслуживающего персонала, добиться целевой производительности в 1300 упаковок в час, 13000 литров в час.
 			+e.row-md.row
 				mixin slider(t,i)
-					.col-lg-6
+					.col-lg-6.text-center
 						h4= t
 						+b.gal-block
 							+e.slider--js.swiper-container
@@ -103,14 +103,14 @@ block pagecontent
 						h4 Оборудование в проекте
 						.section__inner
 							ul 
-								li: a(href="#")  Промышленный робот Производитель KUKA KR 180 R3200 PA (Германия)
+								li: a(href="#") Промышленный робот Производитель KUKA KR 180 R3200 PA (Германия)
 								li Транспортная система продукта Производитель ООО Форкус
 								li Транспортная система для поддонов Производитель ООО Форкус
-								li: a(href="#")  Захватная система Производитель ООО АРТЕХ
-								li: a(href="#")  Магазин картонных подложек Производитель ООО АРТЕХ
+								li: a(href="#") Захватная система Производитель ООО АРТЕХ
+								li: a(href="#") Магазин картонных подложек Производитель ООО АРТЕХ
 								li Автоматический диспенсер пустых поддонов-паллет Производитель ООО АРТЕХ
 								li Автоматический обмотчик поддонов Производитель Atlanta Revolution LS (Италия)
-								li: a(href="#")  Система управления и безопасности Производитель ООО АРТЕХ
+								li: a(href="#") Система управления и безопасности Производитель ООО АРТЕХ
 	//- .container.section
 	//- 	.mb-3
 	//- 		+btn-primary

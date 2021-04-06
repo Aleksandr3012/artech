@@ -13,6 +13,9 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding">
+		<div class="bg-block">
+			<div class="bg-block-inner"></div>
+		</div>
 		<div class="main-wrapper">
 			<script>
 				let screenName = '02-1920.jpg'
@@ -140,7 +143,7 @@
 						<div class="col-lg-auto order-lg-last"> 
 							<div class="sitebar text-lg-center">
 								<div class="sitebar__group"> 
-									<div class="row row--lg">
+									<div class="row row--lg pb-3">
 										<div class="col order-lg-last text-secondary">Грузоподъемность</div>
 										<div class="col-lg-12 col">
 											<div class="h6 fw-600 mb-1">8-20 кг</div>
@@ -154,7 +157,7 @@
 									</div>
 								</div>
 								<div class="sitebar__group text-lg-center">
-									<div class="text-center"><a class="btn btn-primary w-100 mb-3" href="#">Отправить запрос</a></div>
+									<div class="text-center"><a class="btn btn-primary w-100 mb-3 link-modal-js" href="#modal-call">Отправить запрос</a></div>
 									<div class="row justify-content-center align-items-center">
 										<div class="col-lg-12 col-auto">
 											<div class="text-secondary fw-600">Поделиться:</div>

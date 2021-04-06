@@ -20,6 +20,14 @@ var JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
 		// alert(scrollWidth);
+		$("[data-fancybox]").fancybox({
+			beforeLoad: function beforeLoad() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
+			},
+			afterClose: function afterClose() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null; // 	document.querySelector("html").classList.remove("fixed")
+			}
+		});
 		$(".link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
@@ -324,6 +332,7 @@ function eventHandler() {
 	});
 	whenResize();
 	var defaultSl = (_defaultSl = {
+		speed: 500,
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true
@@ -354,13 +363,13 @@ function eventHandler() {
 		freeModeMomentum: true
 	})); // modal window
 
-	$(document).on("click", '.sitebar-link:not(.sitebar-link--back)', function (e) {
+	$('.sitebar--filter').on("click", ' .sitebar-link:not(.sitebar-link--back)', function (e) {
 		e.preventDefault();
 		$(".sitebar__title").slideUp();
 		$(this).parent().siblings().slideUp();
 		$(this).slideUp().next().slideDown();
 	});
-	$(document).on("click", '.sitebar-link--back', function (e) {
+	$('.sitebar--filter').on("click", ' .sitebar-link--back', function (e) {
 		e.preventDefault();
 		$(this).parent().slideUp().prev().slideDown().parent().siblings().slideDown();
 		$(".sitebar__title").slideDown();
@@ -369,6 +378,10 @@ function eventHandler() {
 	galBlock.forEach(function (el) {
 		var swiper5 = new Swiper(el.querySelector('.gal-block__slider--js'), _objectSpread(_objectSpread({}, defaultSl), {}, {
 			slidesPerView: 1,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			pagination: {
 				el: el.querySelector('.swiper-pagination'),
 				type: 'fraction'

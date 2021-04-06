@@ -13,6 +13,9 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding">
+		<div class="bg-block">
+			<div class="bg-block-inner"></div>
+		</div>
 		<div class="main-wrapper">
 			<script>
 				//- let screenName = '09-1920.jpg'
@@ -141,23 +144,25 @@
 									<li><a class="sitebar-link" href="#">Заголовок 4</a>
 									</li>
 								</ul>
-								<div class="text-center text-secondary fw-600">Поделиться:</div>
-								<div class="soc soc--sm light"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
-									<svg class="icon icon-fb ">
-										<use xlink:href="img/svg/sprite.svg#fb"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
-									<svg class="icon icon-vk ">
-										<use xlink:href="img/svg/sprite.svg#vk"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
-									<svg class="icon icon-twitter ">
-										<use xlink:href="img/svg/sprite.svg#twitter"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF5D00;">
-									<svg class="icon icon-mail-bg ">
-										<use xlink:href="img/svg/sprite.svg#mail-bg"></use>
-									</svg></a>
+								<div class="sitebar__footer">
+									<div class="text-center text-secondary fw-600">Поделиться:</div>
+									<div class="soc soc--sm light"><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4267B2;">
+										<svg class="icon icon-fb ">
+											<use xlink:href="img/svg/sprite.svg#fb"></use>
+										</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #4A76A8;">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #139BD0;">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #03A9F4;">
+										<svg class="icon icon-twitter ">
+											<use xlink:href="img/svg/sprite.svg#twitter"></use>
+										</svg></a><a class="soc__item" href="#" target="_blank" style="--hover-bg: #FF5D00;">
+										<svg class="icon icon-mail-bg ">
+											<use xlink:href="img/svg/sprite.svg#mail-bg"></use>
+										</svg></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -175,8 +180,8 @@
 								<picture> 
 									<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
 									<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
-									<source type="image/jpeg" srcset="img/@2x/borjomi.jpeg" media="(min-width:576px)"/>
-									<source type="image/jpeg" srcset="img/@1x/borjomi.jpeg"/><img src="img/@2x/borjomi.jpeg" alt="" loading="lazy"/>
+									<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
+									<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
 							</div>
@@ -304,7 +309,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -327,7 +332,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -350,7 +355,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>
@@ -373,7 +378,7 @@
 											</picture>
 											<!-- /picture--></a>
 									</div>
-									<div class="col">
+									<div class="article__col-caption col">
 										<div class="article__wrap">
 											<div class="article__date">10.12.2020
 											</div><a class="article__text" href="#">Компания АРТЕХ&nbsp;&mdash; это профессиональный подход в&nbsp;промышленной автоматизации</a>

@@ -240,3 +240,21 @@ a {
 
 @include media-breakpoint-down(xs) {
 }
+
+
+.modal-win--map{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	iframe{
+		filter: saturate(0);
+	}
+.map-wrap,
+	iframe,
+		picture,
+		img{
+			height: 100% !important;
+			width: 100% 	!important;
+		}
+}

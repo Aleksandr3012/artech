@@ -1,8 +1,10 @@
 mixin eq-item(t='Транспортные системы')
 	+e.item 
-		+pic('eq.png','',0)
+		a(href="#") 
+			+pic('eq.png','',0)
 		+e.caption 
-			+e.title.fw-600= t
+			+e.title.fw-600
+				a(href="#")= t
 			+e.btn(href="#") Подробнее
 
 mixin sEquipments(data)
@@ -10,10 +12,34 @@ mixin sEquipments(data)
 	+b.sEquipments.section.pt-0&attributes(attributes)
 		.container
 			.row
-				- for (var x = 0; x < 7; x++)
-					+e.col.col-xl-3.col-lg-4.col-sm-6
-						+eq-item
-					// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Формирователи гофрокоробов")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Транспортные системы")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Маркировка")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Захваты")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Обмотчики поддонов")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Диспенсеры пленки")
+				// /+e.col.col-xl-3.col-lg-4
+				
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+eq-item("Кейспакер")
+				// /+e.col.col-xl-3.col-lg-4
 				
 	// end sEquipments
 mixin sEquipments5(data)
