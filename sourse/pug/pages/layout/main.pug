@@ -31,6 +31,56 @@ html(lang="ru")
 	style.
 		body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}
 	body.loaded_hiding(class= mainPage data-bg= bg)
+
+		// if ie 11
+		section.s404.s404--borser.section.d-none
+			.container
+				.s404__inner
+					a.s404__logo(href='/')
+						img.res-i(src='img/svg/logo.svg' alt='logo')
+					h1 Ваш браузер устарел
+					p
+						| Наш сайт разработан с помощью современных технологий, которые, к сожалению не поддерживаются вашим браузером.
+						br
+						| Пожалуйста, установите актуальную версию любого из представленных ниже браузеров и вернитесь на наш сайт.
+					.s404__row.row
+						.s404__col.col-6.col-lg-3
+							a.s404__link(href='https://www.google.com/chrome/')
+								//- picture
+								//- 	source(type='image/webp' srcset='img/@2x/webp/chrome.webp' media='(min-width:576px)')
+								//- 	source(type='image/webp' srcset='img/@1x/webp/chrome.webp')
+								//- 	source(type='image/jpg' srcset='img/@2x/chrome.jpg' media='(min-width:576px)')
+								//- 	source(type='image/jpg' srcset='img/@1x/chrome.jpg')
+								img( class='res-i' src='img/@2x/chrome.png' alt='' )
+								div.s404__text Google Chrome
+						.s404__col.col-6.col-lg-3
+							a.s404__link(href='https://browser.yandex.ru/')
+								//- picture
+								//- 	source(type='image/webp' srcset='img/@2x/webp/yandex.webp' media='(min-width:576px)')
+								//- 	source(type='image/webp' srcset='img/@1x/webp/yandex.webp')
+								//- 	source(type='image/jpg' srcset='img/@2x/yandex.jpg' media='(min-width:576px)')
+								//- 	source(type='image/jpg' srcset='img/@1x/yandex.jpg')
+								img( class='res-i' src='img/@2x/yandex.png' alt='' )
+								div.s404__text Яндекс Браузер
+						.s404__col.col-6.col-lg-3
+							a.s404__link(href="https://www.apple.com/safari/")
+								//- picture
+								//- 	source(type='image/webp' srcset='img/@2x/webp/safari.webp' media='(min-width:576px)')
+								//- 	source(type='image/webp' srcset='img/@1x/webp/safari.webp')
+								//- 	source(type='image/jpg' srcset='img/@2x/safari.jpg' media='(min-width:576px)')
+								//- 	source(type='image/jpg' srcset='img/@1x/safari.jpg')
+								img( class='res-i' src='img/@2x/safari.png' alt='' )
+								div.s404__text Safari
+						.s404__col.col-6.col-lg-3
+							a.s404__link(href="https://www.mozilla.org/firefox/")
+								//- picture
+								//- 	source(type='image/webp' srcset='img/@2x/webp/firefox.webp' media='(min-width:576px)')
+								//- 	source(type='image/webp' srcset='img/@1x/webp/firefox.webp')
+								//- 	source(type='image/jpg' srcset='img/@2x/firefox.jpg' media='(min-width:576px)')
+								//- 	source(type='image/jpg' srcset='img/@1x/firefox.jpg')
+								img( class='res-i' src='img/@2x/firefox.png' alt='' )
+								div.s404__text Mozilla Firefox
+
 		.bg-block
 			.bg-block-inner
 		.main-wrapper

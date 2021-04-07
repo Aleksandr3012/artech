@@ -13,6 +13,25 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding">
+		<!-- if ie 11-->
+		<section class="s404 s404--borser section d-none">
+			<div class="container">
+				<div class="s404__inner"><a class="s404__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt="logo"></a>
+					<h1>Ваш браузер устарел</h1>
+					<p>Наш сайт разработан с помощью современных технологий, которые, к сожалению не поддерживаются вашим браузером.<br>Пожалуйста, установите актуальную версию любого из представленных ниже браузеров и вернитесь на наш сайт.</p>
+					<div class="s404__row row">
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.google.com/chrome/"><img class="res-i" src="img/@2x/chrome.png" alt="">
+								<div class="s404__text">Google Chrome</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://browser.yandex.ru/"><img class="res-i" src="img/@2x/yandex.png" alt="">
+								<div class="s404__text">Яндекс Браузер</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.apple.com/safari/"><img class="res-i" src="img/@2x/safari.png" alt="">
+								<div class="s404__text">Safari</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.mozilla.org/firefox/"><img class="res-i" src="img/@2x/firefox.png" alt="">
+								<div class="s404__text">Mozilla Firefox</div></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="bg-block">
 			<div class="bg-block-inner"></div>
 		</div>
@@ -438,6 +457,116 @@
 						<button class="form-wrap__btn btn btn-primary" type="button">Закрыть
 						</button>
 					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-questionnaire" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__topBlock"> 
+						<div class="row align-items-center">
+							<div class="col-auto"><a class="form-wrap__logo" href="/"><img src="img/svg/logo.svg" alt="logo"/></a>
+							</div>
+							<div class="col">
+								<div class="form-wrap__questionnaireTitle">Анкета партнера<span class="text-primary">&nbsp;ООО «АРТЕХ»</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table"> 
+							<tr> 
+								<td>Полное наименование Юридического лица</td>
+								<td>Общество с Ограниченной ответственностью ООО «АРТЕХ»</td>
+							</tr>
+							<tr> 
+								<td>Юридический адрес</td>
+								<td>450520, Уфимский район, с. Нижегородка, ул. Заводская 36/1</td>
+							</tr>
+							<tr> 
+								<td>Фактический адрес</td>
+								<td>450520, Уфимский район, с. Нижегородка, ул. Чапаева 38</td>
+							</tr>
+							<tr> 
+								<td>На основании чего действует предприятие</td>
+								<td>Устава</td>
+							</tr>
+							<tr> 
+								<td>ИНН</td>
+								<td>0245953963</td>
+							</tr>
+							<tr> 
+								<td>КПП</td>
+								<td>024501001</td>
+							</tr>
+							<tr> 
+								<td>ОГРН</td>
+								<td>1160280136576</td>
+							</tr>
+							<tr> 
+								<td>ОКПО</td>
+								<td>06118441</td>
+							</tr>
+							<tr> 
+								<td>ОКТМО</td>
+								<td>80652420111</td>
+							</tr>
+							<tr> 
+								<td>ОКВЭД</td>
+								<td>28.29, 28.22.7, 28.99</td>
+							</tr>
+							<tr> 
+								<td>Должность, Ф.И.О. руководителя</td>
+								<td>Директор Боровков Родион Вячеславович</td>
+							</tr>
+							<tr> 
+								<td>Ф.И.О. главного бухгалтера</td>
+								<td>Жданова Анастасия Александровна</td>
+							</tr>
+							<tr> 
+								<td class="light">Контактные данные</td>
+								<td></td>
+							</tr>
+							<tr> 
+								<td>Телефон</td>
+								<td><a class="table__tel" href="tel:+7(347)2210790">+7 (347) 221-07-90</a></td>
+							</tr>
+							<tr> 
+								<td>Адрес электронной почты</td>
+								<td><a class="table__link" href="mailto:info@artech.si">info@artech.si</a></td>
+							</tr>
+							<tr> 
+								<td>Сайт</td>
+								<td><a class="table__link" href="http://www.artech.si/" target="_blank">www.artech.si</a></td>
+							</tr>
+							<tr> 
+								<td>Инстаграм</td>
+								<td><a class="table__link" href="http://www.instagram.com/artech_ufa" target="_blank">www.instagram.com/artech_ufa</a></td>
+							</tr>
+							<tr> 
+								<td class="light">Баковские реквизиты</td>
+								<td></td>
+							</tr>
+							<tr> 
+								<td>Расчетный счет</td>
+								<td>40702810810000233270</td>
+							</tr>
+							<tr> 
+								<td>Корреспондентский счет</td>
+								<td>30101810145250000974</td>
+							</tr>
+							<tr> 
+								<td>Банк</td>
+								<td>АО "ТИНЬКОФФ БАНК"</td>
+							</tr>
+							<tr> 
+								<td>ИНН</td>
+								<td>7710140679</td>
+							</tr>
+							<tr> 
+								<td>БИК</td>
+								<td>044525974</td>
+							</tr>
+					</table>
 				</form>
 			</div>
 		</div>

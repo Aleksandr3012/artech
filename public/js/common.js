@@ -6,14 +6,28 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var isIE11 = Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject;
+
+if (isIE11) {
+	document.body.classList.remove("loaded_hiding");
+	$(".s404--borser").removeClass("d-none");
+}
+
 var div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
 div.style.height = '50px'; // мы должны вставить элемент в документ, иначе размеры будут равны 0
 
-document.body.append(div);
+if (!isIE11) {
+	document.body.append(div);
+}
+
 var scrollWidth = div.offsetWidth - div.clientWidth;
-div.remove();
+
+if (!isIE11) {
+	div.remove();
+}
+
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -196,13 +210,7 @@ var JSCCommon = {
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
-	ifie: function ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
-	},
+	ifie: function ifie() {},
 	// sendForm() {
 	// 	var gets = (function () {
 	// 		var a = window.location.search;
@@ -293,6 +301,7 @@ var $ = jQuery;
 function eventHandler() {
 	var _defaultSl, _Swiper;
 
+	if (isIE11) return;
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
@@ -302,13 +311,23 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.getCurrentYear('.currentYear');
-	JSCCommon.CustomInputFile(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.CustomInputFile();
+
+	window.onload = function () {
+		document.body.classList.remove("loaded_hiding");
+		var wow = new WOW({
+			mobile: false,
+			animateClass: 'animate__animated'
+		});
+		wow.init();
+	}; // JSCCommon.CustomInputFile(); 
 	// let screenName;
 	// screenName = document.body.dataset.bg;
 	// var x = window.location.host;
 	// if (screenName && x.includes("localhost:30")) {
 	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	// }
+
 
 	function whenResize() {
 		var topNav = document.querySelector('.top-nav  ');
@@ -405,16 +424,6 @@ function eventHandler() {
 			}
 		}
 	}));
-
-	window.onload = function () {
-		document.body.classList.remove("loaded_hiding");
-		var wow = new WOW({
-			mobile: false,
-			animateClass: 'animate__animated'
-		});
-		wow.init();
-	};
-
 	window.addEventListener('scroll', function (e) {
 		var el = document.querySelector('.top-nav');
 		if (!el) return;
@@ -446,9 +455,9 @@ function eventHandler() {
 	// 		}
 	// });
 
-	if ($('.counter-js')) {
+	if ($('.counter-wrap-js').length) {
 		var show = true;
-		var countbox = ".sAboutText";
+		var countbox = ".counter-wrap-js";
 		$(window).on("scroll load resize", function () {
 			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
 

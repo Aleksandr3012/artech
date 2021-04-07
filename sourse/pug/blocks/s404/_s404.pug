@@ -12,3 +12,27 @@ mixin s404(data)
 
 		+e.btn.btn.btn-primary(href="/") Вернуться на главную
 	// end s404
+
+
+mixin s404-browser(data)
+	// start s404
+	+b.SECTION.s404--browser.section#s404&attributes(attributes)
+		.container 
+			+e.inner 
+				+e.logo(href="/")
+					img.res-i(src="img/svg/logo.svg" alt="logo")
+				h1 Ваш браузер устарел
+				p Наш сайт разработан с&nbsp;помощью современных технологий, которые, к&nbsp;сожалению не&nbsp;поддерживаются вашим браузером.<br>Пожалуйста, установите актуальную версию любого из&nbsp;представленных ниже браузеров и&nbsp;вернитесь на&nbsp;наш сайт.
+
+				+e.row.row 
+					mixin item(i,t)
+						+e.col.col-6.col-lg-3 
+							+e.link(href="#")
+								+pic(i)
+								+e.text= t
+					+item('chrome', 'Google Chrome')
+					+item('yandex', 'Яндекс Браузер')
+					+item('safari', 'Safari')
+					+item('firefox', 'Mozilla Firefox')
+
+

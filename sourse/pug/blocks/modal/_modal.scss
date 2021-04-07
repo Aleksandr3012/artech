@@ -45,6 +45,47 @@ a {
 	outline: 0 !important;
 }
 
+#modal-questionnaire {
+	max-width: 680px;
+	padding: 30px 20px;
+	@media (min-width: 600px) {
+		padding: 30px;
+	}
+
+	.form-wrap {
+		&__topBlock {
+			text-align: right;
+			padding-bottom: rem(30);
+			@media (min-width: 600px) {
+				padding-bottom: rem(40);
+			}
+		}
+
+		&__questionnaireTitle {
+			text-align: right;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: var(--h6-font-size);
+
+			span {
+				display: inline-block;
+			}
+		}
+	}
+
+	table {
+		font-size: 13px;
+	}
+
+	td {
+		padding-left: 0;
+
+		&:nth-child(1) {
+			width: 50% !important;
+		}
+	}
+}
+
 #modal-search {
 	padding: 0;
 	width: 100%;
@@ -241,20 +282,19 @@ a {
 @include media-breakpoint-down(xs) {
 }
 
-
-.modal-win--map{
+.modal-win--map {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	max-width: 100%;
-	iframe{
+	iframe {
 		filter: saturate(0);
 	}
-.map-wrap,
+	.map-wrap,
 	iframe,
-		picture,
-		img{
-			height: 100% !important;
-			width: 100% 	!important;
-		}
+	picture,
+	img {
+		height: 100% !important;
+		width: 100% !important;
+	}
 }
