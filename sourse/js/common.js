@@ -463,9 +463,9 @@ function eventHandler() {
 			wow.init();
 	};
 
-	if ($('.counter-js')) {
+	if ($('.counter-wrap-js').length) {
 		var show = true;
-		var countbox = ".sAboutText";
+		var countbox = ".counter-wrap-js";
 		$(window).on("scroll load resize", function () {
 				if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
 				var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
@@ -485,7 +485,7 @@ function eventHandler() {
 		});
 	};
 		
-	};
+};
 	if (document.readyState !== 'loading') {
 		eventHandler();
 } else {

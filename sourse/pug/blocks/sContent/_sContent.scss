@@ -63,7 +63,7 @@
 
 	a {
 		text-decoration: none;
-		border-bottom: solid 1px ;
+		border-bottom: solid 1px;
 		// margin-left: -3px;
 		@include h() {
 			border-color: transparent;
@@ -84,7 +84,6 @@
 				color: $primary;
 				margin-right: rem(5);
 			}
-
 		}
 	}
 
@@ -145,6 +144,7 @@ p {
 .table {
 	margin-bottom: 0.3rem;
 	td {
+		vertical-align: middle;
 		@include media-breakpoint-down(md) {
 			padding-left: 0;
 			padding-right: rem(5);
@@ -158,6 +158,10 @@ p {
 			@include media-breakpoint-up(lg) {
 				width: 49%;
 			}
+		}
+
+		&.light {
+			color: #8c8c8c;
 		}
 	}
 }
@@ -175,14 +179,14 @@ p {
 }
 
 .photo,
-.video{
+.video {
 	overflow: hidden;
 	border: none !important;
-	picture{
+	picture {
 		// @include a-cent;
 	}
-	&:hover{
-		img{
+	&:hover {
+		img {
 			transform: scale(1.04);
 		}
 	}
@@ -223,4 +227,3 @@ p {
 		}
 	}
 }
-

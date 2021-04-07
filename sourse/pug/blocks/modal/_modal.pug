@@ -24,5 +24,116 @@ mixin modal()
 				h3 Спасибо за обращение!
 				p Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, как только получим вашу заявку.
 				+e.BUTTON.btn.btn.btn-primary(type="button") Закрыть
+
+	+b.modal-win(id="modal-questionnaire" class=" " style="display: none" )
+		+form-wrap
+			+e.topBlock 
+				.row.align-items-center
+					.col-auto
+						+e.logo(href="/")
+							img(src="img/svg/logo.svg" alt="logo")
+					.col
+						+e.questionnaireTitle Анкета партнера
+							span.text-primary &nbsp;ООО «АРТЕХ»
+			table.table 
+				mixin tr(data, s)
+					tr 
+						if s
+							td.light!= data.td1
+							td
+
+						else 
+							td!= data.td1
+							td!= data.td2
+				+tr({
+					td1: `Полное наименование Юридического лица`, 
+					td2: `Общество с Ограниченной ответственностью ООО «АРТЕХ»`
+				})
+				+tr({
+					td1: `Юридический адрес`, 
+					td2: `450520, Уфимский район, с. Нижегородка, ул. Заводская 36/1`
+				})
+				+tr({
+					td1: `Фактический адрес`, 
+					td2: `450520, Уфимский район, с. Нижегородка, ул. Чапаева 38`
+				})
+				+tr({
+					td1: `На основании чего действует предприятие`, 
+					td2: `Устава`
+				})
+				+tr({
+					td1: `ИНН`, 
+					td2: `0245953963`
+				})
+				+tr({
+					td1: `КПП`, 
+					td2: `024501001`
+				})
+				+tr({
+					td1: `ОГРН`, 
+					td2: `1160280136576`
+				})
+				+tr({
+					td1: `ОКПО`, 
+					td2: `06118441`
+				})
+				+tr({
+					td1: `ОКТМО`, 
+					td2: `80652420111`
+				})
+				+tr({
+					td1: `ОКВЭД`, 
+					td2: `28.29, 28.22.7, 28.99`
+				})
+				+tr({
+					td1: `Должность, Ф.И.О. руководителя`, 
+					td2: `Директор Боровков Родион Вячеславович`
+				})
+				+tr({
+					td1: `Ф.И.О. главного бухгалтера`, 
+					td2: `Жданова Анастасия Александровна`
+				})
+				+tr({
+					td1: `Контактные данные`
+				}, 's')
+				+tr({
+					td1: `Телефон`, 
+					td2: `<a class="table__tel" href="tel:+7(347)2210790">+7 (347) 221-07-90</a>`
+				})
+				+tr({
+					td1: `Адрес электронной почты`, 
+					td2: `<a class="table__link" href="mailto:info@artech.si">info@artech.si</a>`
+				})
+				+tr({
+					td1: `Сайт`, 
+					td2: `<a class="table__link" href="http://www.artech.si/" target="_blank">www.artech.si</a>`
+				})
+				+tr({
+					td1: `Инстаграм`, 
+					td2: `<a class="table__link" href="http://www.instagram.com/artech_ufa" target="_blank">www.instagram.com/artech_ufa</a>`
+				})
+				+tr({
+					td1: `Баковские реквизиты`
+				}, 's')
+				+tr({
+					td1: `Расчетный счет`, 
+					td2: `40702810810000233270`
+				})
+				+tr({
+					td1: `Корреспондентский счет`, 
+					td2: `30101810145250000974`
+				})
+				+tr({
+					td1: `Банк`, 
+					td2: `АО "ТИНЬКОФФ БАНК"`
+				})
+				+tr({
+					td1: `ИНН`, 
+					td2: `7710140679`
+				})
+				+tr({
+					td1: `БИК`, 
+					td2: `044525974`
+				})
 	// #modal-search
 	// end modals
