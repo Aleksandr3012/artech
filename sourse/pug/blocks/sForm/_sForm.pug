@@ -3,9 +3,9 @@ mixin form-body()
 		.row
 			.col-lg-6 
 				+input('Ваше имя')(required)
-				+input('Телефон или e-mail')(required)
+				+input('Телефон или e-mail')(required).invalid
 			.col-lg-6 
-				+input('Ваше сообщение','textarea')( required)
+				+input('Ваше сообщение','textarea')( required).invalid
 			.col-lg-6.order-lg-last
 				+add-file
 			.col-lg-6
@@ -27,12 +27,12 @@ mixin sForm(modal)
 				+form-body()
 	else
 		+b.SECTION.sForm.section&attributes(attributes) 
-				.container
-					.section__inner.mb-0
-						if block
-							block
-						else
-							h3 Задать вопрос
-							p Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: #[a(href="tel:+73472210790") +7 (347) 221-07-90]
-						+form-body()
+			.container
+				.section__inner.mb-0
+					if block
+						block
+					else
+						h3 Задать вопрос
+						p Возникли вопросы? Пожалуйста, заполните форму, или позвоните по телефону: #[a(href="tel:+73472210790") +7 (347) 221-07-90]
+					+form-body()
 	// end sForm

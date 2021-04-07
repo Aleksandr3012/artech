@@ -9,23 +9,98 @@
 		border-top: none;
 		padding-left: 0;
 		resize: none;
+		padding-top: 0.5rem;
+
+		&:focus,
+		&:active {
+			border-color: #dedede;
+		}
+	}
+
+	&__inputBorder {
+		--bgc: #{$primary};
+		background-color: var(--bgc);
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 4;
+		transform-origin: left;
+		transform: scale(0, 1);
+		@include mt;
+		pointer-events: none;
 	}
 
 	&__input:focus + &__inputBorder {
 		transform: scale(1);
 	}
 
-	&__inputBorder {
-		background-color: $primary;
-		width: 100%;
-		height: 2px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		transform-origin: left;
-		transform: scale(0, 1);
-		@include mt;
+	&__input.invalid + &__inputBorder {
+		transform: scale(1);
+		--bgc: #{$danger};
 	}
+
+	@include media-breakpoint-up(lg) {
+		--input-size: #{rem(50.5)};
+	}
+	--border-height: 2px;
+	--input-size: #{rem(50.5)};
+	--input-mb: var(--input-size);
+	--textarea-height: calc(var(--input-size) * 3 + var(--border-height) / 2);
+	$bg-gradient: repeating-linear-gradient(
+		to top,
+		var(--line-color) 0,
+		var(--line-color) var(--border-height),
+		transparent var(--border-height),
+		transparent calc(var(--border-height) + var(--input-size))
+	);
+
+	textarea + .form-wrap__inputBorder {
+		--line-color: var(--bgc);
+		height: calc(100%);
+		background-color: transparent !important;
+		background-image: repeating-linear-gradient(
+			to top,
+			var(--line-color) 0,
+			var(--line-color) var(--border-height),
+			transparent var(--border-height),
+			transparent calc(var(--border-height) + var(--input-size))
+		);
+	}
+
+	textarea {
+		--line-color: #dedede;
+		position: relative;
+		z-index: 3;
+		height: var(--textarea-height);
+		border-bottom-width: 0;
+		background-image: repeating-linear-gradient(
+			to top,
+			var(--line-color) 0,
+			var(--line-color) var(--border-height),
+			transparent var(--border-height),
+			transparent calc(var(--border-height) + var(--input-size))
+		);
+		margin-bottom: rem(10);
+		// border-bottom: none;
+		line-height: 2.9;
+		padding-top: 0;
+		&.border-danger {
+			// --line-color: #{$danger};
+		}
+		&:focus,
+		&:active {
+			// --line-color: #00b2ff;
+			// border-color: #00b2ff !important;
+		}
+	}
+
+	&__input-wrap {
+		padding-bottom: 0;
+		margin-bottom: var(--input-mb);
+	}
+
 	&__btn {
 		cursor: pointer;
 	}
