@@ -13,6 +13,25 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding">
+		<!-- if ie 11-->
+		<section class="s404 s404--borser section d-none">
+			<div class="container">
+				<div class="s404__inner"><a class="s404__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt="logo"></a>
+					<h1>Ваш браузер устарел</h1>
+					<p>Наш сайт разработан с помощью современных технологий, которые, к сожалению не поддерживаются вашим браузером.<br>Пожалуйста, установите актуальную версию любого из представленных ниже браузеров и вернитесь на наш сайт.</p>
+					<div class="s404__row row">
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.google.com/chrome/"><img class="res-i" src="img/@2x/chrome.png" alt="">
+								<div class="s404__text">Google Chrome</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://browser.yandex.ru/"><img class="res-i" src="img/@2x/yandex.png" alt="">
+								<div class="s404__text">Яндекс Браузер</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.apple.com/safari/"><img class="res-i" src="img/@2x/safari.png" alt="">
+								<div class="s404__text">Safari</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.mozilla.org/firefox/"><img class="res-i" src="img/@2x/firefox.png" alt="">
+								<div class="s404__text">Mozilla Firefox</div></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="bg-block">
 			<div class="bg-block-inner"></div>
 		</div>
@@ -66,14 +85,14 @@
 					</div>
 					<!--  мобильное меню-->
 					<div class="container container--fluid">
-						<div class="row align-items-center">
+						<div class="top-nav__row row align-items-center">
 							<div class="col-auto d-xxl-none order-1 order-md-last">
 								<div class="top-nav__toggle-menu-wrap">
 									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 									</div>
 								</div>
 							</div>
-							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="d-md-none" src="img/svg/logo-sm.svg" alt=""/></a>
+							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="logo-full d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="logo-text" src="img/svg/logo-sm.svg" alt=""/></a>
 							</div>
 							<div class="col d-none d-xxl-block order-1">
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -112,13 +131,13 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<main class="main-overflow wow  animate__fadeInUp" data-wow-delay="2s" href="#sAbout">
+			<main class="main-overflow" data-wow-delay="2s" href="#sAbout">
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
-						<div class="section-title">
+						<div class="section-title wow animate__fadeInUp" data-wow-delay="1s">
 							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-						</div><a class="scrollBottom scroll-link" href="#sAbout"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
+						</div><a class="scrollBottom scroll-link wow animate__fadeInUp" href="#sAbout" data-wow-delay="1s"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
 <circle cx="60" cy="60" r="54" fill="none" stroke="#D8D8D8" stroke-width="4" />
 <circle class="scrollBottom__value" cx="60" cy="60" r="54" fill="none" stroke="#00B2FF" stroke-width="4" />
 </svg></span>
@@ -132,7 +151,7 @@
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
 						<div class="sAbout__mainRow row"> 
-							<div class="sAbout__col col-md-6 col-lg-12">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"> <a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -160,7 +179,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sAbout__col col-md-6 col-lg-12">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"><a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -194,11 +213,7 @@
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
 				<section class="sAboutText section wow animate__fadeInUp" id="sAboutText" data-wow-delay="0.1s">
-					<div class="sAboutText__decor sAboutText__decor--r"><img src="img/@2x/decor-2.png" alt=""/>
-					</div>
-					<div class="sAboutText__decor sAboutText__decor--l d-none d-xxl-block"><img src="img/@2x/decor-3.png" alt=""/>
-					</div>
-					<div class="container counter-wrap-js">
+					<div class="container">
 						<div class="sAboutText__row row">
 							<div class="sAboutText__col col-xl-9"> 
 								<div class="sAboutText__txtWrap">
@@ -371,19 +386,20 @@
 						<form>
 							<div class="row">
 								<div class="col-lg-6"> 
+									<!-- вешать класс invalid-->
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control invalid" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
-									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control invalid" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>

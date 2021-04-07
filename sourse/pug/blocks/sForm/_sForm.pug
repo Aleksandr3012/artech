@@ -2,10 +2,12 @@ mixin form-body()
 	+form-wrap
 		.row
 			.col-lg-6 
+				// вешать класс invalid
 				+input('Ваше имя')(required)
-				+input('Телефон или e-mail')(required).invalid
+				+input('Телефон или e-mail')(required)
+
 			.col-lg-6 
-				+input('Ваше сообщение','textarea')( required).invalid
+				+input('Ваше сообщение','textarea')( required)
 			.col-lg-6.order-lg-last
 				+add-file
 			.col-lg-6

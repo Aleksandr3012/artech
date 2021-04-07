@@ -6,14 +6,28 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var isIE11 = Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject;
+
+if (isIE11) {
+	document.body.classList.remove("loaded_hiding");
+	$(".s404--borser").removeClass("d-none");
+}
+
 var div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
 div.style.height = '50px'; // мы должны вставить элемент в документ, иначе размеры будут равны 0
 
-document.body.append(div);
+if (!isIE11) {
+	document.body.append(div);
+}
+
 var scrollWidth = div.offsetWidth - div.clientWidth;
-div.remove();
+
+if (!isIE11) {
+	div.remove();
+}
+
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -138,16 +152,11 @@ var JSCCommon = {
 			}
 		}, {
 			passive: true
-		});
-		window.addEventListener('resize', function () {
-			if (window.matchMedia("(min-width: 992px)").matches) {
-				_this.closeMenu();
-			}
-
-			;
-		}, {
-			passive: true
-		});
+		}); // window.addEventListener('resize', () => {
+		// 	if (window.matchMedia("(min-width: 1200px)").matches) {
+		// 		this.closeMenu();
+		// 	};
+		// }, { passive: true });
 	},
 	// /mobileMenu
 	// tabs  .
@@ -201,13 +210,7 @@ var JSCCommon = {
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
-	ifie: function ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<section class="s404 s404--borser section"><div class="container"> <div class="s404__inner"> <a class="s404__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt="logo"/></a><h1>Ваш браузер устарел</h1><p>Наш сайт разработан с&nbsp;помощью современных технологий, которые, к&nbsp;сожалению не&nbsp;поддерживаются вашим браузером.<br>Пожалуйста, установите актуальную версию любого из&nbsp;представленных ниже браузеров и&nbsp;вернитесь на&nbsp;наш сайт.</p><div class="s404__row row"> <div class="s404__col col-6 col-lg-3"> <a class="s404__link" href="#"><picture> <source type="image/webp" srcset="img/@2x/webp/chrome.webp" media="(min-width:576px)"/><source type="image/webp" srcset="img/@1x/webp/chrome.webp"/><source type="image/jpg" srcset="img/@2x/chrome.jpg" media="(min-width:576px)"/><source type="image/jpg" srcset="img/@1x/chrome.jpg"/><img src="img/@2x/chrome.jpg" alt="" loading="lazy"/></picture><span class="s404__text">Google Chrome</span></a></div><div class="s404__col col-6 col-lg-3"> <a class="s404__link" href="#"><picture> <source type="image/webp" srcset="img/@2x/webp/yandex.webp" media="(min-width:576px)"/><source type="image/webp" srcset="img/@1x/webp/yandex.webp"/><source type="image/jpg" srcset="img/@2x/yandex.jpg" media="(min-width:576px)"/><source type="image/jpg" srcset="img/@1x/yandex.jpg"/><img src="img/@2x/yandex.jpg" alt="" loading="lazy"/></picture><span class="s404__text">Яндекс Браузер</span></a></div><div class="s404__col col-6 col-lg-3"> <a class="s404__link" href="#"><picture> <source type="image/webp" srcset="img/@2x/webp/safari.webp" media="(min-width:576px)"/><source type="image/webp" srcset="img/@1x/webp/safari.webp"/><source type="image/jpg" srcset="img/@2x/safari.jpg" media="(min-width:576px)"/><source type="image/jpg" srcset="img/@1x/safari.jpg"/><img src="img/@2x/safari.jpg" alt="" loading="lazy"/></picture><span class="s404__text">Safari</span></a></div><div class="s404__col col-6 col-lg-3"> <a class="s404__link" href="#"><picture> <source type="image/webp" srcset="img/@2x/webp/firefox.webp" media="(min-width:576px)"/><source type="image/webp" srcset="img/@1x/webp/firefox.webp"/><source type="image/jpg" srcset="img/@2x/firefox.jpg" media="(min-width:576px)"/><source type="image/jpg" srcset="img/@1x/firefox.jpg"/><img src="img/@2x/firefox.jpg" alt="" loading="lazy"/></picture><span class="s404__text">Mozilla Firefox</span></a></div></div></div></div></section>');
-		}
-	},
+	ifie: function ifie() {},
 	// sendForm() {
 	// 	var gets = (function () {
 	// 		var a = window.location.search;
@@ -298,6 +301,7 @@ var $ = jQuery;
 function eventHandler() {
 	var _defaultSl, _Swiper;
 
+	if (isIE11) return;
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
@@ -307,13 +311,23 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.getCurrentYear('.currentYear');
-	JSCCommon.CustomInputFile(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.CustomInputFile();
+
+	window.onload = function () {
+		document.body.classList.remove("loaded_hiding");
+		var wow = new WOW({
+			mobile: false,
+			animateClass: 'animate__animated'
+		});
+		wow.init();
+	}; // JSCCommon.CustomInputFile(); 
 	// let screenName;
 	// screenName = document.body.dataset.bg;
 	// var x = window.location.host;
 	// if (screenName && x.includes("localhost:30")) {
 	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	// }
+
 
 	function whenResize() {
 		var topNav = document.querySelector('.top-nav  ');
@@ -410,15 +424,36 @@ function eventHandler() {
 			}
 		}
 	}));
-
-	window.onload = function () {
-		document.body.classList.remove("loaded_hiding");
-		var wow = new WOW({
-			mobile: false,
-			animateClass: 'animate__animated'
-		});
-		wow.init();
-	};
+	window.addEventListener('scroll', function (e) {
+		var el = document.querySelector('.top-nav');
+		if (!el) return;
+		var oldScroll = this.oldScroll || 0,
+				newScroll = this.scrollY,
+				height = el.innerHeight,
+				// isScrollDown = newScroll > oldScroll,
+		isScrollUp = newScroll < oldScroll && newScroll > 0,
+				isScrollDown = newScroll > 0;
+		el.classList.toggle('scroll-up', isScrollUp);
+		el.classList.toggle('scroll-down', isScrollDown);
+		this.oldScroll = newScroll;
+	}); // var show = true;
+	// var countbox = ".sAboutText";
+	// $(window).on("scroll load resize", function () {
+	// 		if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+	// 		var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+	// 		var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+	// 		var w_height = $(window).height(); // Высота окна браузера
+	// 		var d_height = $(document).height(); // Высота всего документа
+	// 		var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+	// 		if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+	// 				$('.counter-js').css('opacity', '1');
+	// 				$('.counter-js').spincrement({
+	// 						thousandSeparator: "",
+	// 						duration: 2000
+	// 				});
+	// 				show = false;
+	// 		}
+	// });
 
 	if ($('.counter-wrap-js').length) {
 		var show = true;
@@ -436,11 +471,11 @@ function eventHandler() {
 
 			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
 
-			if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+			if (w_top + 300 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
 				$('.counter-js').css('opacity', '1');
 				$('.counter-js').spincrement({
 					thousandSeparator: "",
-					duration: 2000
+					duration: 3000
 				});
 				show = false;
 			}

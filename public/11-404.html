@@ -13,6 +13,25 @@
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
 	<body class="loaded_hiding page-404">
+		<!-- if ie 11-->
+		<section class="s404 s404--borser section d-none">
+			<div class="container">
+				<div class="s404__inner"><a class="s404__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt="logo"></a>
+					<h1>Ваш браузер устарел</h1>
+					<p>Наш сайт разработан с помощью современных технологий, которые, к сожалению не поддерживаются вашим браузером.<br>Пожалуйста, установите актуальную версию любого из представленных ниже браузеров и вернитесь на наш сайт.</p>
+					<div class="s404__row row">
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.google.com/chrome/"><img class="res-i" src="img/@2x/chrome.png" alt="">
+								<div class="s404__text">Google Chrome</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://browser.yandex.ru/"><img class="res-i" src="img/@2x/yandex.png" alt="">
+								<div class="s404__text">Яндекс Браузер</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.apple.com/safari/"><img class="res-i" src="img/@2x/safari.png" alt="">
+								<div class="s404__text">Safari</div></a></div>
+						<div class="s404__col col-6 col-lg-3"><a class="s404__link" href="https://www.mozilla.org/firefox/"><img class="res-i" src="img/@2x/firefox.png" alt="">
+								<div class="s404__text">Mozilla Firefox</div></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="bg-block">
 			<div class="bg-block-inner"></div>
 		</div>
@@ -53,19 +72,20 @@
 						<form>
 							<div class="row">
 								<div class="col-lg-6"> 
+									<!-- вешать класс invalid-->
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control invalid" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
-									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control invalid" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>

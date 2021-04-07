@@ -117,16 +117,21 @@
 
 	&__col {
 		padding-bottom: rem(24);
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	&__link {
-		display: flex;
-		flex-direction: column;
 		height: 100%;
+		display: block;
 		background-color: #fff;
 		text-decoration: none;
 		padding: rem(23);
 		color: $body-color !important;
+		
+		img{
+			flex: 0 0 auto;
+		}
 	}
 
 	&__text {

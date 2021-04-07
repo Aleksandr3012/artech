@@ -20,15 +20,15 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn" data-wow-delay="1s" )
 		+mob-mnu
 		.container.container--fluid
-			.row.align-items-center
+			+e.row.row.align-items-center
 				.col-auto.d-xxl-none.order-1.order-md-last
 					+e.toggle-menu-wrap
 						+b.toggle-menu-mobile--js
 							span
 				+e.col.col.col-md-auto.order-2.order-md-1
 					+e.logo(href="/")
-						img.d-none.d-md-block(src="img/svg/logo.svg" alt="")
-						img.d-md-none(src="img/svg/logo-sm.svg" alt="")
+						img.logo-full.d-none.d-md-block(src="img/svg/logo.svg" alt="")
+						img.logo-text(src="img/svg/logo-sm.svg" alt="")
 				.col.d-none.d-xxl-block.order-1
 					+mnu()
 				.col-auto.order-1.order-xxl-5.d-none.d-md-block
