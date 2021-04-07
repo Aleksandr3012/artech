@@ -103,9 +103,13 @@ $h: 3px;
 .menu-mobile {
 	position: absolute !important;
 	z-index: 999;
-	max-width: 100%;
-	// height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
+	max-width: 100%;
+		@include media-breakpoint-up(lg){
+
+			--top-nav: 110px;
+		}
+	height: calc(var(--vh, 1vh) * 100 - var(--top-nav));
 
 	// top: 91px;
 	// @include media-breakpoint-up(md) {

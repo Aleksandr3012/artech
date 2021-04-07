@@ -21,6 +21,9 @@
 		} 
 .top-nav {
 	// position: relative;
+	&.scroll-down{
+		visibility: visible !important;
+	}
 	position: fixed;
 	width: 100vw;
 	top: 0;
@@ -62,8 +65,15 @@
 		--sp: #{rem(14)};
 		// --spy: #{rem(13)};
 		transform: translateY(var(--top,0));
+		@include media-breakpoint-up(md) {
+			.top-nav__logo{
+				margin-top: -15px;
+				margin-bottom: -15px;
+			}
+		}
 		.logo-full{
 			opacity: 0;
+			// height: 30px;
 		}
 		.logo-text{
 			opacity: 1;
