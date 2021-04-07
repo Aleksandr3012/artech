@@ -13,9 +13,6 @@ mixin mob-mnu()
 					+e.btnSearch(type="submit")
 						+icon('search')
 				+mnu()
-				+e.lang.d-md-none(href="#") 
-					img(src="img/svg/lang.svg" alt="")
-					span English
 
 	//  мобильное меню
 mixin top-nav() 
@@ -25,8 +22,9 @@ mixin top-nav()
 		.container.container--fluid
 			.row.align-items-center
 				.col-auto.d-xxl-none.order-1.order-md-last
-					+b.toggle-menu-mobile--js
-						span
+					+e.toggle-menu-wrap
+						+b.toggle-menu-mobile--js
+							span
 				+e.col.col.col-md-auto.order-2.order-md-1
 					+e.logo(href="/")
 						img.d-none.d-md-block(src="img/svg/logo.svg" alt="")

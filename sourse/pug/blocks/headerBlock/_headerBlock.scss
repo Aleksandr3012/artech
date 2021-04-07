@@ -8,7 +8,7 @@
 	// background-image: url(../img);
 	// background-color: #000000;
 
-	--sTPB: #{rem(45)};
+	--sTPB: 0rem;
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(85)};
 	}
@@ -22,16 +22,16 @@
 		--sPT: #{rem(75)};
 	}
 	@include media-breakpoint-only(xl) {
-		--sPT: #{rem(83)};
+		--sPT: #{rem(60)};
 	}
 	@include media-breakpoint-only(lg) {
-		--sPT: #{rem(53)};
+		--sPT: #{rem(45)};
 	}
 	@include media-breakpoint-only(md) {
 		--sPT: #{rem(105)};
 	}
 	@include media-breakpoint-down(md) {
-		--sPT: #{rem(73)};
+		--sPB: 0rem;
 	}
 
 	.section-title {

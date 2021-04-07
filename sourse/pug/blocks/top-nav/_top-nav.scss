@@ -173,6 +173,10 @@
 		}
 	}
 
+	&__toggle-menu-wrap {
+		cursor: pointer;
+	}
+
 	@include media-breakpoint-up(xs) {
 	}
 	@include media-breakpoint-between(md, xl) {

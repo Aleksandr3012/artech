@@ -27,9 +27,10 @@
 		}
 
 		&__input-wrap {
-			padding-bottom: rem(43);
+			padding-bottom: 0;
+			margin-bottom: rem(43);
 			@include media-breakpoint-up(lg) {
-				padding-bottom: rem(63);
+				margin-bottom: rem(63);
 			}
 		}
 	}
@@ -65,9 +66,8 @@
 		// border-bottom: none;
 		line-height: 2.9;
 		padding-top: 0;
-		&.border-danger{
+		&.border-danger {
 			--line-color: #{$danger};
-			
 		}
 		&:focus,
 		&:active {

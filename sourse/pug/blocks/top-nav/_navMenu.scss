@@ -51,6 +51,14 @@
 				}
 			}
 		}
+
+		&--lang {
+			display: flex;
+			align-items: center;
+			img {
+				margin-right: rem(24);
+			}
+		}
 	}
 
 	&.light {

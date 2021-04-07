@@ -36,6 +36,8 @@
 								</div>
 								<div class="menu-mobile__search">
 									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
+										<div class="menu-mobile__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="menu-mobile__btnSearch" type="submit">
@@ -55,7 +57,9 @@
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
 									</li>
-								</ul><a class="menu-mobile__lang d-md-none" href="#"> <img src="img/svg/lang.svg" alt=""/><span>English</span></a>
+									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -63,7 +67,9 @@
 					<div class="container container--fluid">
 						<div class="row align-items-center">
 							<div class="col-auto d-xxl-none order-1 order-md-last">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								<div class="top-nav__toggle-menu-wrap">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
 								</div>
 							</div>
 							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="d-md-none" src="img/svg/logo-sm.svg" alt=""/></a>
@@ -79,6 +85,8 @@
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
+									</li>
+									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 									</li>
 								</ul>
 							</div>
@@ -119,6 +127,8 @@
 								<div class="row">
 									<div class="col">
 										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск по всем решениям"/>
+											<div class="form-wrap__inputBorder">
+											</div>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
@@ -411,7 +421,7 @@
 				</div>
 				<!-- end sContent-->
 			</div>
-			<footer class="footer"> 
+			<footer class="footer wow animate__fadeInUp" data-wow-delay="0.5s"> 
 				<div class="footer__sliderWrap">
 					<div class="container container--fluid">
 						<div class="footer__partnerTxt">Наши партнеры
@@ -451,6 +461,8 @@
 								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
 								</li>
 								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
+								</li>
+								<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 								</li>
 							</ul>
 						</div>
@@ -519,14 +531,20 @@
 							<div class="row">
 								<div class="col-lg-6"> 
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
 									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -566,7 +584,9 @@
 				<form>
 					<div class="container">
 						<div class="form-wrap__wrap">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/> 
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/>
+								<div class="form-wrap__inputBorder">
+								</div> 
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn btn" type="submit">
@@ -596,6 +616,7 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<script src="js/jquery.spincrement.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"> </script>
