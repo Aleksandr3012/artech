@@ -112,13 +112,13 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<main class="main-overflow wow  animate__fadeInUp" data-wow-delay="2s" href="#sAbout">
+			<main class="main-overflow" data-wow-delay="2s" href="#sAbout">
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
-						<div class="section-title">
+						<div class="section-title wow animate__fadeInUp" data-wow-delay="1s">
 							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-						</div><a class="scrollBottom scroll-link" href="#sAbout"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
+						</div><a class="scrollBottom scroll-link wow animate__fadeInUp" href="#sAbout" data-wow-delay="1s"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
 <circle cx="60" cy="60" r="54" fill="none" stroke="#D8D8D8" stroke-width="4" />
 <circle class="scrollBottom__value" cx="60" cy="60" r="54" fill="none" stroke="#00B2FF" stroke-width="4" />
 </svg></span>
@@ -132,7 +132,7 @@
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
 						<div class="sAbout__mainRow row"> 
-							<div class="sAbout__col col-md-6 col-lg-12">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"> <a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -160,7 +160,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sAbout__col col-md-6 col-lg-12">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"><a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -194,10 +194,6 @@
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
 				<section class="sAboutText section wow animate__fadeInUp" id="sAboutText" data-wow-delay="0.1s">
-					<div class="sAboutText__decor sAboutText__decor--r"><img src="img/@2x/decor-2.png" alt=""/>
-					</div>
-					<div class="sAboutText__decor sAboutText__decor--l d-none d-xxl-block"><img src="img/@2x/decor-3.png" alt=""/>
-					</div>
 					<div class="container">
 						<div class="sAboutText__row row">
 							<div class="sAboutText__col col-xl-9"> 
@@ -262,7 +258,7 @@
 				</section>
 				<!-- end sAboutText-->
 			</main>
-			<footer class="footer wow animate__fadeInUp" data-wow-delay="0.5s"> 
+			<footer class="footer">
 				<div class="footer__sliderWrap">
 					<div class="container container--fluid">
 						<div class="footer__partnerTxt">Наши партнеры
@@ -371,12 +367,13 @@
 						<form>
 							<div class="row">
 								<div class="col-lg-6"> 
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+									<!-- вешать класс invalid-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
 										<div class="form-wrap__inputBorder">
 										</div>
 									</div>
@@ -425,7 +422,7 @@
 				<form>
 					<div class="container">
 						<div class="form-wrap__wrap">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск" required="required"/>
 								<div class="form-wrap__inputBorder">
 								</div> 
 							</div>

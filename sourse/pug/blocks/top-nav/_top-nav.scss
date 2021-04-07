@@ -1,5 +1,6 @@
 .fixed .top-nav {
-	&::after {
+	&::before {
+		transform: translateY(-100%);
 		// 	content: '';
 		// 	position: absolute;
 		// 	top: 0;
@@ -37,6 +38,19 @@
 		position: relative;
 		overflow: hidden;
 	}
+
+	.menu-mobile {
+	position: absolute !important;
+	z-index: 999;
+	width: 100%;
+	max-width: 100%;
+		@include media-breakpoint-up(md){
+
+			--top-nav: 60px;
+		}
+		--top-nav: 40px;
+	height: calc(var(--vh, 1vh) * 100 - var(--top-nav) - var(--sp) * 2);
+	}
 	.top-nav__row{
 		transition: all .6s cubic-bezier(.45,0,.55,1);
 		--opacity: 1;
@@ -54,7 +68,7 @@
 		height: 100%;
 		background-color:rgba($color: #fff, $alpha: .7);
 		transition: all .3s cubic-bezier(.45,0,.55,1);
-		backdrop-filter: blur(15px) brightness(150%) saturate(180%);
+		backdrop-filter: blur(45px);
 		transform: translateY(var(--top,-100%));
 		opacity: var(--opacity);
 	}
