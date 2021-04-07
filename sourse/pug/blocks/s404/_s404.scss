@@ -134,6 +134,10 @@
 		padding-top: rem(26);
 	}
 
+	&--browser {
+		background-color: $body-bg;
+	}
+
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-between(md, xxl) {
