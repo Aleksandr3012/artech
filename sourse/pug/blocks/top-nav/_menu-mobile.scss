@@ -101,22 +101,24 @@ $h: 3px;
 }
 
 .menu-mobile {
-	position: fixed !important;
+	position: absolute !important;
 	z-index: 999;
 	max-width: 100%;
 	// height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 
-	top: 91px;
-	@include media-breakpoint-up(md) {
-		top: 138px;
-	}
+	// top: 91px;
+	// @include media-breakpoint-up(md) {
+	// 	top: 138px;
+	// }
 
-	@include media-breakpoint-up(xl) {
-		top: 141px;
-	}
+	// @include media-breakpoint-up(xl) {
+	// 	top: 141px;
+	// }
+	top: 100%;
 	// left: 0;
-	right: 0;
+	// right: 0;
+	left: 0px;
 	&:not(.active) {
 		transform: translate3d(120%, 0, 0);
 		opacity: 0;
@@ -139,16 +141,16 @@ $h: 3px;
 		position: relative;
 		z-index: 2;
 
-		&::before {
-			content: "";
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			height: 100%;
-			width: 200vw;
-			left: -50vw;
-			background-color: #fff;
-		}
+		// &::before {
+		// 	content: "";
+		// 	z-index: -1;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	height: 100%;
+		// 	width: 200vw;
+		// 	left: -50vw;
+		// 	background-color: #fff;
+		// }
 
 		.icon {
 			font-size: rem(20);
@@ -229,6 +231,7 @@ $h: 3px;
 	&__mail {
 		font-size: rem(20);
 		text-decoration: none;
+		color: #8f9597;
 	}
 
 	&__lang {
@@ -265,7 +268,7 @@ $h: 3px;
 				height: 100%;
 				width: 200vw;
 				left: -50vw;
-				background-color: #fff;
+				background-color: rgba($color: #fff, $alpha: 0.5);
 				opacity: 0;
 				@include mt;
 			}

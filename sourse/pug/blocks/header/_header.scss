@@ -1,18 +1,42 @@
 // start .header
+.main-wrapper{
+	--y: #{rem(140)};
+	@include media-breakpoint-up(xl) {
+		--y: #{rem(120)};
+	}
+	@include media-breakpoint-between(md, xxl) {
+		--y: #{rem(160)};
+	}
+	padding-top: var(--y);
+}
+
 .header {
+	img{
+		@include mt;
+	}
+	// position: absolute;
+	// position: fixed;
+
+	// position: absolute;
+	// position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	// z-index: 200;
+	// --spy: #{rem(23)};
+	
+	@include media-breakpoint-up(xl) {
+				--spy: #{rem(17)};
+			}
+			@include media-breakpoint-between(md, xxl) {
+				--spy: #{rem(24)};
+			}
 	&-inner {
 		background-color: #fff;
 		.top-nav {
-			padding-top: rem(23);
-			padding-bottom: rem(23);
-			@include media-breakpoint-up(xl) {
-				padding-top: rem(17);
-				padding-bottom: rem(17);
-			}
-			@include media-breakpoint-between(md, xxl) {
-				padding-top: rem(24);
-				padding-bottom: rem(24);
-			}
+			
+			padding-top: var(--spy);
+			padding-bottom: var(--spy);
 
 			&__logoTopBlock {
 				margin-bottom: 0;
@@ -29,6 +53,7 @@
 			}
 		}
 	}
+
 	@include media-breakpoint-up(xs) {
 	}
 	@include media-breakpoint-between(md, xl) {

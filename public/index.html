@@ -37,6 +37,8 @@
 								</div>
 								<div class="menu-mobile__search">
 									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
+										<div class="menu-mobile__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="menu-mobile__btnSearch" type="submit">
@@ -46,44 +48,46 @@
 									</button>
 								</div>
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 									</li>
-								</ul><a class="menu-mobile__lang d-md-none" href="#"> <img src="img/svg/lang.svg" alt=""/><span>English</span></a>
+								</ul>
 							</div>
 						</div>
 					</div>
 					<!--  мобильное меню-->
 					<div class="container container--fluid">
-						<div class="row align-items-center">
+						<div class="top-nav__row row align-items-center">
 							<div class="col-auto d-xxl-none order-1 order-md-last">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								<div class="top-nav__toggle-menu-wrap">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
 								</div>
 							</div>
-							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="top-nav__logoTopBlock d-none d-md-block" src="img/svg/logo-top.svg" alt="" role="presentation"/><img src="img/svg/logo-sm.svg" alt=""/></a>
+							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="logo-full d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="logo-text" src="img/svg/logo-sm.svg" alt=""/></a>
 							</div>
 							<div class="col d-none d-xxl-block order-1">
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 									</li>
 								</ul>
 							</div>
@@ -114,21 +118,13 @@
 					<div class="container">
 						<div class="section-title">
 							<h1><span class="text-primary">Решения и&nbsp;оборудование</span> для&nbsp;групповой упаковки и&nbsp;укладки на&nbsp;поддон</h1>
-						</div>
-						<div class="scrollBottom scroll-link">
-							<div class="scrollBottom__count"> 
-								<div class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
+						</div><a class="scrollBottom scroll-link" href="#sAbout"><span class="scrollBottom__count"> <span class="scrollBottom__img"><svg class="scrollBottom__svg" width="120" height="120" viewBox="0 0 120 120">
 <circle cx="60" cy="60" r="54" fill="none" stroke="#D8D8D8" stroke-width="4" />
 <circle class="scrollBottom__value" cx="60" cy="60" r="54" fill="none" stroke="#00B2FF" stroke-width="4" />
-</svg>
-								</div>
-								<svg class="icon icon-arrow-bottom ">
-									<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
-								</svg>
-							</div>
-							<div class="scrollBottom__text">Листайте вниз
-							</div>
-						</div>
+</svg></span>
+						<svg class="icon icon-arrow-bottom ">
+							<use xlink:href="img/svg/sprite.svg#arrow-bottom"></use>
+						</svg></span><span class="scrollBottom__text">Листайте вниз</span></a>
 					</div>
 				</div>
 				<!-- end headerBlock-->
@@ -138,17 +134,15 @@
 						<div class="sAbout__mainRow row"> 
 							<div class="sAbout__col col-md-6 col-lg-12">
 								<div class="sAbout__row row">
-									<div class="col-lg-6 order-lg-last"> 
-										<div class="sAbout__imgWrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
-												<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
-												<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
-												<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
+									<div class="col-lg-6 order-lg-last"> <a class="sAbout__imgWrap" href="#">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/borjomi.webp" media="(min-width:576px)"/>
+											<source type="image/webp" srcset="img/@1x/webp/borjomi.webp"/>
+											<source type="image/jpg" srcset="img/@2x/borjomi.jpg" media="(min-width:576px)"/>
+											<source type="image/jpg" srcset="img/@1x/borjomi.jpg"/><img src="img/@2x/borjomi.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
 									</div>
 									<div class="col-lg-6">
 										<div class="sAbout__wrap">
@@ -168,17 +162,15 @@
 							</div>
 							<div class="sAbout__col col-md-6 col-lg-12">
 								<div class="sAbout__row row">
-									<div class="col-lg-6 order-lg-last">
-										<div class="sAbout__imgWrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/equipment.webp" media="(min-width:576px)"/>
-												<source type="image/webp" srcset="img/@1x/webp/equipment.webp"/>
-												<source type="image/jpg" srcset="img/@2x/equipment.jpg" media="(min-width:576px)"/>
-												<source type="image/jpg" srcset="img/@1x/equipment.jpg"/><img src="img/@2x/equipment.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
+									<div class="col-lg-6 order-lg-last"><a class="sAbout__imgWrap" href="#">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/equipment.webp" media="(min-width:576px)"/>
+											<source type="image/webp" srcset="img/@1x/webp/equipment.webp"/>
+											<source type="image/jpg" srcset="img/@2x/equipment.jpg" media="(min-width:576px)"/>
+											<source type="image/jpg" srcset="img/@1x/equipment.jpg"/><img src="img/@2x/equipment.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
 									</div>
 									<div class="col-lg-6">
 										<div class="sAbout__wrap">
@@ -201,7 +193,11 @@
 				</section>
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
-				<section class="sAboutText section" id="sAboutText">
+				<section class="sAboutText section wow animate__fadeInUp" id="sAboutText" data-wow-delay="0.1s">
+					<div class="sAboutText__decor sAboutText__decor--r"><img src="img/@2x/decor-2.png" alt=""/>
+					</div>
+					<div class="sAboutText__decor sAboutText__decor--l d-none d-xxl-block"><img src="img/@2x/decor-3.png" alt=""/>
+					</div>
 					<div class="container">
 						<div class="sAboutText__row row">
 							<div class="sAboutText__col col-xl-9"> 
@@ -218,7 +214,7 @@
 									<div class="col-md-4">
 										<div class="sAboutText__numRow row align-items-center">
 											<div class="col-2 col-md-12">
-												<div class="sAboutText__numb">40
+												<div class="sAboutText__numb counter-js">40
 												</div>
 											</div>
 											<div class="col">
@@ -229,7 +225,7 @@
 									<div class="col-md-4">
 										<div class="sAboutText__numRow row align-items-center">
 											<div class="col-2 col-md-12">
-												<div class="sAboutText__numb">58
+												<div class="sAboutText__numb counter-js">58
 												</div>
 											</div>
 											<div class="col">
@@ -240,7 +236,7 @@
 									<div class="col-md-4">
 										<div class="sAboutText__numRow row align-items-center">
 											<div class="col-2 col-md-12">
-												<div class="sAboutText__numb">25
+												<div class="sAboutText__numb counter-js">25
 												</div>
 											</div>
 											<div class="col">
@@ -266,7 +262,7 @@
 				</section>
 				<!-- end sAboutText-->
 			</main>
-			<footer class="footer"> 
+			<footer class="footer wow animate__fadeInUp" data-wow-delay="0.5s"> 
 				<div class="footer__sliderWrap">
 					<div class="container container--fluid">
 						<div class="footer__partnerTxt">Наши партнеры
@@ -297,17 +293,17 @@
 						</div>
 						<div class="col d-none d-lg-block">
 							<ul class="navMenu light" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+								<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Решения </a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оборудование </a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+								<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
 								</li>
 							</ul>
 						</div>
@@ -376,14 +372,20 @@
 							<div class="row">
 								<div class="col-lg-6"> 
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
 									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
+										<div class="form-wrap__inputBorder">
+										</div>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -423,7 +425,9 @@
 				<form>
 					<div class="container">
 						<div class="form-wrap__wrap">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/> 
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск"/>
+								<div class="form-wrap__inputBorder">
+								</div> 
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn btn" type="submit">
@@ -453,6 +457,7 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<script src="js/jquery.spincrement.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"> </script>

@@ -6,7 +6,7 @@
 	&__item {
 		text-decoration: none !important;
 		vertical-align: middle;
-		@include mt;
+		@include mt(0.2s);
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -1,10 +1,10 @@
 mixin sAboutText(data)
 	// start sAboutText
-	+b.SECTION.sAboutText.section#sAboutText&attributes(attributes)
-		//- +e.decor--r
-		//- 	img(src="img/@2x/decor-2.png" alt="")
-		//- +e.decor--l.d-none.d-xxl-block
-		//- 	img(src="img/@2x/decor-3.png" alt="")
+	+b.SECTION.sAboutText.section#sAboutText(class="wow  animate__fadeInUp" data-wow-delay="0.1s" )&attributes(attributes)
+		+e.decor--r
+			img(src="img/@2x/decor-2.png" alt="")
+		+e.decor--l.d-none.d-xxl-block
+			img(src="img/@2x/decor-3.png" alt="")
 		.container
 
 
@@ -21,7 +21,7 @@ mixin sAboutText(data)
 							.col-md-4
 								+e.numRow.row.align-items-center
 									.col-2.col-md-12
-										+e.numb= n
+										+e.numb.counter-js= n
 									.col
 										p!= t
 						+col('40',`Решений установили на&nbsp;базе промышленных роботов для 31&nbsp;компаний`)
