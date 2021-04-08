@@ -319,7 +319,39 @@ function eventHandler() {
 			mobile: false,
 			animateClass: 'animate__animated'
 		});
-		wow.init();
+		setTimeout(function () {
+			$('.top-nav').removeClass("opacity-0");
+			wow.init();
+		}, 1000);
+		var countbox = $('.counter-wrap-js');
+
+		if (countbox.length) {
+			var show = true;
+			$(window).on("scroll load resize", function () {
+				if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+
+				var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+
+				var e_top = countbox.offset().top; // Расстояние от блока со счетчиками до верха всего документа
+
+				var w_height = $(window).height(); // Высота окна браузера
+
+				var d_height = $(document).height(); // Высота всего документа
+
+				var e_height = countbox.outerHeight(); // Полная высота блока со счетчиками
+
+				if ((w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) && document.querySelector(".sAboutText").style.visibility == 'visible') {
+					$('.counter-js').css('opacity', '1');
+					$('.counter-js').spincrement({
+						thousandSeparator: "",
+						duration: 3000
+					});
+					show = false;
+				}
+			});
+		}
+
+		;
 	}; // JSCCommon.CustomInputFile(); 
 	// let screenName;
 	// screenName = document.body.dataset.bg;
@@ -432,8 +464,8 @@ function eventHandler() {
 				height = el.innerHeight,
 				// isScrollDown = newScroll > oldScroll,
 		isScrollUp = newScroll < oldScroll && newScroll > 0,
-				isScrollDown = newScroll > 0;
-		el.classList.toggle('scroll-up', isScrollUp);
+				isScrollDown = newScroll > 0; // el.classList.toggle('scroll-up', isScrollUp);
+
 		el.classList.toggle('scroll-down', isScrollDown);
 		this.oldScroll = newScroll;
 	}); // var show = true;
@@ -454,35 +486,6 @@ function eventHandler() {
 	// 				show = false;
 	// 		}
 	// });
-
-	if ($('.counter-wrap-js').length) {
-		var show = true;
-		var countbox = ".counter-wrap-js";
-		$(window).on("scroll load resize", function () {
-			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-
-			var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-
-			var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-
-			var w_height = $(window).height(); // Высота окна браузера
-
-			var d_height = $(document).height(); // Высота всего документа
-
-			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-
-			if (w_top + 300 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-				$('.counter-js').css('opacity', '1');
-				$('.counter-js').spincrement({
-					thousandSeparator: "",
-					duration: 3000
-				});
-				show = false;
-			}
-		});
-	}
-
-	;
 }
 
 ;

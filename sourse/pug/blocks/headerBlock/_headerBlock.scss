@@ -19,10 +19,11 @@
 		--sTPB: #{rem(100)};
 	}
 	@include media-breakpoint-only(xxl) {
-		--sPT: #{rem(75)};
+		--sPT: #{rem(35)};
 	}
 	@include media-breakpoint-only(xl) {
-		--sPT: #{rem(60)};
+		--sPT: #{rem(15)};
+		--sTPB: #{rem(15)};
 	}
 	@include media-breakpoint-only(lg) {
 		--sPT: #{rem(45)};

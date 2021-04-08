@@ -1,6 +1,6 @@
 mixin sAboutText(data)
 	// start sAboutText
-	+b.SECTION.sAboutText.section#sAboutText(class="wow  animate__fadeInUp" data-wow-delay="0.1s" )&attributes(attributes)
+	+b.SECTION.sAboutText.section#sAboutText(class="wow  animate__fadeInUp  " data-wow-offset="-50")&attributes(attributes)
 		//- +e.decor--r
 		//- 	img(src="img/@2x/decor-2.png" alt="")
 		//- +e.decor--l.d-none.d-xxl-block
@@ -8,7 +8,7 @@ mixin sAboutText(data)
 		.container
 
 
-			+e.row.row
+			+e.row.row.counter-wrap-js 
 				+e.col.col-xl-9 
 					+e.txtWrap
 						+b.section-title
@@ -16,7 +16,7 @@ mixin sAboutText(data)
 						.d-xl-none 
 							p Специалисты нашей компании работают на&nbsp;рынке робототехники более десяти лет. На&nbsp;наших глазах и&nbsp;нашими руками промышленная роботизация возрождалась в&nbsp;России.
 							p Узнайте подробнее о&nbsp;том, почему мы&nbsp;выбрали для себя направление по&nbsp;автоматизации групповой упаковки и&nbsp;укладки, почему мы&nbsp;считаем, что глубокие знания технологии упаковки необходимы для нашей работы, узнайте историю развития нашей компании, наши цели и&nbsp;планы.
-					+e.roww.row 
+					+e.roww.row
 						mixin col(n, t)
 							.col-md-4
 								+e.numRow.row.align-items-center

@@ -56,6 +56,12 @@
 	}
 
 	&__col {
+		
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		&:last-child {
 			.sAbout__row {
 				padding-bottom: 0;
@@ -131,6 +137,7 @@
 
 	&__imgWrap {
 		overflow: hidden;
+	
 
 		@include block(540, 355);
 		@include media-breakpoint-up(md) {
@@ -152,11 +159,6 @@
 			@include block(656, 388);
 		}
 
-		&:hover {
-			img {
-				transform: scale(1.1);
-			}
-		}
 
 		img {
 			width: 100%;
