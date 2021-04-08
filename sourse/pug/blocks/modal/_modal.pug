@@ -23,7 +23,7 @@ mixin modal()
 			.text-center
 				h3 Спасибо за обращение!
 				p Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, как только получим вашу заявку.
-				+e.BUTTON.btn.btn.btn-primary(type="button") Закрыть
+				+e.BUTTON.btn.btn.btn-primary(type="button").modal-close-js Закрыть
 
 	+b.modal-win(id="modal-questionnaire" class=" " style="display: none" )
 		+form-wrap

@@ -28,4 +28,47 @@ mixin ie11()
 
 
 mixin mapblock()
-	<div class="map-wrap" style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс.Карты</a><a href="https://yandex.by/maps/11111/republic-of-bashkortostan/house/zavodskaya_ulitsa_36_1/YUwYfgJkQUUGQFtufXpwcHRrZw==/?ll=55.854801%2C54.611883&utm_medium=mapframe&utm_source=maps&z=16.8" style="color:#eee;font-size:12px;position:absolute;top:14px;">Заводская улица, 36/1 — Яндекс.Карты</a><iframe src="https://yandex.by/map-widget/v1/-/CCUUr-Fv0B" width="560" height="400" frameborder="1" allowfullscreen="true"  style="position:relative;"></iframe></div>
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<52595e17-a3a9-488b-a4a0-56d20819ac51>" type="text/javascript"></script>
+	script. 
+		ymaps.ready(function () {
+		let place = [54.61188307006308,55.85480099999991];
+		var myMap = new ymaps.Map('map', {
+						center: place,
+						zoom: 18
+				}, {
+						searchControlProvider: 'yandex#search'
+				}),
+
+				// Создаём макет содержимого.
+				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+ 
+
+				myPlacemarkWithContent = new ymaps.Placemark(place, {
+						hintContent: '450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
+						balloonContent: '450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
+						//- iconContent: '12'
+				}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#imageWithContent',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/svg/map.svg',
+						// Размеры метки.
+						iconImageSize: [60, 60],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-30, -60],
+						// Смещение слоя с содержимым относительно слоя с картинкой.
+						iconContentOffset: [15, 15],
+						// Макет содержимого.
+						iconContentLayout: MyIconContentLayout
+				});
+
+			myMap.geoObjects
+					.add(myPlacemarkWithContent);
+			});
+	#map
+	//- <div class="map-wrap" style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс.Карты</a><a href="https://yandex.by/maps/11111/republic-of-bashkortostan/house/zavodskaya_ulitsa_36_1/YUwYfgJkQUUGQFtufXpwcHRrZw==/?ll=55.854801%2C54.611883&utm_medium=mapframe&utm_source=maps&z=16.8" style="color:#eee;font-size:12px;position:absolute;top:14px;">Заводская улица, 36/1 — Яндекс.Карты</a><iframe src="https://yandex.by/map-widget/v1/-/CCUUr-Fv0B" width="560" height="400" frameborder="1" allowfullscreen="true"  style="position:relative;"></iframe></div>

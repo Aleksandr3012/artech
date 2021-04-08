@@ -23,8 +23,11 @@ block pagecontent
 		//- let screenName = 'main_540.jpg'
 
 	//- +mob-mnu()
+	.bg-block
+		+b.bg-block-inner--top
+		+b.bg-block-inner--foot
+	+top-nav()
 	+header()
-		+top-nav()
 	//- +topLine()
 	main.main-overflow( data-wow-delay="2s" href="#sAbout")
 		+headerBlock()

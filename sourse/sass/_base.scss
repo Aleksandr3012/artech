@@ -22,6 +22,7 @@ html {
 html {
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
+	position: relative;
 	// margin-right: calc(-1 * (100vw - 100%));
 	// overflow-x: hidden;
 	&.fixed {
@@ -48,6 +49,25 @@ html {
 	z-index: -1;
 	height: 100%;
 }
+:root{
+	--bg1: url(../img/@2x/webp/decor.webp);
+	--bg2: url(../img/@2x/webp/decor-2.webp);
+	--bg3: url(../img/@2x/webp/decor-3.webp);
+	--bgp1: 0 100%;
+	--bgp2: 0 0;
+	--bgp3: 400px 100%;
+	--bgp4: 400px 0;
+	@include media-breakpoint-up(xxxl) {
+		--psize: 920px;
+	}
+	
+	@include media-breakpoint-up(lg) {
+		--psize: 720px;
+	}
+	--psize: 620px;
+
+	--pos: calc(-1 * var(--psize) /2);
+}
 .bg-block-inner {
 	width: 100vw;
 	// @include a-cent(x);
@@ -56,33 +76,99 @@ html {
 	top: 0;
 	height: 100%;
 	margin-right: calc(-1 * (100vw - 100%));
-	@include media-breakpoint-up(xl) {
-		--top: 0;
-	}
-	--top: 100px;
+	top: 0;
 	&::before,
 	&::after {
 		content: "";
 		position: absolute;
-		top: 0;
+		top: var(--top,0);
 		height: 100%;
 		width: 50%;
-		max-width: (1920px / 2);
-		// min-width: (800px / 2);
+		max-width: (1920px / 2); 
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100%;
+		background-image: var(--bg); 
+		width: var(--psize);
+		height:var(--psize);
 	}
-	&::before {
-		background-image: url(../img/@2x/webp/pattern_left.webp);
-		background-position: 0 var(--top);
-		left: 0;
+	&::before{
+		left: var(--pos);
 	}
-	&::after {
-		right: 0;
-		background-image: url(../img/@2x/webp/pattern_right.webp);
-		background-position: 100% var(--top);
+	&::after{
+		right: var(--pos);
 	}
-	top: 0;
+	&--top::after { 
+		--bg: var(--bg1);
+		@include media-breakpoint-up(xxxl) {
+			--top: 151px;
+			--pos: -170px;
+		} 
+		@include media-breakpoint-up(xl) {
+			--top: 164px; 
+		} 
+		@include media-breakpoint-up(lg) {
+			--top: 138px;
+			--pos: -360px;
+		} 
+		@include media-breakpoint-up(md) {
+			--top: 380px;
+		} 
+		--top: 130px;
+	}
+
+	&--top::before { 
+		--bg: var(--bg1);
+		@include media-breakpoint-up(xxxl) {
+			--top: 527px;
+			--pos: calc(-1 * var(--psize) /2);
+		}
+		@include media-breakpoint-up(xl) {
+			--top: 726px;
+			--pos: -460px;
+		}
+		@include media-breakpoint-up(lg) {
+			--top: 558px;
+			--pos: -422px;
+		}
+		@include media-breakpoint-up(md) {
+			--top: 1243px;
+			// --pos: -422px;
+		}
+		--top: 1243px;
+		
+	}
+	&--foot::before { 
+		--bg: var(--bg3);
+		@include media-breakpoint-up(xxxl) { 
+			--top: 2302px;
+			display: block;
+		}
+		@include media-breakpoint-up(xl) {
+			--top: 1342px;
+			--pos: calc(-1 * var(--psize) /2);
+			display: block;
+		}
+		display: none;
+	}
+	&--foot::after { 
+		--bg: var(--bg2);
+		@include media-breakpoint-up(xxxl) { 
+			--top: 1666px;
+		}
+		@include media-breakpoint-up(xl) {
+			// --top: 142px;
+			--top: 1394px;
+		}
+		@include media-breakpoint-up(lg) {
+			--top: 1642px;
+			// --pos: calc(-1 * var(--psize) /2);
+		}
+		@include media-breakpoint-up(md) {
+			--top: 1942px;
+			// --pos: calc(-1 * var(--psize) /2);
+		}
+		--top: 2115px;
+	}
 	z-index: -1;
 	height: 100%;
 }
@@ -876,4 +962,14 @@ body.loaded {
 .form-check-input,
 .form-check {
 	cursor: pointer;
+}
+
+
+
+#map{
+	height: 100%;
+}
+
+.fancybox-bg{
+	background-color: #263237;
 }

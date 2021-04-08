@@ -87,7 +87,9 @@
 
 		--opacity: 0;
 		--spy: 0;
-		--sp: #{rem(14)};
+			@include media-breakpoint-up(md) {
+				--sp: #{rem(14)};
+			}
 		// --spy: #{rem(13)};
 		transform: translateY(var(--top,0));
 		@include media-breakpoint-up(md) {

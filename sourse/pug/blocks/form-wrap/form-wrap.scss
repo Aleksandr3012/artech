@@ -55,14 +55,6 @@
 	--input-size: #{rem(50.5)};
 	--input-mb: var(--input-size);
 	--textarea-height: calc(var(--input-size) * 3 + var(--border-height) / 2);
-	$bg-gradient: repeating-linear-gradient(
-		to top,
-		var(--line-color) 0,
-		var(--line-color) var(--border-height),
-		transparent var(--border-height),
-		transparent calc(var(--border-height) + var(--input-size))
-	);
-
 	textarea + .form-wrap__inputBorder {
 		--line-color: var(--bgc);
 		--input-border-height: 100%;

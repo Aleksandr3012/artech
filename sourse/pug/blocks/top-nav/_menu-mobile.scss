@@ -148,13 +148,14 @@ $h: 3px;
 		height: 100%;
 		border-top: solid 1px #fff;
 		@include mt(1s);
-		// transform: translateY(-100%);
+		transform: translateX(100%);
 		opacity: 0;
 		// border-bottom: solid 1px #fff;
 	}
 	&.active &__inner{
+		transition-delay: .6s;
 		opacity: 1;
-		// transform: translateY(0);
+		transform: translateX(0);
 	}
 
 	&__search {

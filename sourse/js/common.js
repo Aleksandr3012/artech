@@ -329,40 +329,38 @@ function eventHandler() {
 
 
 
+	function counters() {
 
+		var countbox = $('.counter-wrap-js');
+		var show = true; 
+		if (!countbox.length && !show)  return; 
+			$('.counter-js').css('opacity', '1');
+			$('.counter-js').spincrement({
+				thousandSeparator: "",
+				duration: 3000
+			});
+			show = false;  
+	}
 	window.onload = function () {
+
 		document.body.classList.remove("loaded_hiding")
 		var wow = new WOW({
-			mobile: false,
+			// mobile: false,
 			animateClass: 'animate__animated',
+			callback: function (box) {
+				if (box.id == 'sAboutText') {
+					// мы попали под анимацию svg
+					setTimeout(() => {
+					counters();
+				}, 500);
+				}
+			}
 		});
 		setTimeout(() => {
 			$('.top-nav').removeClass("opacity-0");
 			wow.init();
 		}, 1000);
 
-
-		var countbox = $('.counter-wrap-js');
-		if (countbox.length) {
-			var show = true;
-			$(window).on("scroll load resize", function () {
-				if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-				var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-				var e_top = countbox.offset().top; // Расстояние от блока со счетчиками до верха всего документа
-				var w_height = $(window).height(); // Высота окна браузера
-				var d_height = $(document).height(); // Высота всего документа
-				var e_height = countbox.outerHeight(); // Полная высота блока со счетчиками
-
-				if ((w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height)  && document.querySelector(".sAboutText").style.visibility== 'visible') {
-					$('.counter-js').css('opacity', '1');
-					$('.counter-js').spincrement({
-						thousandSeparator: "",
-						duration: 3000
-					});
-					show = false;
-				}
-			});
-		};
 	};
 
 	// JSCCommon.CustomInputFile(); 

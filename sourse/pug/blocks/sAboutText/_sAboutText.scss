@@ -42,6 +42,7 @@
 	&__numb {
 		font-size: var(--h1-font-size);
 		font-weight: 600;
+			// @include media-breakpoint-up(xl)
 		opacity: 0;
 
 		@include media-breakpoint-only(xl) {

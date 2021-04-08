@@ -14,6 +14,7 @@
 	h3 {
 		@include media-breakpoint-down(sm) {
 			font-size: var(--h4-font-size);
+			margin-bottom: 20px;
 		}
 	}
 
@@ -31,10 +32,12 @@
 	.fancybox-button {
 		padding: 0;
 		opacity: 1;
+		right: 15px;
+		top: 15px;
+		width: 60px;
+		height: 60px;
 			@media (min-width: 600px){
 
-				right: 15px;
-				top: 15px;
 			}
 		svg {
 			@include mt;
@@ -157,7 +160,35 @@ a {
 }
 
 #modal-thanks {
-	max-width: rem(648);
+	max-width: 648px;
+	width: 100%;
+	@media (max-width: 575.98px) {
+		min-height: 100vh;
+		display: inline-flex !important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+ 
+		.h3,  h3 {
+			font-size: 40px;
+		}
+		p{
+
+			margin-bottom: 30px;
+		}
+	}
+			.h3,  h3 {
+				@include media-breakpoint-up(lg) {
+
+					font-size: 40px;
+				}
+				font-size: 30px;
+		}
+ 
+	.form-wrap__btn{
+		width: 240px;
+		height: 60px;
+	}
 
 	p {
 		max-width: rem(470);
@@ -294,6 +325,10 @@ a {
 	width: 100%;
 	height: 100%;
 	max-width: 100%;
+	[data-fancybox-close]{
+		right: 0;
+		top: 40px;
+	}
 	iframe {
 		filter: saturate(0);
 	}

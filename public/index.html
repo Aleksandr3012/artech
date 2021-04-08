@@ -33,9 +33,6 @@
 				</div>
 			</div>
 		</section>
-		<div class="bg-block">
-			<div class="bg-block-inner"></div>
-		</div>
 		<div class="main-wrapper">
 			<script>
 				//- let screenName = 'main-1920.jpg'
@@ -46,30 +43,74 @@
 				//- let screenName = 'main_540.jpg'
 				
 			</script>
-			<!-- start header-->
-			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy opacity-0">
-					<div class="menu-mobile menu-mobile--js d-xxl-none">
-						<div class="menu-mobile__inner">
-							<div class="menu-mobile__contacts d-md-none text-center"> 
-								<div class="container"><a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><br/><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
-								</div>
+			<div class="bg-block">
+				<div class="bg-block-inner bg-block-inner--top">
+				</div>
+				<div class="bg-block-inner bg-block-inner--foot">
+				</div>
+			</div>
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy opacity-0">
+				<div class="menu-mobile menu-mobile--js d-xxl-none">
+					<div class="menu-mobile__inner">
+						<div class="menu-mobile__contacts d-md-none text-center"> 
+							<div class="container"><a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><br/><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
 							</div>
-							<div class="menu-mobile__search">
-								<div class="container">
-									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
-										<div class="menu-mobile__inputBorder">
-										</div>
+						</div>
+						<div class="menu-mobile__search">
+							<div class="container">
+								<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
+									<div class="menu-mobile__inputBorder">
 									</div>
-									<!-- +e.input-wrap-->
-									<button class="menu-mobile__btnSearch" type="submit">
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
-										</svg>
-									</button>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="menu-mobile__btnSearch" type="submit">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text"> Главная
+								</div></a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text">Решения
+								</div></a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text">О компании
+								</div></a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text">Статьи
+								</div></a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text">Контакты
+								</div></a>
+							</li>
+							<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+								<div class="navMenu__text"><img src="img/svg/lang.svg" alt=""/><span>English</span>
+								</div></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--  мобильное меню-->
+				<div class="container container--fluid">
+					<div class="top-nav__row row align-items-center">
+						<div class="col-auto d-xxl-none order-1 order-md-last">
+							<div class="top-nav__toggle-menu-wrap">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
+						</div>
+						<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="logo-full d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="logo-text" src="img/svg/logo-sm.svg" alt=""/></a>
+						</div>
+						<div class="col d-none d-xxl-block order-1">
 							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 								<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
 									<div class="navMenu__text"> Главная
@@ -97,65 +138,27 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-					<!--  мобильное меню-->
-					<div class="container container--fluid">
-						<div class="top-nav__row row align-items-center">
-							<div class="col-auto d-xxl-none order-1 order-md-last">
-								<div class="top-nav__toggle-menu-wrap">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-									</div>
-								</div>
-							</div>
-							<div class="top-nav__col col col-md-auto order-2 order-md-1"><a class="top-nav__logo" href="/"><img class="logo-full d-none d-md-block" src="img/svg/logo.svg" alt=""/><img class="logo-text" src="img/svg/logo-sm.svg" alt=""/></a>
-							</div>
-							<div class="col d-none d-xxl-block order-1">
-								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text"> Главная
-										</div></a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text">Решения
-										</div></a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text">О компании
-										</div></a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text">Статьи
-										</div></a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text">Контакты
-										</div></a>
-									</li>
-									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
-										<div class="navMenu__text"><img src="img/svg/lang.svg" alt=""/><span>English</span>
-										</div></a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-auto order-1 order-xxl-5 d-none d-md-block"><a class="top-nav__lang" href="#"> <img src="img/svg/lang.svg" alt=""/></a>
-							</div>
-							<div class="col-auto col-md col-xxl-auto order-3">
-								<div class="top-nav__contactWrap"> <a class="top-nav__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="top-nav__mail" href="mailto:"> <span>info@artech.si</span>
-									<svg class="icon icon-mail ">
-										<use xlink:href="img/svg/sprite.svg#mail"></use>
-									</svg></a>
-								</div>
-							</div>
-							<div class="col-auto order-4 d-none d-md-block"><a class="btn btn-outline-primary link-modal-js" href="#modal-call">Связаться с нами</a></div>
-							<div class="col-auto d-none d-xxl-block order-4"><a class="top-nav__search link-modal-js" href="#modal-search">
-								<svg class="icon icon-search ">
-									<use xlink:href="img/svg/sprite.svg#search"></use>
+						<div class="col-auto order-1 order-xxl-5 d-none d-md-block"><a class="top-nav__lang" href="#"> <img src="img/svg/lang.svg" alt=""/></a>
+						</div>
+						<div class="col-auto col-md col-xxl-auto order-3">
+							<div class="top-nav__contactWrap"> <a class="top-nav__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="top-nav__mail" href="mailto:"> <span>info@artech.si</span>
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
 								</svg></a>
 							</div>
 						</div>
+						<div class="col-auto order-4 d-none d-md-block"><a class="btn btn-outline-primary link-modal-js" href="#modal-call">Связаться с нами</a></div>
+						<div class="col-auto d-none d-xxl-block order-4"><a class="top-nav__search link-modal-js" href="#modal-search">
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg></a>
+						</div>
 					</div>
 				</div>
-				<!-- end top-nav-->
+			</div>
+			<!-- end top-nav-->
+			<!-- start header-->
+			<header class="header" id="header">
 			</header>
 			<!-- end header-->
 			<main class="main-overflow" data-wow-delay="2s" href="#sAbout">
@@ -501,7 +504,7 @@
 					<div class="text-center">
 						<h3>Спасибо за обращение!</h3>
 						<p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, как только получим вашу заявку.</p>
-						<button class="form-wrap__btn btn btn-primary" type="button">Закрыть
+						<button class="form-wrap__btn btn btn-primary modal-close-js" type="button">Закрыть
 						</button>
 					</div>
 				</form>

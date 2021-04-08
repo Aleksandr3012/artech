@@ -24,8 +24,8 @@ block pagecontent
 		//- let screenName = '9-540.jpg'
 
 	//- +mob-mnu()
-	+header().header-inner
-		+top-nav() 
+	+top-nav() 
+	+header()
 		.container 
 			+breadcrumb('Главная','О компании')
 		+page-head 
@@ -36,7 +36,7 @@ block pagecontent
 		+e.slider--js.swiper-container
 			.swiper-wrapper
 				- for (var x = 0; x < 3; x++)
-					+e.slide.swiper-slide.bg-wrap(data-fancybox="gal" href=`img/@2x/bgr.jpg`)
+					+e.slide.swiper-slide.bg-wrap
 						+pic(`bgr.jpg`,'bg').picture-bg
 		.swiper-pagination
 		+arrow()
