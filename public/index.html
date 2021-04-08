@@ -13,7 +13,7 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<style>body::after { content: '';position: fixed;left: 0;top: 0;width: 100%;z-index: 2000;height: 100%;background-color: #263237;}</style>
-	<body class="loaded_hiding">
+	<body class="loaded_hiding main-page">
 		<!-- if ie 11-->
 		<section class="s404 s404--borser section d-none">
 			<div class="container">
@@ -43,7 +43,7 @@
 				//- let screenName = 'main-1140.jpg'
 				//- let screenName = 'mian-960.jpg'
 				//- let screenName = 'main-720.jpg'
-				let screenName = 'main_540.jpg'
+				//- let screenName = 'main_540.jpg'
 				
 			</script>
 			<!-- start header-->
@@ -52,10 +52,12 @@
 				<div class="top-nav block-with-lazy opacity-0">
 					<div class="menu-mobile menu-mobile--js d-xxl-none">
 						<div class="menu-mobile__inner">
-							<div class="container">
-								<div class="menu-mobile__contacts d-md-none text-center"> <a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
+							<div class="menu-mobile__contacts d-md-none text-center"> 
+								<div class="container"><a class="menu-mobile__tel" href="tel:+73472210790">+7 (347) 221-07-90</a><br/><a class="menu-mobile__mail" href="mailto:"> <span>info@artech.si</span></a>
 								</div>
-								<div class="menu-mobile__search">
+							</div>
+							<div class="menu-mobile__search">
+								<div class="container">
 									<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
 										<div class="menu-mobile__inputBorder">
 										</div>
@@ -67,21 +69,33 @@
 										</svg>
 									</button>
 								</div>
-								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
-									</li>
-									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
-									</li>
-								</ul>
 							</div>
+							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text"> Главная
+									</div></a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Решения
+									</div></a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">О компании
+									</div></a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Статьи
+									</div></a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Контакты
+									</div></a>
+								</li>
+								<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text"><img src="img/svg/lang.svg" alt=""/><span>English</span>
+									</div></a>
+								</li>
+							</ul>
 						</div>
 					</div>
 					<!--  мобильное меню-->
@@ -97,17 +111,29 @@
 							</div>
 							<div class="col d-none d-xxl-block order-1">
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+									<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text"> Главная
+										</div></a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text">Решения
+										</div></a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text">О компании
+										</div></a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text">Статьи
+										</div></a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text">Контакты
+										</div></a>
 									</li>
-									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
+									<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+										<div class="navMenu__text"><img src="img/svg/lang.svg" alt=""/><span>English</span>
+										</div></a>
 									</li>
 								</ul>
 							</div>
@@ -152,7 +178,7 @@
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
 						<div class="sAbout__mainRow row"> 
-							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s" data-wow-offset="-50">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay=".5s" data-wow-offset="-100">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"> <a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -180,7 +206,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay="1s" data-wow-offset="-50">
+							<div class="sAbout__col col-md-6 col-lg-12 wow animate__fadeInUp" data-wow-delay=".5s" data-wow-offset="-50">
 								<div class="sAbout__row row">
 									<div class="col-lg-6 order-lg-last"><a class="sAbout__imgWrap" href="#">
 										<!-- picture-->
@@ -213,7 +239,7 @@
 				</section>
 				<!-- end sAbout-->
 				<!-- start sAboutText-->
-				<section class="sAboutText section wow animate__fadeInUp" id="sAboutText" data-wow-offset="-50">
+				<section class="sAboutText section wow animate__fadeInUp" id="sAboutText" data-wow-offset="-20">
 					<div class="container">
 						<div class="sAboutText__row row counter-wrap-js"> 
 							<div class="sAboutText__col col-xl-9"> 
@@ -309,17 +335,29 @@
 						</div>
 						<div class="col d-none d-lg-block">
 							<ul class="navMenu light" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+								<li class="navMenu__item active" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text"> Главная
+									</div></a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Решения</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Решения
+									</div></a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">О компании</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">О компании
+									</div></a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Статьи</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Статьи
+									</div></a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Контакты</a>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text">Контакты
+									</div></a>
 								</li>
-								<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url"><img src="img/svg/lang.svg" alt=""/><span>English</span></a>
+								<li class="navMenu__item navMenu__item--lang d-md-none" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">
+									<div class="navMenu__text"><img src="img/svg/lang.svg" alt=""/><span>English</span>
+									</div></a>
 								</li>
 							</ul>
 						</div>

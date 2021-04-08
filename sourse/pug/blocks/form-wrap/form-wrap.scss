@@ -19,25 +19,32 @@
 
 	&__inputBorder {
 		--bgc: #{$primary};
-		background-color: var(--bgc);
+		background: var(--bgc);
 		width: 100%;
-		height: 2px;
+		height: var(--input-border-height);
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		z-index: 4;
-		transform-origin: left;
-		transform: scale(0, 1);
+		transform-origin: left top;
+		// transform: scaleX(0);
+		width: 0;
+		// opacity: 0;
+
 		@include mt;
 		pointer-events: none;
 	}
-
+	
+	&__input.invalid + &__inputBorder ,
 	&__input:focus + &__inputBorder {
-		transform: scale(1);
+		// transform: scale(1);
+		// transform: scaleX(1);
+		width: 100%;
+		opacity: 1;
 	}
-
-	&__input.invalid + &__inputBorder {
-		transform: scale(1);
+	
+	&__input.invalid + &__inputBorder { 
+		// transform: scale(1);
 		--bgc: #{$danger};
 	}
 
@@ -58,9 +65,8 @@
 
 	textarea + .form-wrap__inputBorder {
 		--line-color: var(--bgc);
-		height: calc(100%);
-		background-color: transparent !important;
-		background-image: repeating-linear-gradient(
+		--input-border-height: 100%;
+		background: repeating-linear-gradient(
 			to top,
 			var(--line-color) 0,
 			var(--line-color) var(--border-height),

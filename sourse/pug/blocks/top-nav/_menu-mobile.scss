@@ -102,11 +102,15 @@ $h: 3px;
 
 .menu-mobile {
 	position: absolute !important;
-	z-index: 999;
+.container{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+	// z-index: 999;
 	width: 100%;
 	max-width: 100%;
-	 
-
+	@include mt(0.6s);
+	z-index: -1;
 	// top: 91px;
 	// @include media-breakpoint-up(md) {
 	// 	top: 138px;
@@ -120,29 +124,37 @@ $h: 3px;
 	// right: 0;
 	left: 0px;
 	&:not(.active) {
-		transform: translate3d(120%, 0, 0);
-		opacity: 0;
+		transform: translate3d(0, -140vh, 0);
+		// opacity: 0;
 	}
-	@include mt(0.6);
+	
 	will-change: transform;
 	&::before{
 		content: '';
 		position: absolute;
 		left: 0;
-		top: 99%;
+		top: 0%;
 		width: 100%;
-		height: 100vh;
+		height: 110%;
 		background-color: #e5e5e5;
+		z-index: -1;
 	}
 	&__inner {
-		background-color: #e5e5e5;
+		// background-color: #e5e5e5;
 		padding: 0 0 rem(20);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
 		border-top: solid 1px #fff;
+		@include mt(1s);
+		// transform: translateY(-100%);
+		opacity: 0;
 		// border-bottom: solid 1px #fff;
+	}
+	&.active &__inner{
+		opacity: 1;
+		// transform: translateY(0);
 	}
 
 	&__search {
@@ -169,19 +181,34 @@ $h: 3px;
 	&__input {
 		border-width: 0;
 		padding-left: 0;
-		padding-top: rem(10);
-		padding-bottom: rem(10);
-		font-size: rem(20);
-		@include media-breakpoint-up(md) {
+		padding-top: rem(24);
+		padding-bottom: rem(24);
+		font-size: 30px;
+		@include media-breakpoint-up(sm) {
 			font-size: rem(30);
 			padding-top: rem(20);
 			padding-bottom: rem(20);
 		}
 	}
 
+	font-size: 30px;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(30); 
+			}
 	&__btnSearch {
 		@include a-cent(y);
-		right: rem(10);
+		.icon{
+			font-size: 30px;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(30); 
+			}
+			// font-size: rem(30);
+		}
+		@include media-breakpoint-up(md) {
+			
+			right: rem(20);
+		}
+		right: rem(15);
 		background: transparent;
 		border: none;
 	}
@@ -221,15 +248,26 @@ $h: 3px;
 	}
 
 	&__contacts {
-		padding-top: rem(10);
-		padding-bottom: rem(10);
+		padding-top: 32px;
+		padding-bottom: 30px;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: -50vw;
+			width: 200vw;
+			height: 2px;
+			background-color: #fff;
+		}
 	}
 
 	&__tel {
-		font-size: rem(20);
+		// font-size: rem(20);
 		margin-bottom: rem(5);
 		font-weight: 600;
 		text-decoration: none;
@@ -237,7 +275,7 @@ $h: 3px;
 	}
 
 	&__mail {
-		font-size: rem(20);
+		// font-size: rem(20);
 		text-decoration: none;
 		color: #8f9597;
 	}
@@ -247,23 +285,49 @@ $h: 3px;
 		align-items: center;
 		text-decoration: none;
 		color: $body-color !important;
-		img {
-			margin-right: rem(10);
-		}
+
+	
 	}
 
 	.navMenu {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -50vw;
+			width: 200vw;
+			height: 2px;
+			background-color: #fff;
+		}
 		padding-bottom: rem(10);
+		&__item--lang{
+				.navMenu__text{
+			display: flex;
+			align-items: center;
+		}
+		img {
+			flex: 0 0 auto;
+			margin-right: 24px;
+			position: relative;
+			width: 40px;
+			// top: em(-2);
+		}
+		}
 		&__link {
 			font-weight: 600;
 			position: relative;
 			z-index: 2;
 			text-align: left;
-			padding-top: rem(10);
-			padding-bottom: rem(10);
-			font-size: rem(20);
-			@include media-breakpoint-up(md) {
-				font-size: rem(30);
+			padding-top: rem(25);
+			padding-bottom: rem(25);
+			// font-size: rem(20);
+			display: block;
+			min-width: 100%;
+			flex-grow: 1;
+			// font-size: 30px;
+			@include media-breakpoint-up(sm) {
+				// font-size: rem(30);
 				padding-top: rem(20);
 				padding-bottom: rem(20);
 			}
@@ -287,7 +351,21 @@ $h: 3px;
 				background-color: #fff;
 			}
 		}
+		&__text{
+			@extend .container;
+		}
 		&__item {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				width: 200vw;
+				height: 2px;
+				left: -50vw;
+				background-color: #fff;
+				z-index: 2;
+			}
 			&.active,
 			&:hover {
 				.navMenu__link {

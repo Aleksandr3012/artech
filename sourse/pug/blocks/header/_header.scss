@@ -1,13 +1,13 @@
 // start .header
 .main-wrapper{
-	--y: #{rem(140)};
-	@include media-breakpoint-up(xl) {
-		--y: #{rem(120)};
-	}
-	@include media-breakpoint-between(md, xxl) {
-		--y: #{rem(160)};
-	}
-	padding-top: var(--y);
+	
+	// @include media-breakpoint-up(xl) {
+	// 	--top-line-height: #{rem(120)};
+	// }
+	// @include media-breakpoint-between(md, xxl) {
+	// 	--top-line-height: #{rem(160)};
+	// }
+	padding-top: var(--top-line-height);
 }
 
 .header {
@@ -26,17 +26,27 @@
 	// --spy: #{rem(23)};
 	
 	@include media-breakpoint-up(xl) {
-				--spy: #{rem(17)};
+				--sp: #{rem(17)};
 			}
 			@include media-breakpoint-between(md, xxl) {
-				--spy: #{rem(24)};
+				--sp: #{rem(24)};
 			}
 	&-inner {
 		background-color: #fff;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			bottom: 99%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+		}
 		.top-nav {
 			
-			padding-top: var(--spy);
-			padding-bottom: var(--spy);
+			// padding-top: var(--sp);
+			// padding-bottom: var(--sp);
 
 			&__logoTopBlock {
 				margin-bottom: 0;

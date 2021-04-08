@@ -55,7 +55,34 @@
 	--chevron--right: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z' fill='%2300B2FF'/%3E%3C/svg%3E%0A");
 
 	--sidebar-size: 312px;
+
+
+		@include media-breakpoint-up(md){
+
+			--top-nav: 60px;
+		}
+		--top-nav: 40px;
+		--sp: #{rem(24)};
+		@include media-breakpoint-between(md, xxl) {
+		--sp: #{rem(30)};
+	}
+
+	@include media-breakpoint-up(xxl) {
+
+		--top-line-height: calc(#{rem(87px)} + var(--sp) * 2);
+	}
+	@include media-breakpoint-up(xl) {
+
+		--top-line-height: calc(#{rem(87px)} + var(--sp) * 2);
+	}
+	@include media-breakpoint-up(md) {
+
+		--top-line-height: calc(77px + var(--sp) * 2);
+	}
+	--top-line-height: calc(40px + var(--sp) * 2);
+	--input-border-height: 2px;
 }
+
 
 @include media-breakpoint-up(xl) {
 }

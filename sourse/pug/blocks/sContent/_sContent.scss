@@ -9,6 +9,8 @@
 	}
 .sContent {
 	padding-bottom: calc(var(--sPB) / 1.3);
+	position: relative;
+	overflow: hidden;
 	h2 {
 		max-width: rem(1100);
 	}

@@ -1,3 +1,10 @@
+.main-page{
+	.top-nav{
+			@include media-breakpoint-down(md) {
+		border-bottom: solid 2px #fff;
+	}
+	}
+}
 .fixed .top-nav {
 	&::before {
 		transform: translateY(-100%);
@@ -26,9 +33,13 @@
 		visibility: visible !important;
 	}
 	position: fixed;
-	width: 100vw;
-	top: 0;
-	--sp: #{rem(24)};
+		@include media-breakpoint-up(xl) {
+					// padding-right: 17px;
+					width: 100vw;
+		}
+		width: 100%;
+		top: 0;
+	
 	// padding-bottom: rem(24);
 
 	--opacity: 1;
@@ -37,19 +48,19 @@
 	.container{
 		position: relative;
 		overflow: hidden;
+		padding-top: var(--sp);
+	padding-bottom: var(--sp);
+	z-index: 100;
+	position: relative;
 	}
 
 	.menu-mobile {
 	position: absolute !important;
-	z-index: 999;
+	// z-index: 999;
 	width: 100%;
 	max-width: 100%;
-		@include media-breakpoint-up(md){
-
-			--top-nav: 60px;
-		}
-		--top-nav: 40px;
-	height: calc(var(--vh, 1vh) * 100 - var(--top-nav) - var(--sp) * 2);
+	
+	height: calc(var(--vh, 1vh) * 100 - var(--top-line-height));
 	}
 	.top-nav__row{
 		transition: all .6s cubic-bezier(.45,0,.55,1);
@@ -74,15 +85,15 @@
 	}
 	&.scroll-down{
 
-		--opacity: 1;
-		// --spy: 0;
+		--opacity: 0;
+		--spy: 0;
 		--sp: #{rem(14)};
 		// --spy: #{rem(13)};
-		// transform: translateY(var(--top,0));
+		transform: translateY(var(--top,0));
 		@include media-breakpoint-up(md) {
 			.top-nav__logo{
-				margin-top: -20px;
-				margin-bottom: -20px;
+				margin-top: -15px;
+				margin-bottom: -15px;
 			}
 		}
 		.logo-full{
@@ -95,12 +106,25 @@
 		}
 		
 		.top-nav__row{
-			transform: translateY(var(--top, 0));
-			// opacity: 0;
+			transform: translateY(var(--top, 100%));
+			opacity: 0;
 		}
-			@include media-breakpoint-between(md, xxl) {
-		--sp: #{rem(30)};
+
 	}
+	.top-nav__row{
+		z-index: 2000;
+	}
+	&.scroll-up{
+			.top-nav__row{
+				opacity: 1;
+			}
+		// position: fixed;
+		--opacity: 1;
+		--top:0;
+		// --spy: #{rem(17)};
+	}
+	@include mt;
+	
 	// left: 0;
 	// left: 200px;
 	// right: -200px;
@@ -108,29 +132,16 @@
 	// top: 0;
 	// left: 0;
 	z-index: 1000;
-	--top:0;
-	}	
-	&.scroll-up{
-		
-		// position: fixed;
-		--opacity: 1;
-		// --spy: #{rem(17)};
-	}
-	@include mt;
-
 	// background-color: #fff;
 	// border-bottom: 1px solid #000;
 	// --color-link: 255,
 	// width: 100%;
-	padding-top: var(--sp);
-	padding-bottom: var(--sp);
+	
 	// 0,
 	// 0;
 	// background-color: #{rgba(var(--color-link), .5)};
 	
-	@include media-breakpoint-down(md) {
-		border-bottom: solid 2px #fff;
-	}
+
 
 	.container--fluid {
 		.toggle-menu-mobile {

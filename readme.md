@@ -12,3 +12,4 @@
 1. <https://Aleksandr3012.github.io/artech/public/11-404.html>
 1. <https://Aleksandr3012.github.io/artech/public/12-search.html>
 1. <https://Aleksandr3012.github.io/artech/public/13-search-empy.html>
+2. <https://Aleksandr3012.github.io/artech/public/14-browser-outdated.html>

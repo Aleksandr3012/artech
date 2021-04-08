@@ -30,8 +30,15 @@
 
 	.fancybox-button {
 		padding: 0;
+		opacity: 1;
+			@media (min-width: 600px){
+
+				right: 15px;
+				top: 15px;
+			}
 		svg {
 			@include mt;
+			color: #DEDEDE;
 		}
 		&:hover {
 			svg {

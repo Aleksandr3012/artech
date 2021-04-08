@@ -464,8 +464,8 @@ function eventHandler() {
 				height = el.innerHeight,
 				// isScrollDown = newScroll > oldScroll,
 		isScrollUp = newScroll < oldScroll && newScroll > 0,
-				isScrollDown = newScroll > 0; // el.classList.toggle('scroll-up', isScrollUp);
-
+				isScrollDown = newScroll > 0;
+		el.classList.toggle('scroll-up', isScrollUp);
 		el.classList.toggle('scroll-down', isScrollDown);
 		this.oldScroll = newScroll;
 	}); // var show = true;
