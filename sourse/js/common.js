@@ -130,7 +130,15 @@ const JSCCommon = {
 
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+			menu.classList.add("menu-hide");
+			setTimeout(() => {
+				menu.classList.remove("menu-hide"); 
+			}, 4000);
+			[document.body, document.querySelector('html')].forEach(el => {
+				setTimeout(() => {
+					el.classList.remove("fixed")
+				}, 1500);
+			});
 			// document.querySelector("html").style.marginRight = null;
 			document.querySelector("body").style.marginRight = null
 		}
@@ -280,7 +288,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', "  .scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 

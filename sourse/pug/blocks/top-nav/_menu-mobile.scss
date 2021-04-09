@@ -147,16 +147,26 @@ $h: 3px;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
 		border-top: solid 1px #fff;
-		// @include mt(1s);
-		transition: opacity 0.5s ease-in-out;
-		transform: translateX(100%);
+		@include mt(1s);
+		transition-delay: 0.6s;
+		// transition: opacity 0.5s ease-in-out; 
 		opacity: 0;
 		// border-bottom: solid 1px #fff;
 	}
 	&.active &__inner {
+		opacity: 1; 
+	}
+
+		&.menu-hide {
 		transition-delay: 0.6s;
-		opacity: 1;
-		transform: translateX(0);
+		.toggle-menu-mobile{
+			transition-delay: 0.8s;
+
+		}
+
+	}
+	&.menu-hide &__inner {
+		transition-delay: 0s; 
 	}
 
 	&__search {

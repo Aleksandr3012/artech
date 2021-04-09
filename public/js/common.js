@@ -130,8 +130,14 @@ var JSCCommon = {
 				return element.classList.remove("on");
 			});
 			menu.classList.remove("active");
+			menu.classList.add("menu-hide");
+			setTimeout(function () {
+				menu.classList.remove("menu-hide");
+			}, 4000);
 			[document.body, document.querySelector('html')].forEach(function (el) {
-				return el.classList.remove("fixed");
+				setTimeout(function () {
+					el.classList.remove("fixed");
+				}, 1500);
 			}); // document.querySelector("html").style.marginRight = null;
 
 			document.querySelector("body").style.marginRight = null;
@@ -268,7 +274,7 @@ var JSCCommon = {
 		});
 	},
 	animateScroll: function animateScroll() {
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', "  .scroll-link", function () {
 			var elementClick = $(this).attr("href");
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
