@@ -3,8 +3,8 @@
 	// --sPB: ;
 	// --sTPB: ;
 
-	@include media-breakpoint-up(md) {
-		padding-top: 0;
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(14);
 	}
 
 	@include media-breakpoint-between(md, xxl) {
@@ -59,8 +59,6 @@
 	}
 
 	&__col {
-		
-	
 		&:last-child {
 			.sAbout__row {
 				padding-bottom: 0;
@@ -135,7 +133,7 @@
 	}
 
 	&__row {
-			&:hover {
+		&:hover {
 			img {
 				transform: scale(1.1);
 			}
@@ -156,7 +154,7 @@
 		}
 
 		//pt
-		@include media-breakpoint-between(md, xxl) {
+		@include media-breakpoint-between(lg, xxl) {
 			padding-top: calc(var(--sPT) / 1.2);
 		}
 
@@ -164,7 +162,7 @@
 			padding-top: calc(var(--sPT) * 1.12);
 		}
 		@include media-breakpoint-only(md) {
-			padding-top: calc(var(--sPT) * 3.47);
+			// padding-top: calc(var(--sPT) * 3.47);
 		}
 		@include media-breakpoint-up(xxl) {
 			padding-top: var(--sPT);
@@ -175,7 +173,6 @@
 
 	&__imgWrap {
 		overflow: hidden;
-	
 
 		@include block(540, 355);
 		@include media-breakpoint-up(md) {
@@ -196,7 +193,6 @@
 			margin-left: rem(-198);
 			@include block(656, 388);
 		}
-
 
 		img {
 			width: 100%;
