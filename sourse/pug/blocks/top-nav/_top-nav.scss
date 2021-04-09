@@ -44,6 +44,7 @@
 	--opacity: 1;
 	opacity: var(--opacity);
 	transition: all 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+	// border-bottom: 1px solid transparent;
 	.container {
 		position: relative;
 		overflow: hidden;
@@ -80,6 +81,7 @@
 		backdrop-filter: blur(45px);
 		transform: translateY(var(--top, -100%));
 		opacity: var(--opacity);
+		border-bottom:1px solid #dedede;
 	}
 	&.scroll-down {
 		--opacity: 0;
@@ -113,7 +115,7 @@
 		z-index: 2000;
 	}
 	&.scroll-up {
-		border-bottom: 1px solid #dedede;
+		
 
 		.top-nav__row {
 			opacity: 1;
