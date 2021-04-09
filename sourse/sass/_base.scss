@@ -641,9 +641,9 @@ ul {
 }
 
 @include media-breakpoint-up(lg) {
-	.wow {
-		visibility: hidden;
-	}
+}
+.wow {
+	visibility: hidden;
 }
 
 img {
