@@ -284,7 +284,7 @@ const JSCCommon = {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
-			$('html, body').animate({ scrollTop: destination }, 0);
+			$('html, body').animate({ scrollTop: destination }, 800);
 
 			return false;
 		});

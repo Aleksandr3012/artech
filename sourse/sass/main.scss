@@ -63,11 +63,11 @@ $output-bourbon-deprecation-warnings: false;
 .breadcrumb-item + .breadcrumb-item {
 	padding-left: 0;
 }
-.breadcrumb-item + .breadcrumb-item a{
+.breadcrumb-item + .breadcrumb-item a {
 	padding-left: rem(13);
-	
+
 	&:before {
-		content:  url("../img/svg/chevron-right.svg");
+		content: url("../img/svg/chevron-right.svg");
 		background-position: center;
 		background-repeat: no-repeat;
 		display: inline-block;
@@ -77,16 +77,15 @@ $output-bourbon-deprecation-warnings: false;
 		margin-top: 1px;
 	}
 }
-.breadcrumb-item+.breadcrumb-item:before {
-
+.breadcrumb-item + .breadcrumb-item:before {
 	display: none;
 }
 .breadcrumb {
 	padding-top: rem(30);
 	display: block;
-	&::before{
+	&::before {
 	}
-	li{
+	li {
 		display: inline;
 		position: relative;
 	}
@@ -131,12 +130,12 @@ $output-bourbon-deprecation-warnings: false;
 		}
 	}
 }
-.pagination-wrapper li .page-numbers.disabled{
+.pagination-wrapper li .page-numbers.disabled {
 	opacity: 0.5;
 	pointer-events: none;
 }
 .pagination-wrapper li .page-numbers.disabled:hover,
-.pagination-wrapper li .page-numbers.default:hover{
+.pagination-wrapper li .page-numbers.default:hover {
 	background-color: #fff;
 	color: $body-color;
 }
@@ -148,8 +147,8 @@ $output-bourbon-deprecation-warnings: false;
 	justify-content: center;
 	padding-top: rem(30);
 }
-.page-numbers{
-	padding-bottom: 0 !important;
+.page-numbers {
+	// padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
 }
 .pagination-wrapper li .page-numbers {

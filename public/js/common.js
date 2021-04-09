@@ -273,7 +273,7 @@ var JSCCommon = {
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
 				scrollTop: destination
-			}, 0);
+			}, 800);
 			return false;
 		});
 	},
