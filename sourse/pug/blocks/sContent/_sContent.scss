@@ -1,4 +1,7 @@
 // start .sContent
+.sForm a:not(.btn, .tdn) {
+	border: none !important;
+}
 .section__inner a:not(.btn, .tdn) {
 	text-decoration: none;
 	border-bottom: solid 1px;
