@@ -26,8 +26,8 @@ mixin input(placeholder,  t='text', label, name= t)
 				+t(t,placeholder, name)&attributes(attributes)
 				block
 		else
-			+t(t,placeholder, name)&attributes(attributes)
-			+e.inputBorder
+			span.wpcf7-form-control-wrap
+				+t(t,placeholder, name)&attributes(attributes)
 		block
 	// +e.input-wrap
 mixin select(label,pl,...items)

@@ -553,7 +553,9 @@ function eventHandler() {
 	// });
  
 
-		
+	$(".form-control, .form-select").each(function(){
+		$(this).after('<div class="form-wrap__inputBorder">');
+	})
 };
 	if (document.readyState !== 'loading') {
 		eventHandler();

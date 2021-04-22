@@ -10,17 +10,19 @@
 		padding-left: 0;
 		resize: none;
 		padding-top: 0.5rem;
+		background-color: none ;
 
 		&:focus,
 		&:active {
 			border-color: #dedede;
 		}
 	}
-
+	.wpcf7-not-valid-tip{
+		display: none !important;
+	}
 	&__inputBorder {
 		--bgc: #{$primary};
 		background: var(--bgc);
-		width: 100%;
 		height: var(--input-border-height);
 		position: absolute;
 		bottom: 0;
@@ -28,21 +30,22 @@
 		z-index: 4;
 		transform-origin: left top;
 		// transform: scaleX(0);
-		width: 0;
+		width: var(--width, 0);
 		// opacity: 0;
 
 		@include mt;
 		pointer-events: none;
 	}
 	
+	&__input.wpcf7-not-valid + &__inputBorder ,
 	&__input.invalid + &__inputBorder ,
 	&__input:focus + &__inputBorder {
 		// transform: scale(1);
 		// transform: scaleX(1);
-		width: 100%;
-		opacity: 1;
+		--width: 100%; 
 	}
 	
+	&__input.wpcf7-not-valid + &__inputBorder,
 	&__input.invalid + &__inputBorder { 
 		// transform: scale(1);
 		--bgc: #{$danger};

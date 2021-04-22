@@ -483,6 +483,10 @@ function eventHandler() {
 	// 				show = false;
 	// 		}
 	// });
+
+	$(".form-control, .form-select").each(function () {
+		$(this).after('<div class="form-wrap__inputBorder">');
+	});
 }
 
 ;

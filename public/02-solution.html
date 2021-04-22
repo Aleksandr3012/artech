@@ -52,9 +52,7 @@
 						</div>
 						<div class="menu-mobile__search">
 							<div class="container">
-								<div class="menu-mobile__input-wrap form-group"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
-									<div class="menu-mobile__inputBorder">
-									</div>
+								<div class="menu-mobile__input-wrap form-group"><span class="wpcf7-form-control-wrap"><input class="menu-mobile__input form-control" name="text" type="text" placeholder="Поиск по сайту"/></span>
 								</div>
 								<!-- +e.input-wrap-->
 								<button class="menu-mobile__btnSearch" type="submit">
@@ -150,18 +148,18 @@
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<div class="container"> 
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-								<meta itemprop="position" content="1"/></a></li>
-						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Решения</span>
-								<meta itemprop="position" content="2"/></a></li>
-					</ol>
-				</nav>
-			</div>
 			<!-- start header-->
 			<header class="header" id="header">
+				<div class="container"> 
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Решения</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+				</div>
 				<div class="container">
 					<div class="page-head"> 
 						<h1>Решения</h1>
@@ -169,9 +167,7 @@
 							<form>
 								<div class="row">
 									<div class="col">
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск по всем решениям"/>
-											<div class="form-wrap__inputBorder">
-											</div>
+										<div class="form-wrap__input-wrap form-group"><span class="wpcf7-form-control-wrap"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск по всем решениям"/></span>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
@@ -586,21 +582,15 @@
 							<div class="row">
 								<div class="col-lg-6"> 
 									<!-- вешать класс invalid-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
-										<div class="form-wrap__inputBorder">
-										</div>
+									<div class="form-wrap__input-wrap form-group"><span class="wpcf7-form-control-wrap"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/></span>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail" required="required"/>
-										<div class="form-wrap__inputBorder">
-										</div>
+									<div class="form-wrap__input-wrap form-group"><span class="wpcf7-form-control-wrap"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail" required="required"/></span>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
-									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea>
-										<div class="form-wrap__inputBorder">
-										</div>
+									<div class="form-wrap__input-wrap form-group"><span class="wpcf7-form-control-wrap"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение" required="required"></textarea></span>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -622,10 +612,12 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-6"></div>
-								<div class="col-lg-6"><a class="btn btn-primary btn-primary-arrow" href="#">Отправить
+								<div class="col-lg-6">
+									<button class="btn btn-primary btn-primary-arrow" type="submit">Отправить
 										<svg class="icon icon-arrow-r ">
 											<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-										</svg></a>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</form>
@@ -640,9 +632,7 @@
 				<form>
 					<div class="container">
 						<div class="form-wrap__wrap">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск" required="required"/>
-								<div class="form-wrap__inputBorder">
-								</div> 
+							<div class="form-wrap__input-wrap form-group"><span class="wpcf7-form-control-wrap"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Начните поиск" required="required"/></span> 
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn btn" type="submit">
