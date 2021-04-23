@@ -49,7 +49,7 @@ const JSCCommon = {
 			infobar: false,
 			touch: false,
 			type: 'inline',
-			autoFocus: false,
+			// autoFocus: false,
 			i18n: {
 				en: {
 					CLOSE: "Закрыть",
