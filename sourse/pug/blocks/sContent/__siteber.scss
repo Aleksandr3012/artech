@@ -193,6 +193,9 @@
 	// 	padding: rem(23) rem(24);
 	// }
 	font-weight: 600;
+	&__count{
+		margin-left: rem(10);
+	}
 }
 .filter-group {
 	border-top: solid 1px #f1f1f1;

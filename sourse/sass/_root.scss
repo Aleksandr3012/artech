@@ -34,7 +34,7 @@
 		--sPT: #{rem(90)};
 		--sPB: #{rem(90)};
 		--h1-font-size: #{$h1-font-size};
-		--h2-font-size: #{$h2-font-size};
+		--h2-font-size: var(--h1-font-size);
 		--h3-font-size: #{$h3-font-size};
 		--h4-font-size: #{$h4-font-size};
 		--h5-font-size: #{$h5-font-size};

@@ -41,8 +41,21 @@ block pagecontent
 								p ООО «АРТЕХ»
 								a.btn.btn-outline-primary.link-modal-js(href="#modal-questionnaire")  Карточка партнера
 							+e.col.col-6: +e.item
-								+e.title Адрес:
+								+e.title Социальные сети:
+								p &nbsp;
+								+soc()
+									+item-sos('instagram')(style="--bg:#E94754; --hover-bg: #E94754")
+									+item-sos('telegram')(style="--bg:#139BD0; --hover-bg: #139BD0")
+							//- 
+							+e.col.col-6: +e.item
+								+e.title Юридический адрес: 
 								p 450520, Уфимский район, с. Нижегородка, ул&nbsp;Заводская 36/1
+							
+							+e.col.col-6: +e.item
+								+e.title Адрес:
+								p 450520, Уфимский район, с. Нижегородка, ул. Чапаева&nbsp;38
+							//- 
+
 							+e.col.col-6: +e.item
 								+e.title E-mail:
 								p

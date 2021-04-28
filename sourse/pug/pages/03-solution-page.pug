@@ -5,7 +5,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 
 block variables
-	- let  mainPage= null 
+	- let  mainPage= 'body-artical'
 	- let  bg= null
 
 block title
@@ -25,7 +25,7 @@ block pagecontent
 		.container 
 			+breadcrumb('Главная','Решения',`Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон`)
 		+page-head 
-			h1 Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон
+			h1.artical-title Роботизированный комплекс по укладке 5-ти литровых бутылей на поддон
 		
 	+b.main-block.section.pb-0
 		.container
