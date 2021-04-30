@@ -143,13 +143,14 @@ p {
 	line-height: 180%;
 	margin-bottom: rem(31);
 }
-
+.section__inner table> :not(caption) > * > *,
 .table > :not(caption) > * > * {
 	border-bottom-width: 1px;
 }
-
+.section__inner table,
 .table {
 	margin-bottom: 0.3rem;
+	@extend .table;
 	td {
 		vertical-align: middle;
 		@include media-breakpoint-down(md) {

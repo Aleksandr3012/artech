@@ -988,14 +988,15 @@ body.loaded {
 
 
 .artical-title {
-		@include media-breakpoint-up(xxl) {
-			--h1-font-size: 3rem ;
-		} 
-		@include media-breakpoint-up(lg) {
-			--h1-font-size: 2.8rem ;
-		} 
-		@include media-breakpoint-up(md) {
-			--h1-font-size: 2.6rem ;
-		}
-		--h1-font-size: 2.2rem ;
+	@include media-breakpoint-up(xxl) {
+		--h1-font-size: 3rem ;
+	} 
+	@include media-breakpoint-up(lg) {
+		--h1-font-size: 2.8rem ;
+	} 
+	@include media-breakpoint-up(md) {
+		--h1-font-size: 2.6rem ;
+	}
+	--h1-font-size: 2.2rem ;
+	font-size: var(--h1-font-size);
 }
