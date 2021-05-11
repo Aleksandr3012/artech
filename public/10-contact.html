@@ -252,8 +252,6 @@
 													MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
 															'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
 													),
-											
-											
 													myPlacemarkWithContent = new ymaps.Placemark(place, {
 															hintContent: '450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
 															balloonContent: '450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
@@ -273,9 +271,31 @@
 															iconContentOffset: [15, 15],
 															// Макет содержимого.
 															iconContentLayout: MyIconContentLayout
+													}),
+													
+													new2 = new ymaps.Placemark( [54.611,55.85480099999991], {
+															hintContent: 'new450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
+															balloonContent: 'new450520, Уфимский район, с. Нижегородка, ул Заводская 36/1',
+															//- iconContent: '12'
+													}, {
+															// Опции.
+															// Необходимо указать данный тип макета.
+															iconLayout: 'default#imageWithContent',
+															// Своё изображение иконки метки.
+															iconImageHref: 'img/svg/map.svg',
+															// Размеры метки.
+															iconImageSize: [60, 60],
+															// Смещение левого верхнего угла иконки относительно
+															// её "ножки" (точки привязки).
+															iconImageOffset: [-30, -60],
+															// Смещение слоя с содержимым относительно слоя с картинкой.
+															iconContentOffset: [15, 15],
+															// Макет содержимого.
+															iconContentLayout: MyIconContentLayout
 													});
 											
 												myMap.geoObjects
+														.add(new2)
 														.add(myPlacemarkWithContent);
 												});
 										</script>
